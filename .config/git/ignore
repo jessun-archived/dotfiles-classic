@@ -1,0 +1,14 @@
+.DS_Store
+
+.tags
+.vim/
+Session.vim
+Session.vim*
+
+.cargo/
+.python-version
+
+pvt.yaml
+pvt.yml
+
+upgrade_by_bin.sh
