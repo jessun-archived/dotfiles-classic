@@ -25,9 +25,9 @@ elif [ -f "/usr/bin/vim" ]; then
 fi
 
 if [ "$machine" == "linux" ]; then 
-    if [ -x "$(command -v setxkbmap)" ]; then
-        # setxkbmap -option 'caps:ctrl_modifier'
-    fi
+    # if [ -x "$(command -v setxkbmap)" ]; then
+    #     setxkbmap -option 'caps:ctrl_modifier'
+    # fi
     if [ -x "$(command -v google-chrome-stable)" ]; then
         export BROWSER=google-chrome-stable
     elif [ -x "$(command -v google-chrome-beta)" ]; then
