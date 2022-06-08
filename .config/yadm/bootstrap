@@ -1,0 +1,177 @@
+init_env(){
+set -x # show shell commands 
+set -e # return when got an error
+}
+
+<< Block
+init_network_proxy(){
+}
+Block
+
+
+init_arch_mirrors(){
+    pacman-mirrors -c China -m rank -i 
+}
+
+init_arch_base_packages(){
+    yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
+    yay -S base-devel bison cmdline socat --noconfirm
+    yay -S nodejs npm yarn --noconfirm
+    yay -S git gcc --noconfirm
+
+    yay -S rustup
+    rustup default stable
+}
+
+init_arch_packages(){
+    yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
+    
+    yay -S neovim-nightly-bin xsel --noconfirm 
+    yay -S tree-sitter --noconfirm
+    yay -S gnome-keyring --noconfirm
+    yay -S nodejs go --noconfirm
+    yay -S megasync-nopdfium --noconfirm
+    yay -S google-chrome-beta google-chrome-dev google-chrome --noconfirm
+    yay -S alsa-utils alsa-firmware alsa-plugins arandr --noconfirm
+    yay -S authy-electron --noconfirm
+    yay -S autoconf automake --noconfirm
+    yay -S barrier --noconfirm
+    yay -S copyq deluge-gtk discord-canary dmenu --noconfirm
+    yay -S ctags alacritty --noconfirm
+    yay -S dunst --noconfirm
+    yay -S evince-no-gnome --noconfirm
+    yay -S feh --noconfirm
+    yay -S feishu-bin --noconfirm
+    yay -S filezilla --noconfirm
+    yay -S fish --noconfirm
+    yay -S flameshot --noconfirm
+    yay -S font-manager --noconfirm
+    yay -S github-cli --noconfirm
+    yay -S gnome-disk-utility --noconfirm
+    yay -S hsetroot --noconfirm
+    yay -S i3-gaps-next-git --noconfirm
+    yay -S kitty --noconfirm
+    yay -S neofetch --noconfirm
+    yay -S network-manager-applet --noconfirm
+    yay -S networkmanager --noconfirm
+    yay -S polybar --noconfirm
+    yay -S picom --noconfirm
+    yay -S vscodium-bin --noconfirm
+    yay -S rofi --noconfirm
+    yay -S slock --noconfirm
+    yay -S tmuxinator --noconfirm
+    yay -S volumeicon --noconfirm
+    yay -S yarn --noconfirm
+    yay -S network-manager-applet --noconfirm
+    yay -S utools --noconfirm
+    yay -S nitrogen --noconfirm
+    yay -S fcitx5-rime --noconfirm
+    yay -S fcitx5-gtk --noconfirm
+    yay -S fcitx5-configtool --noconfirm
+    yay -S debtap --noconfirm
+    yay -S seahorse --noconfirm
+    yay -S apifox kazam cmake --noconfirm
+    yay -S docker --noconfirm
+}
+
+
+# TODO: check file if exist
+init_ssh_key(){
+	ssh-keygen -t ed25519 -C "jessun.zhang@outlook.com"
+}
+
+remove_useless_pacages(){
+    yay -R onlyoffice-desktopeditors steam-manjaro pidgin thunderbird xfburn audacious xfce4-dict mousepad
+}
+
+install_arch_fonts(){
+    yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
+
+    #yay -S noto-fonts-cjk-sc-vf --noconfirm
+    #yay -S ttf-bitstream-vera --noconfirm
+    #yay -S ttf-roboto --noconfirm
+    #yay -S ttf-roboto-mono --noconfirm
+    #yay -S wqy-bitmapsong-beta --noconfirm
+    #yay -S wqy-zenhei --noconfirm
+    #yay -S ttf-font-awesome-5 --noconfirm
+    #yay -S ttf-dejavu-sans-code --noconfirm
+    yay -S fcitx5-skin-fluentdark-git
+    yay -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-jp-fonts --noconfirm
+    yay -S glow-sans-j-compressed --noconfirm
+    yay -S glow-sans-j-condensed --noconfirm
+    yay -S glow-sans-j-extended --noconfirm
+    yay -S glow-sans-j-normal --noconfirm
+    yay -S glow-sans-j-wide --noconfirm
+    yay -S glow-sans-sc-compressed --noconfirm
+    yay -S glow-sans-sc-condensed --noconfirm
+    yay -S glow-sans-sc-extended --noconfirm
+    yay -S glow-sans-sc-normal --noconfirm
+    yay -S glow-sans-sc-wide --noconfirm
+    yay -S glow-sans-tc-compressed --noconfirm
+    yay -S glow-sans-tc-condensed --noconfirm
+    yay -S glow-sans-tc-extended --noconfirm
+    yay -S glow-sans-tc-normal --noconfirm
+    yay -S glow-sans-tc-wide --noconfirm
+    yay -S otf-nerd-fonts-fira-mono --noconfirm
+    yay -S nerd-fonts-fira-code --noconfirm
+    yay -S nerd-fonts-hack --noconfirm
+    yay -S nerd-fonts-noto-sans-mono --noconfirm
+    yay -S nerd-fonts-emoji-lolipop
+}
+
+set_home_dir_name_style(){
+    LANG=C xdg-user-dirs-update --force
+}
+
+set_actiontech_vpn(){
+sudo echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+sudo tee -a /etc/pacman.conf << EOF
+[pritunl]
+Server = https://repo.pritunl.com/stable/pacman
+EOF
+
+sudo pacman-key --keyserver hkp://keyserver.ubuntu.com -r 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+sudo pacman-key --lsign-key 7568D9BB55FF9E5287D586017AE645C0CF8E292A
+sudo pacman -Sy
+sudo pacman -S --noconfirm pritunl
+sudo systemctl start mongodb pritunl
+sudo systemctl enable mongodb pritunl
+}
+
+install_golang(){
+
+    bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+    gvm install go1.17.9
+    gvm use go1.17.9 --default
+}
+
+install_rust(){
+    yay rust-analyzer-nightly-bin
+    cargo install cargo-update
+    cargo install cross       
+    cargo install fd-find     
+    cargo install gitui       
+    cargo install mocword     
+    cargo install ripgrep     
+    cargo install typos-cli   
+    cargo install xcp         
+}
+
+install_rust_package(){
+    rustup component add rust-analyzer-preview
+    rustup component add rust-docs
+}
+
+init_env
+remove_useless_pacages
+#init_network_proxy
+#init_arch_mirrors
+#init_ssh_proxy
+#init_ssh_key
+#init_arch_base_packages
+#init_arch_packages
+install_arch_fonts
+#set_home_dir_name_style
+#set_actiontech_vpn
+#install_golang
