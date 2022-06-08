@@ -1,0 +1,33 @@
+name: luna_pinyin.extended
+version: "2021.01.01"
+sort: by_wight
+use_preset_vocabulary: true
+
+import_tables:
+    - luna_pinyin	#这个是默认使用的明月拼音，没事别删
+    - luna_pinyin.gd
+    - luna_pinyin.net
+    - luna_pinyin.anime
+    - luna_pinyin.basis
+    - luna_pinyin.biaoqing
+    - luna_pinyin.chat
+    - luna_pinyin.classical
+    - luna_pinyin.cn_en
+    - luna_pinyin.computer
+    - luna_pinyin.daily
+    - luna_pinyin.diet
+    - luna_pinyin.extended
+    - luna_pinyin.game
+    - luna_pinyin.gd
+    - luna_pinyin.hanyu
+    - luna_pinyin.history
+    - luna_pinyin.idiom
+    - luna_pinyin.moba
+    - luna_pinyin.movie
+    - luna_pinyin.music
+    - luna_pinyin.name
+    - luna_pinyin.net
+    - luna_pinyin.poetry
+    - luna_pinyin.practical
+    - luna_pinyin.sougou
+    - luna_pinyin.website
