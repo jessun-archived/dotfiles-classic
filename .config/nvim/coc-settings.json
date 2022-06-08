@@ -1,0 +1,312 @@
+{
+    "notification.border": false,
+    "notification.marginRight": 0,
+    "notification.winblend": 0,
+    "notification.focusable": false,
+    "notification.preferMenuPicker": true,
+    // coc
+    "coc.preferences.enableMessageDialog": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "json",
+        "lua"
+    ],
+    "dialog.rounded": false,
+    "suggest.defaultSortMethod": "alphabetical",
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.selection": "recentlyUsedByPrefix",
+    "suggest.enablePreview": true,
+    "list.source.tags.command": "ctags -R -f ./.tags",
+    "list.source.grep.args": [
+        "-S",
+        "-i"
+    ],
+    "session.saveOnVimLeave": true,
+    "http.proxy": "http://127.0.0.1:1087",
+    "languageserver": {},
+    // coc-highlight
+    "colors.filetypes": [
+        "*"
+    ],
+    // coc-git
+    "git.addGBlameToBufferVar": false,
+    // coc-markdownlint
+    // coc-??
+    "Lua.diagnostics.globals": [
+        "use",
+        "vim",
+        "packer",
+        "os_name"
+    ],
+    "go.goplsOptions": {
+        "semanticTokens": true
+    },
+    // coc-rust-analyzer
+    "rust-analyzer.server.path": "rust-analyzer",
+    // coc-spell-checker
+    "cSpell.userWords": [
+      "Hgdol",
+      "Thanos",
+      "udms"
+    ],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.dictionaries": [
+        "actiontech_dict",
+        "personal_dict"
+    ],
+    "cSpell.ignoreWords": [],
+    "cSpell.language": "en",
+    "cSpell.showStatus": true,
+    "cSpell.languageSettings": [
+        {
+            "languageId": "*",
+            "local": "en",
+            "dictionaries": [
+                "actiontech_dict",
+                "personal_dict"
+            ]
+        }
+    ],
+    "cSpell.dictionaryDefinitions": [
+        {
+            "name": "actiontech_dict",
+            "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"
+        },
+        {
+            "name": "personal_dict",
+            "path": "/home/jessun/.config/nvim/dicts/personal_dict.txt"
+        }
+    ],
+    "cSpell.ignorePaths": [
+        "node_modules",
+        "**/node_modules",
+        "**/node_modules/**",
+        "node_modules/**",
+        "vscode-extension",
+        ".git",
+        "*.dll",
+        "**/*.dll"
+    ],
+    "cSpell.enabledLanguageIds": [
+        "vim",
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pug",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yaml",
+        "yml"
+    ],
+    // coc-translator
+    "translator.engines": [
+        // "google",
+        "youdao",
+        "bing",
+        "haici"
+    ],
+    // coc-explorer
+    "explorer.root.strategies": [
+        "workspace",
+        "custom:vcs",
+        "custom:vcs-r"
+    ],
+    "explorer.icon.source": "nvim-web-devicons",
+    "explorer.icon.enableNerdfont": true,
+    "explorer.root.customRules": {
+        "vcs": {
+            "patterns": [
+                ".git",
+                ".hg",
+                ".projections.json"
+            ]
+        },
+        "vcs-r": {
+            "patterns": [
+                ".git",
+                ".hg",
+                ".projections.json"
+            ],
+            "bottomUp": true
+        }
+    },
+    "explorer.file.showHiddenFiles": true,
+    "explorer.keyMappings.global": {
+        "i": false,
+        "<c-o>": "noop",
+        "*": "toggleSelection",
+        "<tab>": "actionMenu",
+        "gk": [
+            "wait",
+            "expandablePrev"
+        ],
+        "gj": [
+            "wait",
+            "expandableNext"
+        ],
+        "h": [
+            "wait",
+            "collapse"
+        ],
+        "l": [
+            "wait",
+            "expandable?",
+            "expand",
+            "open"
+        ],
+        "J": [
+            "wait",
+            "toggleSelection",
+            "normal:j"
+        ],
+        "K": [
+            "wait",
+            "toggleSelection",
+            "normal:k"
+        ],
+        "gl": [
+            "wait",
+            "expand:recursive"
+        ],
+        "gh": [
+            "wait",
+            "collapse:recursive"
+        ],
+        "<2-LeftMouse>": [
+            "expandable?",
+            [
+                "expanded?",
+                "collapse",
+                "expand"
+            ],
+            "open"
+        ],
+        "o": [
+            "wait",
+            "expanded?",
+            "collapse",
+            "expand"
+        ],
+        "<cr>": [
+            "wait",
+            "expandable?",
+            "cd",
+            "open"
+        ],
+        "e": "open",
+        "s": "open:split",
+        "E": "open:vsplit",
+        "t": "open:tab",
+        "<bs>": [
+            "wait",
+            "gotoParent"
+        ],
+        "gs": [
+            "wait",
+            "reveal:select"
+        ],
+        "il": "preview:labeling",
+        "ic": "preview:content",
+        "Il": "previewOnHover:toggle:labeling",
+        "Ic": "previewOnHover:toggle:content",
+        "II": "previewOnHover:disable",
+        "yp": "copyFilepath",
+        "yn": "copyFilename",
+        "yy": "copyFile",
+        "dd": "cutFile",
+        "p": "pasteFile",
+        "df": "delete",
+        "dF": "deleteForever",
+        "a": "addFile",
+        "A": "addDirectory",
+        "r": "rename",
+        "zh": "toggleHidden",
+        "g<dot>": "toggleHidden",
+        "R": "refresh",
+        "?": "help",
+        "q": "quit",
+        "<esc>": "esc",
+        "X": "systemExecute",
+        "gd": "listDrive",
+        "f": "search",
+        "F": "searchRecursive",
+        "gf": "gotoSource:file",
+        "gb": "gotoSource:buffer",
+        "[[": [
+            "wait",
+            "sourcePrev"
+        ],
+        "]]": [
+            "wait",
+            "sourceNext"
+        ],
+        "[i": [
+            "wait",
+            "indentPrev"
+        ],
+        "]i": [
+            "wait",
+            "indentNext"
+        ],
+        "[m": [
+            "wait",
+            "markPrev:modified"
+        ],
+        "]m": [
+            "wait",
+            "markNext:modified"
+        ],
+        "[d": [
+            "wait",
+            "markPrev:diagnosticError:diagnosticWarning"
+        ],
+        "]d": [
+            "wait",
+            "markNext:diagnosticError:diagnosticWarning"
+        ],
+        "[D": [
+            "wait",
+            "markPrev:diagnosticError"
+        ],
+        "]D": [
+            "wait",
+            "markNext:diagnosticError"
+        ],
+        "[c": [
+            "wait",
+            "markPrev:git"
+        ],
+        "]c": [
+            "wait",
+            "markNext:git"
+        ],
+        "<<": "gitStage",
+        ">>": "gitUnstage"
+    },
+    "Lua.telemetry.enable": true
+}

@@ -1,0 +1,35 @@
+require("orgmode").setup(
+    {
+    org_hide_leading_stars = true,
+    org_agenda_files = { "~/workbench/github.com/jessun/logs/**/*" },
+    org_default_notes_file = "~/workbench/github.com/jessun/logs/default.org",
+    org_todo_keywords = { "TODO(t)", "DOING(i)", "IN_REVIEW(r)", "TEST(s)", "|", "DONE(n)" },
+    org_archive_location = "~/workbench/github.com/jessun/.archive.org",
+    org_agenda_templates = {
+        t = {
+            description = "Todo",
+            template = "* TODO %?\n %u",
+            target = "~/workbench/github.com/jessun/logs/todo.org"
+        },
+        j = {
+            description = "Journal",
+            template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
+            target = "~/workbench/github.com/jessun/logs/journal.org"
+        }
+    },
+    mappings = {
+        org = {
+            org_toggle_checkbox = "cio"
+        }
+    },
+    notifications = {
+        enabled = true,
+        cron_enabled = true,
+        repeater_reminder_time = false,
+        deadline_warning_reminder_time = 0,
+        reminder_time = 10,
+        deadline_reminder = true,
+        scheduled_reminder = true
+    }
+}
+)

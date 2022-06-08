@@ -1,0 +1,9 @@
+require("carbon-now").setup(
+  {
+    options = {
+      theme = "solarized",
+      font_family = "Monoid"
+    },
+    open_cmd = "google-chrome-stable"
+  }
+)
