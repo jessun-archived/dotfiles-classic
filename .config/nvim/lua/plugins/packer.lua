@@ -76,8 +76,8 @@ function Packer:start_up()
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
-            use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } } ------------- 模糊搜索
-            use "danielpieper/telescope-tmuxinator.nvim" ---------------------------------------------------- tmuxinator 跳转
+            -- use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } } ------------- 模糊搜索
+            -- use "danielpieper/telescope-tmuxinator.nvim" ---------------------------------------------------- tmuxinator 跳转
             -- use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
             -- use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             -- use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?

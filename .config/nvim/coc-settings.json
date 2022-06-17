@@ -1,27 +1,25 @@
 {
     "notification.border": false,
-    "notification.marginRight": 0,
-    "notification.winblend": 0,
-    "notification.focusable": false,
-    "notification.preferMenuPicker": true,
+    "list.maxPreviewHeight": 99999,
+    //"notification.marginRight": 0,
+    //"notification.winblend": 0,
+    //"notification.focusable": false,
+    //"notification.preferMenuPicker": true,
     // coc
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "json",
-        "lua"
-    ],
+    "coc.preferences.formatOnSaveFiletypes": [],
     "dialog.rounded": false,
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.selection": "recentlyUsedByPrefix",
     "suggest.enablePreview": true,
     "list.source.tags.command": "ctags -R -f ./.tags",
+    "list.source.grep.command": "rg",
     "list.source.grep.args": [
-        "-S",
-        "-i"
     ],
+    "list.source.files.args": ["--hidden","--files"],
     "session.saveOnVimLeave": true,
     "http.proxy": "http://127.0.0.1:1087",
     "languageserver": {},
@@ -46,9 +44,9 @@
     "rust-analyzer.server.path": "rust-analyzer",
     // coc-spell-checker
     "cSpell.userWords": [
-      "Hgdol",
-      "Thanos",
-      "udms"
+        "Hgdol",
+        "Thanos",
+        "udms"
     ],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
