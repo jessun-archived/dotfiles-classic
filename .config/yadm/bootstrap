@@ -3,16 +3,6 @@ set -x # show shell commands
 set -e # return when got an error
 }
 
-<< Block
-init_network_proxy(){
-}
-Block
-
-
-init_arch_mirrors(){
-    pacman-mirrors -c China -m rank -i 
-}
-
 init_arch_base_packages(){
     yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
     yay -S base-devel bison cmdline socat --noconfirm
@@ -74,12 +64,6 @@ init_arch_packages(){
     yay -S docker --noconfirm
 }
 
-
-# TODO: check file if exist
-init_ssh_key(){
-	ssh-keygen -t ed25519 -C "jessun.zhang@outlook.com"
-}
-
 remove_useless_pacages(){
     yay -R onlyoffice-desktopeditors steam-manjaro pidgin thunderbird xfburn audacious xfce4-dict mousepad
 }
@@ -88,13 +72,13 @@ install_arch_fonts(){
     yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
 
     #yay -S noto-fonts-cjk-sc-vf --noconfirm
-    #yay -S ttf-bitstream-vera --noconfirm
-    #yay -S ttf-roboto --noconfirm
-    #yay -S ttf-roboto-mono --noconfirm
-    #yay -S wqy-bitmapsong-beta --noconfirm
-    #yay -S wqy-zenhei --noconfirm
-    #yay -S ttf-font-awesome-5 --noconfirm
-    #yay -S ttf-dejavu-sans-code --noconfirm
+    yay -S ttf-bitstream-vera --noconfirm
+    yay -S ttf-roboto --noconfirm
+    yay -S ttf-roboto-mono --noconfirm
+    yay -S wqy-bitmapsong-beta --noconfirm
+    yay -S wqy-zenhei --noconfirm
+    yay -S ttf-font-awesome-5 --noconfirm
+    yay -S ttf-dejavu-sans-code --noconfirm
     yay -S fcitx5-skin-fluentdark-git
     yay -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-jp-fonts --noconfirm
     yay -S glow-sans-j-compressed --noconfirm
@@ -116,11 +100,6 @@ install_arch_fonts(){
     yay -S nerd-fonts-fira-code --noconfirm
     yay -S nerd-fonts-hack --noconfirm
     yay -S nerd-fonts-noto-sans-mono --noconfirm
-    yay -S nerd-fonts-emoji-lolipop
-}
-
-set_home_dir_name_style(){
-    LANG=C xdg-user-dirs-update --force
 }
 
 set_actiontech_vpn(){
@@ -164,14 +143,9 @@ install_rust_package(){
 }
 
 init_env
-remove_useless_pacages
-#init_network_proxy
-#init_arch_mirrors
-#init_ssh_proxy
-#init_ssh_key
+#remove_useless_pacages
 #init_arch_base_packages
 #init_arch_packages
 install_arch_fonts
-#set_home_dir_name_style
 #set_actiontech_vpn
 #install_golang
