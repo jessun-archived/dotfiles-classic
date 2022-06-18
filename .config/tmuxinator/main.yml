@@ -69,3 +69,5 @@ windows:
       - cd /home/jessun
       - yadm status
 
+  - clash:
+      - cd ~/.config/clash && clash -d .
