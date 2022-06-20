@@ -228,9 +228,8 @@ mode "resize" {
 
 # Autostart applications
 # exec --no-startup-id /opt/appimages/picgo.AppImage
-# exec --no-startup-id ibus-daemon -x -d
-# exec --no-startup-id xfce4-power-manager
-# exec_always --no-startup-id $HOME/.cargo/bin/i3wsr
+exec --no-startup-id tmuxinator start main
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id /$HOME/.config/polybar/launch.sh
 exec --no-startup-id barrier
 exec --no-startup-id picom --experimental-backends
@@ -239,9 +238,6 @@ exec --no-startup-id copyq
 exec --no-startup-id env QT_SCALE_FACTOR=1  megasync
 exec --no-startup-id fcitx5 -d
 exec --no-startup-id fcitx -d
-#exec --no-startup-id i3-msg 'workspace 9; exec feishu'
-exec --no-startup-id tmuxinator start main
-exec --no-startup-id tmuxinator start pvt
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id utools
