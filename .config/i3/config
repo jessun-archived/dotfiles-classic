@@ -249,9 +249,10 @@ exec --no-startup-id volumeicon
 exec_always --no-startup-id kded5
 
 bar {
-#   mode hide
+    mode hide
     strip_workspace_numbers yes
     position bottom
+    output DP-0
     colors {
         separator #666666
         background #2e3440
