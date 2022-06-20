@@ -34,13 +34,14 @@ if [ "$machine" == "linux" ]; then
     elif [ -x "$(command -v microsoft-edge-dev)" ]; then
         export BROWSER=microsoft-edge-dev
     fi
-
     export LANG=zh_CN.UTF-8
 
     export GLFW_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
     export GTK_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
-    export QT_IM_MODULE=fcitx
+    export IMSETTINGS_MODULE=fcitx
+    export INPUT_METHOD=fcitx
 
     export LC_ALL=zh_CN.UTF-8
     export LC_CTYPE=
@@ -51,11 +52,11 @@ fi
 
 
 # home-pc
-# xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x136 --rotate left --output DP-0 --primary --mode 2560x1440 --pos 1080x0 --rotate normal --output DP-1 --off --output DVI-D-1 --off
+xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x136 --rotate left --output DP-0 --primary --mode 2560x1440 --pos 1080x0 --rotate normal --output DP-1 --off --output DVI-D-1 --off
 
 # r7000
-xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 2560x359 --rotate normal --output DP-2 --mode 1920x1080 --pos 0x1440 --rotate normal
-export PATH=/home/jessun/.tiup/bin:$PATH
+# xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 2560x359 --rotate normal --output DP-2 --mode 1920x1080 --pos 0x1440 --rotate normal
+# export PATH=/home/jessun/.tiup/bin:$PATH
 
 export GPG_TTY=$(tty)
 
