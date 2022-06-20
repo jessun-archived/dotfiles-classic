@@ -25,9 +25,6 @@ elif [ -f "/usr/bin/vim" ]; then
 fi
 
 if [ "$machine" == "linux" ]; then 
-    # if [ -x "$(command -v setxkbmap)" ]; then
-    #     setxkbmap -option 'caps:ctrl_modifier'
-    # fi
     if [ -x "$(command -v google-chrome-stable)" ]; then
         export BROWSER=google-chrome-stable
     elif [ -x "$(command -v google-chrome-beta)" ]; then
@@ -53,7 +50,11 @@ fi
 #export TERM="xterm-256color"
 
 
-xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x136 --rotate left --output DP-0 --primary --mode 2560x1440 --pos 1080x0 --rotate normal --output DP-1 --off --output DVI-D-1 --off
+# home-pc
+# xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x136 --rotate left --output DP-0 --primary --mode 2560x1440 --pos 1080x0 --rotate normal --output DP-1 --off --output DVI-D-1 --off
+
+# r7000
+xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 2560x359 --rotate normal --output DP-2 --mode 1920x1080 --pos 0x1440 --rotate normal
 export PATH=/home/jessun/.tiup/bin:$PATH
 
 export GPG_TTY=$(tty)
