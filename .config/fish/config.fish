@@ -28,9 +28,6 @@ switch (uname)
             alias pbcopy 'xsel --clipboard --input'
             alias pbpaste 'xsel --clipboard --output'
         end
-        # if type -q 'setxkbmap'
-        #     setxkbmap -option caps:swapescape
-        # end
     case "*"
         echo "unknowon os"
 end
@@ -61,6 +58,8 @@ if type -q 'go'
     alias govet "CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
     alias gomod "go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
 end
+
+alias switch_capslock_esc 'setxkbmap -option caps:swapescape'
 
 # proxy
 alias usesocks5proxy "export all_proxy='$LOCAL_SOCKS5_PROXY'; export http_proxy='$LOCAL_SOCKS5_PROXY'; export https_proxy='$LOCAL_SOCKS5_PROXY'; git config --global http.proxy '$LOCAL_SOCKS5_PROXY'; git config --global https.proxy '$LOCAL_SOCKS5_PROXY'"
