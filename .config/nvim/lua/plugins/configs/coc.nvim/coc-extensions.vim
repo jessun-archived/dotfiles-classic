@@ -44,4 +44,4 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-translator.vim
 let g:coc_global_extensions += ['coc-explorer']
 source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-explorer.vim
 
-source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-maps.vim
+source ~/.config/nvim/lua/plugins/configs/coc.nvim/custom.vim
