@@ -31,6 +31,7 @@ nmap <Leader>cer <Cmd>call CocAction('runCommand', 'explorer.doAction', 'closest
 
 " List all presets
 nmap <space>e <Cmd>CocCommand explorer<CR>
+nnoremap <silent><nowait> <space>o  :<C-u>CocList -A outline<cr>
 
 "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 " function! s:lightline_coc_diagnostic(kind, sign) abort
