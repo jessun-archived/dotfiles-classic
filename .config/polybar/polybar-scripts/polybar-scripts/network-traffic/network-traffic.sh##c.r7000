@@ -27,7 +27,7 @@ print_bit() {
 }
 
 INTERVAL=3
-INTERFACES="wlo1"
+INTERFACES="wlp4s0"
 
 declare -A bytes
 
