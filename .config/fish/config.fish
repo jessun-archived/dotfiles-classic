@@ -154,6 +154,9 @@ if type -q 'rbenv'
     status --is-interactive; and rbenv init - fish | source
 end
 
+# node
+set --universal nvm_default_version lts
+
 # yarn
 if test -d "$HOME/.yarn/bin/"
     set -gx PATH "$HOME/.yarn/bin/" $PATH
