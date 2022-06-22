@@ -27,7 +27,7 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+d exec --no-startup-id /opt/uTools/utools
 # bindsym $mod+Shift+d exec --no-startup-id rofi -show run
-bindsym Print exec flameshot gui
+bindsym Print exec shutter -s
 
 # change focus
 bindsym $mod+h focus left
