@@ -173,7 +173,7 @@ if command -v pazi >/dev/null
   status --is-interactive; and pazi init fish | source
 end
 
-alias sshtomac="sshuttle -r jessun@192.168.3.31 127.0.0.1/0"
+alias sshtomac="sshuttle --dns -NHr jessun@192.168.124.2 127.0.0.1/0 -v"
 
 set -Ux GPG_TTY (tty)
 
