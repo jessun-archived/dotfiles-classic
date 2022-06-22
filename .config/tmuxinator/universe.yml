@@ -52,7 +52,7 @@ windows:
     - cd ~/workbench/actiontech/upgrade
     - git pull --all
   - scripts:
-    - cd ~/workbench/actiontech/scripts-master
+    - cd ~/workbench/actiontech/scripts-main
     - git pull --all
   - usdk:
     - cd ~/workbench/actiontech/usdk-main

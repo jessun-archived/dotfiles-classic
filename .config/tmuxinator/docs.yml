@@ -1,7 +1,7 @@
-# /home/jessun/.config/tmuxinator/universe_doc.yml
+# /home/jessun/.config/tmuxinator/docs.yml
 
-name: universe_doc
-root: ~/workbench/actiontech
+name: docs
+root: /home/jessun/workbench
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,6 +45,15 @@ root: ~/workbench/actiontech
 # attach: false
 
 windows:
-  - doc:
-    - ~/workbench/github.com/jessun/logs
-    - 
+  - logs:
+    - cd /home/jessun/workbench/github.com/jessun/logs
+    - git pull --all
+    - git diff origin/main
+  - blogs:
+    - cd ~/workbench/github.com/jessun/jessun.github.io
+    - git pull --all
+    - git diff origin/main
+  - tools_collections:
+    - cd ~/workbench/github.com/jessun/tools_collections/
+    - git pull --all
+    - git diff origin/main
