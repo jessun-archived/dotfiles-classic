@@ -39,19 +39,17 @@ function Packer:start_up()
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
             use "shaunsingh/nord.nvim"
-            -- use 'stefanvanburen/rams.vim'
-            -- use 'cormacrelf/vim-colors-github'
-            -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
+            use 'stefanvanburen/rams.vim'
+            use 'cormacrelf/vim-colors-github'
             -- use 'flazz/vim-colorschemes' -- including "github", conflict
-            -- use 'rafi/awesome-vim-colorschemes'
-            -- use 'rainglow/vim'
-            -- use 'Sammyalhashe/random_colorscheme.vim'
+            use 'rafi/awesome-vim-colorschemes'
+            use 'rainglow/vim'
+            -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 文本操作 ||||||||||||||||||||||||||||||||||||||||||||
             use "machakann/vim-sandwich" ---------------------=---------------------------------------------- 快速两端文本 ?
             use "github/copilot.vim" ------------------------------------------------------------------------ Github AI 补全
-            -- use "junegunn/vim-peekaboo" --------------------------------------------------------------------- 寄存器 reg 访问
             use "iamcco/markdown-preview.nvim"
             -- use "vim-scripts/fcitx.vim"
             -- use { "nvim-orgmode/orgmode" } ------------------------------------------------------------------ Org 文档
