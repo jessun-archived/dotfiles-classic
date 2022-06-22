@@ -46,7 +46,7 @@ install_arch_packages(){
     #yay -S feishu-bin --noconfirm
     #yay -S filezilla --noconfirm
     #yay -S fish --noconfirm
-    #yay -S flameshot --noconfirm
+    #yay -S shutter --noconfirm
     #yay -S font-manager --noconfirm
     #yay -S github-cli --noconfirm
     #yay -S gnome-disk-utility --noconfirm
