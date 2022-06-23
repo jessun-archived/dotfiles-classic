@@ -46,7 +46,7 @@ root: ~/workbench/actiontech/
 
 windows:
   - master:
-    - cd ~/workbench/actiontech/sqle-classic
+    - cd ~/workbench/actiontech/sqle-classic-main
     - git pull --all
   - upgrade:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
