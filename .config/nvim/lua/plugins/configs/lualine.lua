@@ -105,7 +105,7 @@ require("lualine").setup {
                 end
             }
         },
-        lualine_c = { "aerial" },
+        -- lualine_c = { "aerial" },
         lualine_x = {},
         lualine_y = {},
         lualine_z = {
