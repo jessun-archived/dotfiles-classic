@@ -249,7 +249,7 @@ bar {
 
 {% if yadm.class == "r7000" %}
 # specific config for r7000
-    output DP-0
+    output DP-2
 {% endif %}
 
 {% if yadm.class == "home-pc" %}
