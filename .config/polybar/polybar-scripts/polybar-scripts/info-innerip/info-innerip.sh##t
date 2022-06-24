@@ -1,6 +1,8 @@
 #!/bin/sh
 
+{% if yadm.class == "r7000" %}
 ITF="wlp4s0"
+{% endif %}
 
 ipaddr=$(ip addr show $ITF | grep 'inet ' | awk '{print $2}' | cut -f1 -d'/')
 echo "IP:$ipaddr"
