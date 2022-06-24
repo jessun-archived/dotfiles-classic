@@ -71,10 +71,13 @@ install_arch_packages(){
     #yay -S seahorse --noconfirm
     yay -S apifox kazam cmake --noconfirm
     yay -S docker --noconfirm
+    pip3 install rofi-tmux --user
 }
 
 remove_useless_pacages(){
     yay -R onlyoffice-desktopeditors 
+    yay -R gnome-chess
+    yay -R quadrapassel
 }
 
 install_arch_fonts(){
