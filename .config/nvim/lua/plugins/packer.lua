@@ -41,7 +41,7 @@ function Packer:start_up()
             use "shaunsingh/nord.nvim"
             use 'stefanvanburen/rams.vim'
             use 'cormacrelf/vim-colors-github'
-            -- use 'flazz/vim-colorschemes' -- including "github", conflict
+            use 'flazz/vim-colorschemes' -- including "github", conflict
             use 'rafi/awesome-vim-colorschemes'
             use 'rainglow/vim'
             -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
