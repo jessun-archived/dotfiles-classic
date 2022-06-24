@@ -280,7 +280,7 @@ type = custom/script
 ;interval = 3.0
 ;accumulate-stats = true
 ;unknown-as-up = true
-exec = ~/.config/polybar/polybar-scripts/polybar-scripts/info-innerip/info-innerip.sh
+exec = bash ~/.config/polybar/polybar-scripts/polybar-scripts/info-innerip/info-innerip.sh
 tail = true
 format-underline = #9f78e1
 
