@@ -45,6 +45,7 @@ if type -q 'git'
     alias gdelete-all-branches='git branch | grep -v "master" | xargs git branch -D'
     alias gdebug='git add . && git commit -m "DEBUG" && git push'
     alias grebase='git pull --all && git rebase -i origin/master'
+    alias git_push_current='git push origin (git rev-parse --abbrev-ref HEAD)'
     alias git_push_current_force='git push -f origin (git rev-parse --abbrev-ref HEAD)'
 end
  
