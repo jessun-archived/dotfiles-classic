@@ -4,5 +4,10 @@
 ITF="wlp4s0"
 {% endif %}
 
+{% if yadm.class == "home-pc" %}
+ITF="wlo1"
+{% endif %}
+
+
 ipaddr=$(ip addr show $ITF | grep 'inet ' | awk '{print $2}' | cut -f1 -d'/')
 echo "IP:$ipaddr"
