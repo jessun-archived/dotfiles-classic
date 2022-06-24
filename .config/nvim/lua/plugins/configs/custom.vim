@@ -4,6 +4,13 @@ augroup auto_save_session
   autocmd VimEnter,BufWritePost,VimLeavePre,CursorMoved,CursorMovedI * :mksession!
 augroup END
 "=========================== session }
+"
+"=========================== session {
+augroup bootstrap_filetype
+  au!
+  autocmd BufRead ~/.config/yadm/bootstrap  set syntax=bash
+augroup END
+"=========================== session }
 
 "=========================== golang highlight }
 let g:go_highlight_functions = 1
