@@ -47,6 +47,8 @@ if [ "$machine" == "linux" ]; then
     export LC_CTYPE=
 fi
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 [ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
 #export TERM="xterm-256color"
 

@@ -322,14 +322,24 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+F1 exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+F1 exec rofi-tmux lp
 
-bindsym $mod+F2 exec rofi -modi drun -show run \
-		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+F2 exec rofi-tmux sw
 
-bindsym $mod+F3 exec rofi -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+F3 exec rofi -show window
+
+bindsym $mod+F4 exec rofi -show drun
+
+bindsym $mod+F5 exec rofi -modi drun -show run
+
+#bindsym $mod+F1 exec rofi -show window \
+#		-config ~/.config/rofi/rofidmenu.rasi
+#
+#bindsym $mod+F2 exec rofi -modi drun -show run \
+#		-config ~/.config/rofi/rofidmenu.rasi
+#
+#bindsym $mod+F3 exec rofi -show drun \
+#		-config ~/.config/rofi/rofidmenu.rasi
 
 bindsym Ctrl+F1 exec ~/.config/i3/scripts/keyhint-2
 
