@@ -48,19 +48,20 @@ if [ "$machine" == "linux" ]; then
 fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 [ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
+export GPG_TTY=$(tty)
+
+
 #export TERM="xterm-256color"
-
-
 # home-pc
 #xrandr --output DVI-D-0 --off --output HDMI-0 --mode 1920x1080 --pos 0x136 --rotate left --output DP-0 --primary --mode 2560x1440 --pos 1080x0 --rotate normal --output DP-1 --off --output DVI-D-1 --off
 
 # r7000
 xrandr --output DP-0 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output HDMI-0 --mode 1920x1080 --pos 0x588 --rotate normal --output DP-2 --mode 1920x1080 --pos 3996x1440 --rotate normal
-# export PATH=/home/jessun/.tiup/bin:$PATH
 
-export GPG_TTY=$(tty)
+{% if yadm.class == "r7000" %}
+{% endif %}
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
