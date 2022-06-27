@@ -4,7 +4,7 @@ set -e # return when got an error
 }
 
 init_arch_base_packages(){
-    yay -S socat
+    yay -S socat --noconfirm
     yay --answerdiff Installed --answerclean Installed --answeredit Installed --answerupgrade Repo --answerdiff Installed --nodiffmenu --noconfirm --useask --save
     yay -S base-devel bison cmdline socat --noconfirm
     yay -S yarn --noconfirm
