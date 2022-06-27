@@ -60,6 +60,8 @@ if type -q 'go'
     alias gomod "go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
 end
 
+alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/*'
+
 alias switch_capslock_esc 'setxkbmap -option caps:swapescape'
 
 # proxy
