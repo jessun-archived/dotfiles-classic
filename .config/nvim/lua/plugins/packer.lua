@@ -51,7 +51,6 @@ function Packer:start_up()
             use "machakann/vim-sandwich" ---------------------=---------------------------------------------- 快速两端文本 ?
             use "github/copilot.vim" ------------------------------------------------------------------------ Github AI 补全
             use "iamcco/markdown-preview.nvim"
-            -- use "vim-scripts/fcitx.vim"
             -- use { "nvim-orgmode/orgmode" } ------------------------------------------------------------------ Org 文档
             -- use { "akinsho/org-bullets.nvim" } -------------------------------------------------------------- Org 文档
             -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
@@ -71,6 +70,10 @@ function Packer:start_up()
             --||||||||||||||||||||||||||||||||||||||||| 编码工具 ||||||||||||||||||||||||||||||||||||||||||||
             -- use "stevearc/aerial.nvim" ---------------------------------------------------------------------- 代码大纲
             use "numToStr/Comment.nvim" --------------------------------------------------------------------- 代码注释
+            use {
+                "SmiteshP/nvim-gps",
+                requires = "nvim-treesitter/nvim-treesitter"
+            }
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||

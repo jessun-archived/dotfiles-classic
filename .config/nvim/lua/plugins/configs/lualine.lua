@@ -1,3 +1,5 @@
+local gps = require("nvim-gps")
+
 local colors = {
     red = "#ca1243",
     grey = "#a0a1a7",
@@ -76,6 +78,44 @@ require("lualine").setup {
                 always_visible = true, -- Show diagnostics even if there are none.
                 -- update_in_insert = true -- Update diagnostics in insert mode.
             },
+            -- {
+            --     "diff",
+            --     colored = true, -- Displays a colored diff status if set to true
+            --     symbols = { added = "+", modified = "~", removed = "-" }, -- Changes the symbols used by the diff.
+            --     diff_color = {
+            --         added    = 'DiffAdd', -- Changes the diff's added color
+            --         modified = 'DiffChange', -- Changes the diff's modified color
+            --         removed  = 'DiffDelete', -- Change
+            --     },
+            -- },
+            -- {
+            --     "%w",
+            --     cond = function()
+            --         return vim.wo.previewwindow
+            --     end
+            -- },
+            -- {
+            --     "%r",
+            --     cond = function()
+            --         return vim.bo.readonly
+            --     end
+            -- },
+            -- {
+            --     "%q",
+            --     cond = function()
+            --         return vim.bo.buftype == "quickfix"
+            --     end
+            -- }
+        },
+        lualine_c = {
+        },
+        lualine_x = {
+            {
+                search_result,
+                -- color = { fg = colors.grey, bg = colors.nord3 }
+            },
+        },
+        lualine_y = {
             {
                 "diff",
                 colored = true, -- Displays a colored diff status if set to true
@@ -86,28 +126,7 @@ require("lualine").setup {
                     removed  = 'DiffDelete', -- Change
                 },
             },
-            {
-                "%w",
-                cond = function()
-                    return vim.wo.previewwindow
-                end
-            },
-            -- {
-            --     "%r",
-            --     cond = function()
-            --         return vim.bo.readonly
-            --     end
-            -- },
-            {
-                "%q",
-                cond = function()
-                    return vim.bo.buftype == "quickfix"
-                end
-            }
         },
-        -- lualine_c = { "aerial" },
-        lualine_x = {},
-        lualine_y = {},
         lualine_z = {
             {
                 "%l:%c",
@@ -115,6 +134,10 @@ require("lualine").setup {
             },
             {
                 "%p%%/%L",
+                -- color = { fg = colors.grey, bg = colors.nord3 }
+            },
+            {
+                "filetype",
                 -- color = { fg = colors.grey, bg = colors.nord3 }
             },
         }
@@ -131,14 +154,7 @@ require("lualine").setup {
         lualine_x = {},
         lualine_y = {},
         lualine_z = {
-            {
-                search_result,
-                -- color = { fg = colors.grey, bg = colors.nord3 }
-            },
-            {
-                "filetype",
-                -- color = { fg = colors.grey, bg = colors.nord3 }
-            }
+            { gps.get_location, cond = gps.is_available },
         },
     }
 }
