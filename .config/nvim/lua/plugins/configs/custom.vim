@@ -22,6 +22,5 @@ let g:go_highlight_build_constraints = 1
 "=========================== golang highlight }
 
 "=========================== colorscheme {
-" colorscheme nord
-colorscheme atom
+colorscheme nord
 "=========================== colorscheme }
