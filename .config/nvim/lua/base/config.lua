@@ -30,8 +30,8 @@ function Config:load_config()
     vim_global_options.nrformats = "" -- 数字格式
     vim_global_options.showmatch = true -- 显示匹配的括号
     vim_global_options.tabpagemax = 30 -- VIM 打开 tab 的最大数量
-    vim_global_options.cursorcolumn = false -- 显示光标所在的列
-    vim_global_options.cursorline = false -- 显示光标所在的行
+    vim_global_options.cursorcolumn = true -- 显示光标所在的列
+    vim_global_options.cursorline = true -- 显示光标所在的行
 
     vim_global_options.wildmenu = true
     vim_global_options.wildmode = "longest:full,full" -- 当按下 <Tab> 时，显示全部匹配的语法项目
