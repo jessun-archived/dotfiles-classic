@@ -1,7 +1,7 @@
-# /home/jessun/.config/tmuxinator/ustats.yml
+# /home/jessun/.config/tmuxinator/sqle-universe.yml
 
-name: ustats
-root: ~/workbench/actiontech/ustats-master
+name: sqle-universe
+root: ~/workbench/actiontech/
 
 # Optional tmux socket
 # socket_name: foo
@@ -46,9 +46,9 @@ root: ~/workbench/actiontech/ustats-master
 
 windows:
   - master:
-    - cd ~/workbench/actiontech/ustats-main
+    - cd ~/workbench/actiontech/sqle-ee-with-wrapper
     - git pull --all
   - upgrade:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
-    - cd ~/workbench/actiontech/ustats
+    - cd ~/workbench/actiontech/sqle-ee-with-wrapper
 

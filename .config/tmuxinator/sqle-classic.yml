@@ -50,5 +50,5 @@ windows:
     - git pull --all
   - upgrade:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
-    - cd ~/workbench/actiontech/sqle
+    - cd ~/workbench/actiontech/sqle-classic
 

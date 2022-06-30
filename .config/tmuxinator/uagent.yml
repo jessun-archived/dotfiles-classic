@@ -46,7 +46,7 @@ root: ~/workbench/actiontech/uagent-master/
 
 windows:
   - master:
-    - cd ~/workbench/actiontech/uagent-master/
+    - cd ~/workbench/actiontech/uagent-main/
     - git pull --all
   - upgrade:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
