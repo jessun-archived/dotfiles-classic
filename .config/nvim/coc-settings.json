@@ -9,7 +9,9 @@
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": [],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "go"
+    ],
     "dialog.rounded": false,
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
