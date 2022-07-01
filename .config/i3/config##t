@@ -17,7 +17,8 @@ font xft:URWGothic-Book 11
 
 floating_modifier $mod
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec gnome-terminal
+#bindsym $mod+Return exec alacritty
 #bindsym $mod+Return exec kitty
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 
