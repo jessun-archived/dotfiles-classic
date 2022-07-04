@@ -46,7 +46,7 @@ root: ~/workbench/actiontech/ucore-master
 
 windows:
   - master:
-    - cd ~/workbench/actiontech/ucore-master
+    - cd ~/workbench/actiontech/ucore-main/
     - git pull --all
   - upgrade:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
