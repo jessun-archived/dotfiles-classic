@@ -49,6 +49,6 @@ windows:
     - cd ~/workbench/actiontech/upgrade
     - git pull --all
   - upgrade:
-    - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
+    - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.61.41
     - cd ~/workbench/actiontech/upgrade
 

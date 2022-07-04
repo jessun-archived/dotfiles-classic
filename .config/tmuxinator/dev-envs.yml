@@ -57,7 +57,7 @@ windows:
     - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.61.198
     - cd quick-usage/deploy/
 
-  - (63.135):
-    - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.63.135
+  - (61.41-dev):
+    - ssh -i ~/MEGAsync/actionsky/ssh/id_rsa root@10.186.61.41
     - cd ~/workbench/actiontech/
 

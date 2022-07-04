@@ -46,7 +46,7 @@ root: ~/workbench/actiontech
 
 windows:
   - udp:
-    - cd ~/workbench/actiontech/udp-master
+    - cd ~/workbench/actiontech/udp-main
     - git pull --all
   - upgrade:
     - cd ~/workbench/actiontech/upgrade
