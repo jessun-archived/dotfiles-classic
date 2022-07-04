@@ -62,9 +62,6 @@ require("lualine").setup {
         },
         lualine_b = {
             {
-                "branch",
-            },
-            {
                 "diagnostics",
                 source = { "nvim", "nvim_diagnostic", "coc" },
                 diagnostics_color = {
@@ -77,6 +74,9 @@ require("lualine").setup {
                 colored = true, -- Displays diagnostics status in color if set to true.
                 always_visible = true, -- Show diagnostics even if there are none.
                 -- update_in_insert = true -- Update diagnostics in insert mode.
+            },
+            {
+                "branch",
             },
             -- {
             --     "diff",
