@@ -45,8 +45,11 @@ if type -q 'git'
     alias gdelete-all-branches='git branch | grep -v "master" | xargs git branch -D'
     alias gdebug='git add . && git commit -m "DEBUG" && git push'
     alias grebase='git pull --all && git rebase -i origin/master'
-    alias git_push_current='git push origin (git rev-parse --abbrev-ref HEAD)'
-    alias git_push_current_force='git push -f origin (git rev-parse --abbrev-ref HEAD)'
+    alias git-push-current='git push origin (git rev-parse --abbrev-ref HEAD)'
+    alias git-push-current-force='git push -f origin (git rev-parse --abbrev-ref HEAD)'
+    alias copy-current-branch-name='echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
+    alias master='git checkout master'
+    alias main='git checkout main'
 end
  
 
@@ -60,7 +63,7 @@ if type -q 'go'
     alias gomod "go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
 end
 
-alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/*'
+alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/* && tmux kill-server'
 
 alias switch_capslock_esc 'setxkbmap -option caps:swapescape'
 
