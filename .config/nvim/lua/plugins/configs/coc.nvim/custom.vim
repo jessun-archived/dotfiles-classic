@@ -22,6 +22,8 @@ nmap <leader>m  :CocList marks<CR>
 xmap <leader>k  :CocList maps<CR>
 nmap <leader>k  :CocList maps<CR>
 
+nnoremap <silent><nowait> <space>r  :<C-u>CocListResume<CR>
+
 nmap <space>ced <Cmd>CocCommand explorer --preset .vim<CR>
 nmap <space>cef <Cmd>CocCommand explorer --preset floating<CR>
 nmap <space>cec <Cmd>CocCommand explorer --preset cocConfig<CR>
