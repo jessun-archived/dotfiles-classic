@@ -133,6 +133,8 @@ install_golang(){
     fish
     gvm install go1.17.9
     gvm use go1.17.9 --default
+    omf install https://github.com/JGAntunes/fish-gvm
+    omf install https://github.com/edc/bass
 }
 
 install_rust_package(){
