@@ -44,6 +44,8 @@ function Packer:start_up()
             use 'flazz/vim-colorschemes' -- including "github", conflict
             use 'rafi/awesome-vim-colorschemes'
             use 'rainglow/vim'
+            use 'kaiuri/nvim-mariana'
+
             -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
             --
