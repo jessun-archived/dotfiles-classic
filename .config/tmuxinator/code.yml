@@ -46,4 +46,4 @@ root: ~/workbench/
 
 windows:
   - rust:
-    - cd ~/workbench/github.com/jessun/rust-practice
+    - cd ~/workbench/github/
