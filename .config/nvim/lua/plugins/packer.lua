@@ -44,7 +44,6 @@ function Packer:start_up()
             use 'flazz/vim-colorschemes' -- including "github", conflict
             use 'rafi/awesome-vim-colorschemes'
             use 'rainglow/vim'
-            use 'kaiuri/nvim-mariana'
 
             -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
@@ -63,6 +62,15 @@ function Packer:start_up()
             -- use "ellisonleao/carbon-now.nvim" --------------------------------------------------------------- 代码生成图像
             use "dstein64/vim-startuptime"
             --
+            --
+            --||||||||||||||||||||||||||||||||||||||||| 目录管理 ||||||||||||||||||||||||||||||||||||||||||||
+            use {
+                'kyazdani42/nvim-tree.lua',
+                requires = {
+                    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+                },
+                tag = 'nightly' -- optional, updated every week. (see issue #1193)
+            }
             --
             --||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
             -- use {"sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim"} --------------------------- 差异比较
