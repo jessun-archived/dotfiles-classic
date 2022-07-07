@@ -20,3 +20,5 @@ ushard
 ustats
 wanghao
 DUPL
+Usql
+udms

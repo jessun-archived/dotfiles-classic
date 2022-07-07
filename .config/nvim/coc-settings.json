@@ -46,9 +46,6 @@
     "rust-analyzer.server.path": "rust-analyzer",
     // coc-spell-checker
     "cSpell.userWords": [
-        "Hgdol",
-        "Thanos",
-        "udms"
     ],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
@@ -215,7 +212,7 @@
         "<cr>": [
             "wait",
             "expandable?",
-            "cd",
+            "expand",
             "open"
         ],
         "e": "open",

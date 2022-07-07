@@ -8,6 +8,7 @@ Fira
 GONOSUMDB
 Gliffy
 Gorm
+Hgdol
 Hoare
 Inconsolata
 JDBC
@@ -18,9 +19,11 @@ Meslo
 Mycnf
 Mysqlbatis
 Mysqld
+NUMA
 Noto
 Rpcf
 Schwarz
+Thanos
 Unscoped
 Unstage
 Untracked
@@ -66,6 +69,7 @@ jessun
 jinzhu
 journalctl
 junegunn
+libc
 macos
 mccabe
 metas
@@ -87,6 +91,8 @@ picgo
 processon
 procfs
 procs
+promql
+proto
 protobuf
 psubscribe
 psubscription
@@ -105,6 +111,7 @@ setaswall
 shalzz
 smartf
 snmp
+somaxconn
 sqle
 sqlx
 startuml
@@ -115,6 +122,7 @@ sumneko
 tabc
 tabo
 tindy
+tlsv
 tmuxinator
 todesk
 tokei
@@ -130,9 +138,3 @@ yapf
 youdao
 zfunc
 zhangsan
-NUMA
-libc
-promql
-proto
-somaxconn
-tlsv
