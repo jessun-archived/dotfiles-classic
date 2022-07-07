@@ -45,9 +45,11 @@ root: ~/workbench/github.com
 # attach: false
 
 windows:
-  - main:
-    - cd ~/workbench/github.com/jessun/sqle-master
+  - ce-main:
+    - cd ~/workbench/github.com/jessun/sqle-ce-main
     - git pull --all
   - auto_test:
     - cd ~/workbench/actiontech/sqle_auto_test/
+  - ee-main:
+    - cd ~/workbench/github.com/sqle-ee-main
 
