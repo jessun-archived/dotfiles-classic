@@ -8,7 +8,7 @@ Session.vim*
 .cargo/
 .python-version
 
-pvt.yaml
-pvt.yml
+known_hosts
+known_hosts.old
 
 upgrade_by_bin.sh
