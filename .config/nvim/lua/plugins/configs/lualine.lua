@@ -1,3 +1,5 @@
+local gps = require("nvim-gps")
+
 local colors = {
     black      = "#383a42",
     dark_green = "#196F3D",
@@ -145,7 +147,9 @@ require("lualine").setup {
             }
         },
         lualine_x = {},
-        lualine_y = {},
+        lualine_y = {
+            { gps.get_location, cond = gps.is_available },
+        },
         lualine_z = {
             { "%l:%c", }, { "%p%%/%L", },
             { "filetype", },
