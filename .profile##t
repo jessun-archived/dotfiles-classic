@@ -24,7 +24,7 @@ elif [ -f "/usr/bin/vim" ]; then
     export EDITOR="/usr/bin/vim"
 fi
 
-if [ "$machine" == "linux" ]; then 
+if [ "$machine"=="linux" ]; then 
     if [ -x "$(command -v google-chrome-stable)" ]; then
         export BROWSER=google-chrome-stable
     elif [ -x "$(command -v google-chrome-beta)" ]; then
