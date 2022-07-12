@@ -5,9 +5,14 @@
 # ===============================
 #
 # ======== Var Definition =======
+
+{% if yadm.class=="actiontech-dev" %}
+export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
+export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
+{% else %}
 export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
 export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
-export HISTIGNORE='*sudo -S*'
+{% endif %}
 
 # https://wiki.archlinux.org/title/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Keyring_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86
 if test -n "$DESKTOP_SESSION"
