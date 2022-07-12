@@ -10,7 +10,7 @@
     find-merge     = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
     show-merge     = "!sh -c 'merge=$(git find-merge $0 $1) && [ -n \"$merge\" ] && git show $merge'"
 [core]
-    editor         = "nvim"
+    editor         = "vim"
     quotepath      = false
 	hooksPath = /home/jessun/.config/git/hooks/
 [diff]
@@ -27,9 +27,9 @@
 [includeIf "gitdif:~"]
     path = ~/.config/git/gitconfig
 [http]
-	proxy = 127.0.0.1:1087
+	proxy = 
 [https]
-	proxy = 127.0.0.1:1087
+	proxy = 
 [receive]
 	denyNonFastForwards = true
 	denyDeletes = true
