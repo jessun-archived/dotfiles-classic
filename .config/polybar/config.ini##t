@@ -54,7 +54,7 @@ font-4 = "material icons:pixelsize=16;3"
 
 modules-left = i3 xwindow
 modules-center =
-modules-right = gmail filesystem ip network memory cpu temperature alsa date powermenu
+modules-right = filesystem ip network memory cpu temperature alsa date powermenu
 
 tray-position = right
 tray-padding = 2
