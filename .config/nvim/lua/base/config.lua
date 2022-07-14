@@ -35,7 +35,7 @@ function Config:load_config()
 
     vim_global_options.wildmenu = true
     vim_global_options.wildmode = "longest:full,full" -- 当按下 <Tab> 时，显示全部匹配的语法项目
-    -- vim_global_options.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
+    vim_global_options.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
     -- vim_global_options.textwidth = 80 -- 文本宽度
     vim_global_options.relativenumber = true -- 是否显示相对行号
     vim_global_options.foldlevelstart = 20 -- 折叠级别的起始值
