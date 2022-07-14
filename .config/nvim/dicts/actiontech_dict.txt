@@ -1,10 +1,13 @@
+DUPL
 Dble
+Sqle
 Udeploy
 Uelasticsearch
 Ulogstash
 Umds
 Uproxy
 Urman
+Usql
 Uterm
 sqled
 uagent
@@ -12,6 +15,7 @@ ucommon
 ucontext
 ucore
 uctx
+udms
 uguard
 uinterface
 umetadata
@@ -19,6 +23,4 @@ umon
 ushard
 ustats
 wanghao
-DUPL
-Usql
-udms
+sqle
