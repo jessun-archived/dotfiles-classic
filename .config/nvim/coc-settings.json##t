@@ -25,7 +25,11 @@
     ],
     "list.source.files.args": ["--hidden","--files"],
     "session.saveOnVimLeave": true,
+{% if yadm.class == "actiontech-dev" %}
+    "http.proxy": "http://10.186.61.41:1087",
+{% else %}
     "http.proxy": "http://127.0.0.1:1087",
+{% endif %}
     "languageserver": {},
     // coc-highlight
     "colors.filetypes": [
