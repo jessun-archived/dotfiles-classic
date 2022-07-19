@@ -9,6 +9,8 @@
 {% if yadm.class=="actiontech-dev" %}
 export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
 export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
+set -g __fish_prompt_hostname "10.186.16.118"
+
 {% else %}
 export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
 export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
@@ -173,7 +175,7 @@ if test -d "$HOME/.yarn/bin/"
     set -gx PATH "$HOME/.yarn/bin/" $PATH
 end
 # ===============================
-export GOPRIVATE=actiontech.cloud
+export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
 export GOINSECURE=actiontech.cloud
 
 if type -q 'exa'
