@@ -74,11 +74,19 @@
     "cSpell.dictionaryDefinitions": [
         {
             "name": "actiontech_dict",
+{% if yadm.class == "actiontech-dev" %}
+            "path": "/home/jessun-dev/.config/nvim/dicts/actiontech_dict.txt"
+{% else %}
             "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"
+{% endif %}
         },
         {
             "name": "personal_dict",
-            "path": "/home/jessun/.config/nvim/dicts/personal_dict.txt"
+{% if yadm.class == "actiontech-dev" %}
+            "path": "/home/jessun-dev/.config/nvim/dicts/personal_dict.txt"
+{% else %}
+            "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"
+{% endif %}
         }
     ],
     "cSpell.ignorePaths": [
