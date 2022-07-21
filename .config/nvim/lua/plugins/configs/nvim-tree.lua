@@ -15,6 +15,9 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = true,
     },
+    git = {
+        ignore = false,
+    },
 })
 
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
