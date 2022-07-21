@@ -48,13 +48,13 @@ end
 
 # git
 if type -q 'git'
-    alias gdelete-merged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
-    alias gdelete-all-branches='git branch | grep -v "master" | xargs git branch -D'
-    alias gdebug='git add . && git commit -m "DEBUG" && git push'
-    alias grebase='git pull --all && git rebase -i origin/master'
-    alias git-push-current='git push -u origin (git rev-parse --abbrev-ref HEAD)'
-    alias git-push-current-force='git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
-    alias copy-current-branch-name='echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
+    alias gitdeletemerged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
+    alias gitdeleteallbranches='git branch | grep -v "master" | xargs git branch -D'
+    alias gitcommitdebug='git add . && git commit -m "DEBUG" && git push'
+    alias gitrebasemaster='git pull --all && git rebase -i origin/master'
+    alias gitpushcurrent='git push -u origin (git rev-parse --abbrev-ref HEAD)'
+    alias gitpushcurrentforce='git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
+    alias copycurrentbranchname='echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
     alias master='git checkout master'
     alias main='git checkout main'
 end
@@ -67,7 +67,7 @@ if type -q 'go'
     # alias golangci="docker run --rm -v (pwd):/app -w /app golangci/golangci-lint:v1.43.0 golangci-lint run"
     alias golangcirun "golangci-lint run"
     alias govet "CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
-    alias gomod "go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
+    alias gomod "http_porxy="" https_proxy="" all_proxy="" go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
 end
 
 alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/* && tmux kill-server'
