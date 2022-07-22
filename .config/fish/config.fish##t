@@ -172,7 +172,8 @@ set --universal nvm_default_version lts
 
 # yarn
 if test -d "$HOME/.yarn/bin/"
-    set -gx PATH "$HOME/.yarn/bin/" $PATH end
+    set -gx PATH "$HOME/.yarn/bin/" $PATH 
+end
 # ===============================
 export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
 export GOINSECURE=actiontech.cloud
