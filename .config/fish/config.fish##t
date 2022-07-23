@@ -1,29 +1,34 @@
 # ===============================
-# Author: jessun1990@gmail.com
+# Author: jessun.zhang@outlook.com
 # Useage: fish shell config file
 # Location: ~/.config/fish/config.fish
 # ===============================
-#
-# ======== Var Definition =======
 
+
+
+# ====================== Var Definition ====================== {
 {% if yadm.class=="actiontech-dev" %}
-export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
-export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
-set -g __fish_prompt_hostname "10.186.16.118"
-
+    export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
+    export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
+    set -g __fish_prompt_hostname "10.186.16.118"
 {% else %}
-export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
-export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
+    export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
+    export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
 {% endif %}
+# ====================== Var Definition ====================== }
 
+
+
+# ====================== Gnome Keyring  ====================== {
 # https://wiki.archlinux.org/title/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Keyring_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86
 if test -n "$DESKTOP_SESSION"
     set (gnome-keyring-daemon --start | string split "=")
 end
-# ===============================
-#
-# ============= OS ==============
+# ====================== Gnome Keyring  ====================== }
 
+
+
+# ====================== Commands alias ====================== {
 switch (uname)
     case 'Darwin'
         alias vim '/Applications/MacVim.app/Contents/bin/vim'
@@ -38,107 +43,75 @@ switch (uname)
     case "*"
         echo "unknowon os"
 end
-# ===============================
-# 
-# ============ Alias ============
-# emacs
-if type -q 'emacs'
-   alias e='emacs -nw'
-end
-
-# git
-if type -q 'git'
-    alias gitdeletemerged='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
-    alias gitdeleteallbranches='git branch | grep -v "master" | xargs git branch -D'
-    alias gitcommitdebug='git add . && git commit -m "DEBUG" && git push'
-    alias gitrebasemaster='git pull --all && git rebase -i origin/master'
-    alias gitpushcurrent='git push -u origin (git rev-parse --abbrev-ref HEAD)'
-    alias gitpushcurrentforce='git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
-    alias copycurrentbranchname='echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
-    alias master='git checkout master'
-    alias main='git checkout main'
-end
- 
-
-#alias nvim "nvim -u ~/.config/nvim/init.lua"
-alias nvim_classic "nvim -u ~/.config/nvim/init-classic.vim"
-
-if type -q 'go'
-    # alias golangci="docker run --rm -v (pwd):/app -w /app golangci/golangci-lint:v1.43.0 golangci-lint run"
-    alias golangcirun "golangci-lint run"
-    alias govet "CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
-    alias gomod "http_porxy="" https_proxy="" all_proxy="" go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
-end
-
-alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/* && tmux kill-server'
 
 alias switch_capslock_esc 'setxkbmap -option caps:swapescape'
+alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/* && tmux kill-server'
+# ====================== Commands alias ====================== }
 
-# proxy
-alias usesocks5proxy "export all_proxy='$LOCAL_SOCKS5_PROXY'; export http_proxy='$LOCAL_SOCKS5_PROXY'; export https_proxy='$LOCAL_SOCKS5_PROXY'; git config --global http.proxy '$LOCAL_SOCKS5_PROXY'; git config --global https.proxy '$LOCAL_SOCKS5_PROXY'"
-alias usehttpproxy "export all_proxy='$LOCAL_HTTP_PROXY'; export http_proxy='$LOCAL_HTTP_PROXY'; export https_proxy='$LOCAL_HTTP_PROXY'; git config --global http.proxy '$LOCAL_HTTP_PROXY'; git config --global https.proxy '$LOCAL_HTTP_PROXY'"
-alias cleanallproxy "export all_proxy=; export http_proxy=; export https_proxy=; git config --global http.proxy ''; git config --global https.proxy ''"
 
-# shell proxy
-alias shellusesocks5proxy "export all_proxy='$LOCAL_SOCKS5_PROXY'; export http_proxy='$LOCAL_SOCKS5_PROXY'; export https_proxy='$LOCAL_SOCKS5_PROXY'"
-alias shellusehttpproxy "export all_proxy='$LOCAL_HTTP_PROXY'; export http_proxy='$LOCAL_HTTP_PROXY'; export https_proxy='$LOCAL_HTTP_PROXY'"
 
-# git proxy
+# ======================== Git alias ======================== {
 if type -q 'git'
+    alias copycurrentbranchname 'echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
+    alias gitcleanproxy "git config --global http.proxy ''; git config --global https.proxy ''"
+    alias gitcommitdebug 'git add . && git commit -m "DEBUG" && git push'
+    alias gitdeleteallbranches 'git branch | grep -v "master" | xargs git branch -D'
+    alias gitdeletemerged 'git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
+    alias gitpushcurrent 'git push -u origin (git rev-parse --abbrev-ref HEAD)'
+    alias gitpushcurrentforce 'git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
+    alias gitrebasemaster 'git pull --all && git rebase -i origin/master'
     alias gitusehttpproxy "git config --global http.proxy '$LOCAL_HTTP_PROXY'; git config --global https.proxy '$LOCAL_HTTP_PROXY'"
     alias gitusesocks5proxy "git config --global http.proxy '$LOCAL_SOCKS5_PROXY'; git config --global https.proxy '$LOCAL_SOCKS5_PROXY'"
-    alias gitcleanproxy "git config --global http.proxy ''; git config --global https.proxy ''"
-    if type -q 'vim'
-        alias gitfix 'git diff --name-only | uniq | xargs nvim '
-    end
-    if type -q 'nvim'
-        alias gitfix 'git diff --name-only | uniq | xargs nvim '
-    end
-    if type -q 'code'
-        alias codefix 'git diff --name-only | uniq | xargs code '
-    end
-    if type -q 'code-insiders'
-        alias codefix 'git diff --name-only | uniq | xargs code-insiders '
-    end
-    alias gitdiff 'git difftool'
+    alias main 'git checkout main'
+    alias master 'git checkout master'
 end
-# ===============================
-#
-# ========== Env Vars ===========
+# ======================== Git alias ======================== }
+
+
+
+# ========================== Golang ========================== {
+if type -q 'go'
+    alias goalngcirundocker "docker run --rm -v (pwd):/app -w /app golangci/golangci-lint:v1.43.0 golangci-lint run"
+    alias golangcirun "golangci-lint run"
+    alias govet "CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
+    alias gomodnoproxy "http_porxy="" https_proxy="" all_proxy="" go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
+
+    # Golang environment
+    export GO111MODULE=on
+    export GOPROXY=goproxy.cn,goproxy.io,direct 
+    export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
+    export GOINSECURE=actiontech.cloud
+
+    # Gvm
+    if test -e "$HOME/.gvm/environments/default"
+        bass source "$HOME/.gvm/environments/default"
+    end
+end
+# ========================== Golang ========================== {
+
+
+
+# ======================== Proxy alias ======================= {
+alias cleanallproxy "export all_proxy=; export http_proxy=; export https_proxy=; git config --global http.proxy ''; git config --global https.proxy ''"
+alias shellusehttpproxy "export all_proxy='$LOCAL_HTTP_PROXY'; export http_proxy='$LOCAL_HTTP_PROXY'; export https_proxy='$LOCAL_HTTP_PROXY'"
+alias shellusesocks5proxy "export all_proxy='$LOCAL_SOCKS5_PROXY'; export http_proxy='$LOCAL_SOCKS5_PROXY'; export https_proxy='$LOCAL_SOCKS5_PROXY'"
+alias usehttpproxy "export all_proxy='$LOCAL_HTTP_PROXY'; export http_proxy='$LOCAL_HTTP_PROXY'; export https_proxy='$LOCAL_HTTP_PROXY'; git config --global http.proxy '$LOCAL_HTTP_PROXY'; git config --global https.proxy '$LOCAL_HTTP_PROXY'"
+alias usesocks5proxy "export all_proxy='$LOCAL_SOCKS5_PROXY'; export http_proxy='$LOCAL_SOCKS5_PROXY'; export https_proxy='$LOCAL_SOCKS5_PROXY'; git config --global http.proxy '$LOCAL_SOCKS5_PROXY'; git config --global https.proxy '$LOCAL_SOCKS5_PROXY'"
+# ======================== Proxy alias ======================= }
+
+
+
+# =================== Environment variables =================== {
 export TERM="screen-256color"
 export LANG=zh_CN.UTF-8
+set -Ux GPG_TTY (tty)
 
-# Golang
-export GO111MODULE=on
-export GOPROXY=goproxy.cn,goproxy.io,direct 
-if test -e "$HOME/.gvm/environments/default"
-    bass source "$HOME/.gvm/environments/default"
-end
-
-# Local bin
+# local bin
 if test -d "$HOME/.local/bin/"
     set -gx PATH "$HOME/.local/bin/" $PATH
 end
 
-if test -d "$HOME/.nix-profile/bin/"
-    set -gx PATH "$HOME/.nix-profile/bin/" $PATH
-end
-
-if test -d "$HOME/.luarocks/bin/"
-    set -gx PATH "$HOME/.luarocks/bin/" $PATH
-end
-
-# Home bin
-if test -d "$HOME/bin/"
-    set -gx PATH "$HOME/bin/" $PATH
-end
-
-# MEGAsync
-if test -d "$HOME/MEGAsync/bin/"
-    set -gx PATH "$HOME/MEGAsync/bin/" $PATH
-end
-
-# Rust
+# rust
 if test -d "$HOME/.cargo/bin/"
     set -gx PATH "$HOME/.cargo/bin/" $PATH
 end
@@ -146,14 +119,7 @@ if type -q rustc
     export RUST_SRC_PATH=(rustc --print sysroot)/lib/rustlib/src/rust/library/
 end
 
-# python
-if type -q pyenv
-    export PYENV_ROOT="$HOME/.pyenv/shims"
-    export PATH="$PYENV_ROOT:$PATH"
-    export PIPENV_PYTHON="$PYENV_ROOT/python"
-end
-
-# ruby env
+# ruby
 if test -d "$HOME/.rbenv/bin"
     set -g PATH "$HOME/.rbenv/bin" $PATH
 end
@@ -169,25 +135,19 @@ end
 
 # node
 set --universal nvm_default_version lts
-
-# yarn
 if test -d "$HOME/.yarn/bin/"
     set -gx PATH "$HOME/.yarn/bin/" $PATH 
 end
-# ===============================
-export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
-export GOINSECURE=actiontech.cloud
+# =================== Environment variables =================== }
 
-if type -q 'exa'
-    alias ls=exa
-end
 
-if command -v pazi >/dev/null
-  status --is-interactive; and pazi init fish | source
-end
 
-alias sshtomac="sshuttle --dns -NHr jessun@192.168.124.2 127.0.0.1/0 -v"
+# ===================== Derecated configs ===================== {
+# alias sshtomac="sshuttle --dns -NHr jessun@192.168.124.2 127.0.0.1/0 -v"
+# =================== Environment variables =================== }
 
-set -Ux GPG_TTY (tty)
 
+
+# ===================== actiontech.cloud  ===================== {
 alias sshtodev="ssh jessun-dev@10.186.16.118"
+# ===================== actiontech.cloud  ===================== }
