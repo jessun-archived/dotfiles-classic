@@ -74,7 +74,7 @@ if type -q 'go'
     alias goalngcirundocker "docker run --rm -v (pwd):/app -w /app golangci/golangci-lint:v1.43.0 golangci-lint run"
     alias golangcirun "golangci-lint run"
     alias govet "CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
-    alias gomodnoproxy "http_porxy="" https_proxy="" all_proxy="" go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
+    alias gomod "http_porxy="" https_proxy="" all_proxy="" go mod vendor;and go mod tidy -go=1.16 ;and go mod tidy -go=1.17"
 
     # Golang environment
     export GO111MODULE=on
