@@ -58,9 +58,9 @@ export GPG_TTY=$(tty)
 # TMUX
 if command -v tmux &> /dev/null; then 
     if [ -n "$TMUX" ]; then
-      tmux attach 
-    else 
       tmux
+    else
+      tmux attach
     fi
 fi
 
