@@ -80,15 +80,16 @@ function Packer:start_up()
             --||||||||||||||||||||||||||||||||||||||||| 编码工具 ||||||||||||||||||||||||||||||||||||||||||||
             -- use "stevearc/aerial.nvim" ---------------------------------------------------------------------- 代码大纲
             use "numToStr/Comment.nvim" --------------------------------------------------------------------- 代码注释
-            use "jessun/nvim-gps"
+            -- use "jessun/nvim-gps"
+            use "liuchengxu/vista.vim"
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
-            -- use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } } ------------- 模糊搜索
+            use { "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } } ------------- 模糊搜索
             -- use "danielpieper/telescope-tmuxinator.nvim" ---------------------------------------------------- tmuxinator 跳转
-            -- use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
-            -- use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
-            -- use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
+            use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
+            use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
+            use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
             use "ggandor/lightspeed.nvim" ------------------------------------------------------------------- 快速移动 ?
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||

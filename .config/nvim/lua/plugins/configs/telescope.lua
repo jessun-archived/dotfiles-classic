@@ -26,9 +26,10 @@ require("telescope").setup {
 -- require('telescope').load_extension('neoclip')
 
 -- vim.api.nvim_set_keymap("n", "<leader>t<leader>", ":Telescope find_files<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader><leader>", ":lua require('telescope.builtin').find_files({enable_preview=false})<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>t<leader>",
+    ":lua require('telescope.builtin').find_files({enable_preview=false})<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>t/", ":Telescope live_grep<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>t/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>tb", ":Telescope buffers<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>tb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>th", ":Telescope help_tags<CR>", {noremap = true, silent = true})
@@ -43,7 +44,7 @@ vim.api.nvim_set_keymap("n", "<leader>tk", ":Telescope keymaps<CR>", { noremap =
 vim.api.nvim_set_keymap(
     "n",
     -- "<leader>t*",
-    "<leader>*",
+    "<leader>t*",
     ":lua require('telescope.builtin').live_grep({ default_text = vim.fn.expand('<cword>') })<CR>",
     { noremap = true, silent = true }
 )
@@ -54,4 +55,4 @@ vim.api.nvim_set_keymap(
     ":lua require('telescope.builtin').colorscheme({enable_preview=true})<CR>",
     { noremap = true, silent = true }
 )
-vim.api.nvim_set_keymap("n", "<leader>tfc", ":GetCurrentFunctions<CR>", { noremap = true, silent = true }) ---- https://github.com/eckon/treesitter-current-functions
+vim.api.nvim_set_keymap("n", "<leader>tf", ":GetCurrentFunctions<CR>", { noremap = true, silent = true }) ---- https://github.com/eckon/treesitter-current-functions
