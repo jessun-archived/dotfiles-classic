@@ -41,13 +41,14 @@ require("todo-comments").setup(
                 -- signs = false, -- configure signs for some keywords individually
             }
         },
-        highlight = {
-            pattern = [[.*<(KEYWORDS)]], -- pattern or table of patterns, used for highlightng (vim regex)
-            keyword = "bg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-            comments_only = true, -- uses treesitter to match keywords in comments only
-            max_line_len = 400, -- ignore lines longer than this
-        },
-        pattern = [[\b(KEYWORDS)\b]], -- ripgrep regex
+        -- highlight = {
+        --     pattern = [[\b(KEYWORDS):]], -- pattern or table of patterns, used for highlightng (vim regex)
+        --     keyword = "bg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
+        --     comments_only = true, -- uses treesitter to match keywords in comments only
+        --     max_line_len = 400, -- ignore lines longer than this
+        -- },
+        pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+
         search = {
             command = "rg",
             args = {
