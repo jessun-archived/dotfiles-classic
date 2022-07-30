@@ -65,6 +65,7 @@ if type -q 'git'
     alias rebasecontinuegit "git rebase --continue"
     alias main 'git checkout main'
     alias master 'git checkout master'
+    alias logsupdategit 'git add . && git commit -m "update" && git push'
 end
 # ======================== Git alias ======================== }
 
