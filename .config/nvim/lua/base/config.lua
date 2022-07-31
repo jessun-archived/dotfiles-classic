@@ -79,6 +79,7 @@ function Config:load_config()
 
     vim_api.nvim_command("syntax sync minlines=128") -- TODO
     vim_api.nvim_command("set path+=**") -- TODO
+    vim_api.nvim_command("set tags=./tags,tags,./.tags,./.ctags,./ctags") -- TODO
     vim_global_options.background = "dark" -- TODO
     vim_api.nvim_command("filetype on") -- TODO
     vim_api.nvim_command("colorscheme desert") -- TODO
