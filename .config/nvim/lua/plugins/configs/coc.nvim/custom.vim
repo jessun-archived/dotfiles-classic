@@ -8,6 +8,9 @@ nmap <leader>cc  <Plug>(coc-codeaction)
 xmap <silent> <leader><leader> :<C-u>CocList -A files<CR>
 nmap <silent> <leader><leader> :<C-u>CocList -A files<CR>
 
+xmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
+nmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
+
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 
 " xmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
@@ -16,29 +19,40 @@ nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 xmap <silent> <leader>/ :<C-u>CocList -I -A grep<CR>
 nmap <silent> <leader>/ :<C-u>CocList -I -A grep<CR>
 
+xmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
+nmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
+
 " nnoremap <silent> <leader>c* :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 nnoremap <silent> <leader>* :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <leader>c* :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
 " xmap <leader>cb  :CocList buffers<CR>
 " nmap <leader>cb  :CocList buffers<CR>
 xmap <leader>b  :CocList buffers<CR>
 nmap <leader>b  :CocList buffers<CR>
 
-xmap <leader>ca  :CocList commands<CR>
-nmap <leader>ca  :CocList commands<CR>
+xmap <leader>cb  :CocList buffers<CR>
+nmap <leader>cb  :CocList buffers<CR>
+
+xmap <leader>cm  :CocList commands<CR>
+nmap <leader>cm  :CocList commands<CR>
 
 " xmap <leader>cm  :CocList marks<CR>
 " nmap <leader>cm  :CocList marks<CR>
 xmap <leader>m  :CocList marks<CR>
 nmap <leader>m  :CocList marks<CR>
 
-" xmap <leader>ck  :CocList maps<CR>
-" nmap <leader>ck  :CocList maps<CR>
+xmap <leader>cm  :CocList marks<CR>
+nmap <leader>cm  :CocList marks<CR>
+
 xmap <leader>k  :CocList maps<CR>
 nmap <leader>k  :CocList maps<CR>
 
-" nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
+xmap <leader>ck  :CocList maps<CR>
+nmap <leader>ck  :CocList maps<CR>
+
 nnoremap <silent><nowait> <leader>r  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
 " nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>n <Plug>(coc-rename)
@@ -52,7 +66,8 @@ nmap <Leader>cer <Cmd>call CocAction('runCommand', 'explorer.doAction', 'closest
 
 " List all presets
 " nmap <leader>ce <Cmd>CocCommand explorer<CR>
-nmap <leader>e <Cmd>CocCommand explorer<CR>
+" nmap <leader>e <Cmd>CocCommand explorer<CR>
+" nmap <leader>e <Cmd>CocCommand explorer<CR>
 
 " nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
 nnoremap <silent><nowait> <leader>o  :<C-u>CocList -A outline<cr>
