@@ -55,7 +55,7 @@ if type -q 'git'
     alias copycurrentgitbranchname 'echo (git rev-parse --abbrev-ref HEAD) | pbcopy'
     alias gitcleanproxy "git config --global http.proxy ''; git config --global https.proxy ''"
     alias gitcommitdebug 'git add . && git commit -m "DEBUG" && git push'
-    alias deleteallbranchesgit 'git branch | grep -v "master" | xargs git branch -D'
+    alias alldeletebranchesgit 'git branch | grep -v "master" | xargs git branch -D'
     alias deletemergedbarnchgit 'git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
     alias pushcurrentgit 'git push -u origin (git rev-parse --abbrev-ref HEAD)'
     alias forcepushcurrentgit 'git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
