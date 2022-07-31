@@ -90,7 +90,7 @@ function Packer:start_up()
             use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
             use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
-            use "ggandor/lightspeed.nvim" ------------------------------------------------------------------- 快速移动 ?
+            use {"phaazon/hop.nvim", branch='v2'}
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
             use "nathom/filetype.nvim" ---------------------------------------------------------------------- filetype 性能优化
