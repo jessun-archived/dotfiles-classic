@@ -39,11 +39,12 @@ function Packer:start_up()
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
             use "shaunsingh/nord.nvim"
-            use 'stefanvanburen/rams.vim'
-            use 'cormacrelf/vim-colors-github'
-            use 'flazz/vim-colorschemes' -- including "github", conflict
-            use 'rafi/awesome-vim-colorschemes'
-            use 'rainglow/vim'
+            use { 'Everblush/everblush.nvim', as = 'everblush' }
+            -- use 'stefanvanburen/rams.vim'
+            -- use 'cormacrelf/vim-colors-github'
+            -- use 'flazz/vim-colorschemes' -- including "github", conflict
+            -- use 'rafi/awesome-vim-colorschemes'
+            -- use 'rainglow/vim'
 
             -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
@@ -90,7 +91,7 @@ function Packer:start_up()
             use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
             use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
-            use {"phaazon/hop.nvim", branch='v2'}
+            use { "phaazon/hop.nvim", branch = 'v2' }
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
             use "nathom/filetype.nvim" ---------------------------------------------------------------------- filetype 性能优化
