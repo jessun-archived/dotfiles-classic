@@ -1,11 +1,6 @@
 {
     "notification.border": false,
     "list.maxPreviewHeight": 99999,
-    //"notification.marginRight": 0,
-    //"notification.winblend": 0,
-    //"notification.focusable": false,
-    //"notification.preferMenuPicker": true,
-    // coc
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
@@ -21,16 +16,37 @@
     "suggest.enablePreview": true,
     "list.source.tags.command": "ctags -R -f ./.tags",
     "list.source.grep.command": "rg",
-    "list.source.grep.args": [
+    "list.source.grep.args": [],
+    "list.source.files.args": [
+        "--hidden",
+        "--files"
     ],
-    "list.source.files.args": ["--hidden","--files"],
     "session.saveOnVimLeave": true,
 {% if yadm.class == "actiontech-dev" %}
     "http.proxy": "http://10.186.61.41:1087",
 {% else %}
     "http.proxy": "http://127.0.0.1:1087",
 {% endif %}
-    "languageserver": {},
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ]
+        }
+    },
     // coc-highlight
     "colors.filetypes": [
         "*"
@@ -45,14 +61,10 @@
         "packer",
         "os_name"
     ],
-    "go.goplsOptions": {
-        "semanticTokens": true
-    },
     // coc-rust-analyzer
     "rust-analyzer.server.path": "rust-analyzer",
     // coc-spell-checker
-    "cSpell.userWords": [
-    ],
+    "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
         "actiontech_dict",
