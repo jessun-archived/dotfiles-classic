@@ -14,3 +14,5 @@ known_hosts
 known_hosts.old
 
 upgrade_by_bin.sh
+umc_upgrade_by_bin.sh
+uagent_upgrade_by_bin.sh
