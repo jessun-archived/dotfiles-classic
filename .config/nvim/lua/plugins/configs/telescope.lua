@@ -56,7 +56,7 @@ vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope buffers<CR>", { noremap = 
 vim.api.nvim_set_keymap(
     "n",
     -- "<leader>t*",
-    "<leader>t",
+    "<leader>*",
     ":lua require('telescope.builtin').live_grep({ default_text = vim.fn.expand('<cword>') })<CR>",
     { noremap = true, silent = true }
 )

@@ -81,4 +81,4 @@ require "nvim-treesitter.configs".setup {
     }
 }
 
-vim.api.nvim_set_keymap("n", "<leader>cf", ":GetCurrentFunctions<CR>", { noremap = true, silent = true }) ---- https://github.com/eckon/treesitter-current-functions
+-- vim.api.nvim_set_keymap("n", "<leader>cf", ":GetCurrentFunctions<CR>", { noremap = true, silent = true }) ---- https://github.com/eckon/treesitter-current-functions
