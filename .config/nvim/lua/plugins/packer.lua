@@ -38,14 +38,14 @@ function Packer:start_up()
             use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } } -- 状态栏
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
-            use "shaunsingh/nord.nvim"
             use { 'Everblush/everblush.nvim', as = 'everblush' }
+            use { 'neoclide/jsonc.vim' }
+            use "shaunsingh/nord.nvim"
             -- use 'stefanvanburen/rams.vim'
             -- use 'cormacrelf/vim-colors-github'
             -- use 'flazz/vim-colorschemes' -- including "github", conflict
             -- use 'rafi/awesome-vim-colorschemes'
             -- use 'rainglow/vim'
-
             -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
             --
@@ -60,8 +60,8 @@ function Packer:start_up()
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 辅助工具 ||||||||||||||||||||||||||||||||||||||||||||
-            -- use "ellisonleao/carbon-now.nvim" --------------------------------------------------------------- 代码生成图像
             use "dstein64/vim-startuptime"
+            use "rcarriga/nvim-notify"
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 目录管理 ||||||||||||||||||||||||||||||||||||||||||||
