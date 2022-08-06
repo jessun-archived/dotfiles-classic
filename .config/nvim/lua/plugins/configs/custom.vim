@@ -61,5 +61,7 @@ let g:vista_ctags_cmd = {
 " For example:
 let g:vista_fzf_preview = ['right:50%']
 
+colorscheme nord
+
 " coc.nvim
 hi CocMenuSel guibg=#4C566A

@@ -146,5 +146,3 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 " nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-hi CocCursorRange ctermbg=19  guibg=#b16286 guifg=#ebdbb2
-hi CocMenuSel     ctermbg=19 guibg=#BF616A
