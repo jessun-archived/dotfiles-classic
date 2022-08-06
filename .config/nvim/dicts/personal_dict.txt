@@ -139,3 +139,4 @@ yapf
 youdao
 zfunc
 zhangsan
+gopls
