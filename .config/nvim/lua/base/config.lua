@@ -77,6 +77,7 @@ function Config:load_config()
 
     vim["loaded_matchparen"] = 1 -- 禁用高亮匹配括号
 
+    vim_api.nvim_command("inoremap # <space><backspace>#") -- TODO
     vim_api.nvim_command("syntax sync minlines=128") -- TODO
     vim_api.nvim_command("set path+=**") -- TODO
     vim_api.nvim_command("set tags=./tags,tags,./.tags,./ctags,ctags,./.ctags") -- TODO
@@ -100,6 +101,7 @@ function Config:load_config()
 
     vim_api.nvim_command("autocmd FileType gitcommit set colorcolumn=50") --- gitcommit file title length limit
     vim_api.nvim_command("autocmd InsertLeave * :silent !fcitx5-remote -c") --- fcitx
+    -- vim_api.nvim_command("autocmd FileType json syntax match Comment +//.+$+") --- gitcommit file title length limit
 
 
     vim.g.did_load_filetypes = 1

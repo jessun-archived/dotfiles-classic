@@ -21,9 +21,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 "=========================== golang highlight }
 
-"=========================== colorscheme {
-colorscheme nord
-"=========================== colorscheme }
 "
 function! NearestMethodOrFunction() abort
   return get(b:, 'vista_nearest_method_or_function', '')
