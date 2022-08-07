@@ -50,6 +50,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap("n", "<leader>tf", ":GetCurrentFunctions<CR>", { noremap = true, silent = true }) ---- https://github.com/eckon/treesitter-current-functions
 
 -- shortcuts
+vim.api.nvim_set_keymap("n", "<leader>k", ":Telescope keymaps<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader><leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope buffers<CR>", { noremap = true, silent = true })
