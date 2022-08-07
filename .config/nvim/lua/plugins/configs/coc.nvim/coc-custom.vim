@@ -18,7 +18,7 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 " ============== coc.nvim lsp {
 " let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
 let g:coc_global_extensions += ['coc-json'] " json format
-" let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
+let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
 " let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
 let g:coc_global_extensions += ['coc-sh'] " shell
 let g:coc_global_extensions += ['coc-yaml'] " yaml
@@ -177,3 +177,4 @@ endfunction
 autocmd User CocNvimInit call s:InitCoc()
 autocmd User CocDiagnosticChange call s:DiagnosticNotify()
 autocmd User CocStatusChange call s:StatusNotify()
+autocmd CursorHold * silent call CocActionAsync('highlight')
