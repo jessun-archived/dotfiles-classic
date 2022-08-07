@@ -1,5 +1,3 @@
--- require("orgmode").setup_ts_grammar()
-
 require "nvim-treesitter.configs".setup {
     -- One of "all", "maintained" (parsers with maintainers), or a list of languages
     -- ensure_installed = "maintained",
@@ -11,7 +9,7 @@ require "nvim-treesitter.configs".setup {
         -- `false` will disable the whole extension
         enable = true,
         -- list of language that will be disabled
-        disable = { "go", "rust" },
+        disable = { "go" },
         -- disable = {"lua"},
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
@@ -29,8 +27,13 @@ require "nvim-treesitter.configs".setup {
                 ["af"] = "@function.outer",
                 ["if"] = "@function.inner",
                 ["ac"] = "@class.outer",
-                ["ic"] = "@class.inner"
-            }
+                ["ic"] = "@class.inner",
+            },
+            selection_modes = {
+                ['@parameter.outer'] = 'v', -- charwise
+                ['@function.outer'] = 'V', -- linewise
+                ['@class.outer'] = '<c-v>', -- blockwise
+            },
         },
         swap = {
             enable = true,
@@ -41,24 +44,26 @@ require "nvim-treesitter.configs".setup {
                 ["<leader>A"] = "@parameter.inner"
             }
         },
-        move = {
+        move = { --- 函数间跳转
             enable = true,
             set_jumps = true, -- whether to set jumps in the jumplist
             goto_next_start = {
-                ["]m"] = "@function.outer",
-                ["]]"] = "@class.outer"
+                -- ["]m"] = "@function.outer",
+                -- ["]]"] = "@class.outer"
+                ["]f"] = "@function.outer",
+                ["]l"] = "@class.outer"
             },
             goto_next_end = {
-                ["]M"] = "@function.outer",
-                ["]["] = "@class.outer"
+                ["]F"] = "@function.outer",
+                ["]L"] = "@class.outer"
             },
             goto_previous_start = {
-                ["[m"] = "@function.outer",
-                ["[["] = "@class.outer"
+                ["[f"] = "@function.outer",
+                ["[l"] = "@class.outer"
             },
             goto_previous_end = {
-                ["[M"] = "@function.outer",
-                ["[]"] = "@class.outer"
+                ["[F"] = "@function.outer",
+                ["[L"] = "@class.outer"
             }
         },
         lsp_interop = {
@@ -70,7 +75,7 @@ require "nvim-treesitter.configs".setup {
             }
         }
     },
-    textsubjects = {
+    textsubjects = { --- 智能选区，按照语义缩放选区
         enable = true,
         prev_selection = ",", -- (Optional) keymap to select the previous selection
         keymaps = {
