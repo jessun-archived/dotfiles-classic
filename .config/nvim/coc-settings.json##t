@@ -10,6 +10,7 @@
         "lua",
         "rust"
     ],
+    "outline.sortBy": "position",
     "dialog.rounded": false,
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,

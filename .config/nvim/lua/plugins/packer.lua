@@ -82,7 +82,7 @@ function Packer:start_up()
             -- use "stevearc/aerial.nvim" ---------------------------------------------------------------------- 代码大纲
             use "numToStr/Comment.nvim" --------------------------------------------------------------------- 代码注释
             -- use "jessun/nvim-gps"
-            use "liuchengxu/vista.vim"
+            -- use "liuchengxu/vista.vim"
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
@@ -91,6 +91,8 @@ function Packer:start_up()
             use "eckon/treesitter-current-functions" -------------------------------------------------------- 当前函数 ?
             use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
+            use "nvim-treesitter/nvim-treesitter-context"
+
             use { "phaazon/hop.nvim", branch = 'v2' }
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
