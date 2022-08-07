@@ -145,13 +145,13 @@ require("lualine").setup {
             }
         },
         lualine_x = {},
-        lualine_y = {
-            {
-                "NearestMethodOrFunction",
-                color = { fg = colors.nord_snow_storm_white1, bg = colors.nord_bg }
-            }
-
-        },
+        -- lualine_y = {
+        --     {
+        --         "NearestMethodOrFunction",
+        --         color = { fg = colors.nord_snow_storm_white1, bg = colors.nord_bg }
+        --     }
+        --
+        -- },
         lualine_z = {
             { "%l:%c", }, { "%p%%/%L", },
             { "filetype", },
