@@ -46,11 +46,10 @@
                 "sh"
             ]
         },
-        "lua": {
-            "command": "lua-lsp",
-            "filetypes": [
-                "lua"
-            ]
+        "rust": {
+            "command": "rust-analyzer",
+            "filetypes": ["rust"],
+            "rootPatterns": ["Cargo.toml"]
         }
     },
     // coc-highlight
