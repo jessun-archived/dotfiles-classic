@@ -38,9 +38,9 @@ function Packer:start_up()
             use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } } -- 状态栏
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
-            use { 'Everblush/everblush.nvim', as = 'everblush' }
             use { 'neoclide/jsonc.vim' }
             use "shaunsingh/nord.nvim"
+            -- use { 'Everblush/everblush.nvim', as = 'everblush' }
             -- use 'stefanvanburen/rams.vim'
             -- use 'cormacrelf/vim-colors-github'
             -- use 'flazz/vim-colorschemes' -- including "github", conflict
