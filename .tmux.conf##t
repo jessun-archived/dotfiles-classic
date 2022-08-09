@@ -14,6 +14,7 @@ bind C-s send-prefix -2
 bind c new-window -c "#{pane_current_path}"
 bind u last
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+bind s choose-tree -s -O time
 
 unbind %
 unbind '"'
