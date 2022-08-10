@@ -94,7 +94,7 @@ nmap <leader>cr <Plug>(coc-rename)
 " nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
 nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
 
-nmap <expr> <silent> <C-d> <SID>select_current_word()
+nmap <expr> <silent> 'w <SID>select_current_word()
 function! s:select_current_word()
   if !get(b:, 'coc_cursors_activated', 0)
     return "\<Plug>(coc-cursors-word)"
@@ -178,3 +178,4 @@ autocmd User CocNvimInit call s:InitCoc()
 autocmd User CocDiagnosticChange call s:DiagnosticNotify()
 autocmd User CocStatusChange call s:StatusNotify()
 autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
