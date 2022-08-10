@@ -1,1 +1,0 @@
-vim.cmd("source ~/.config/nvim/lua/plugins/configs/vim-easy-align.vim")
