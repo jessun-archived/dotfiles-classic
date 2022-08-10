@@ -16,9 +16,7 @@
     export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
 {% endif %}
 
-{% if yadm.class=="mba" %}
-    set -g __fish_prompt_hostname "mba"
-{% endif %}
+set -g __fish_prompt_hostname (ip)
 
 # ====================== Var Definition ====================== }
 
@@ -36,7 +34,6 @@ end
 # ====================== Commands alias ====================== {
 switch (uname)
     case 'Darwin'
-        alias vim '/Applications/MacVim.app/Contents/bin/vim'
         if type -q 'nvm' 
             nvm use default
         end
