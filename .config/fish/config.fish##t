@@ -8,15 +8,15 @@
 
 # ====================== Var Definition ====================== {
 {% if yadm.class=="actiontech-dev" %}
-    export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
-    export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
-    set -g __fish_prompt_hostname "10.186.16.118"
+export LOCAL_SOCKS5_PROXY='socks5://10.186.61.41:1080'
+export LOCAL_HTTP_PROXY='http://10.186.61.41:1087'
+set -g __fish_prompt_hostname "10.186.16.118"
 {% else %}
-    export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
-    export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
+export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
+export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
+set -g __fish_prompt_hostname (ip)
 {% endif %}
 
-set -g __fish_prompt_hostname (ip)
 
 # ====================== Var Definition ====================== }
 
