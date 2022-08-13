@@ -78,6 +78,8 @@ remove_useless_pacages(){
     yay -R onlyoffice-desktopeditors 
     yay -R gnome-chess
     yay -R quadrapassel
+    yay -R gnome-chess
+    yay -R gnome-mines
 }
 
 install_arch_fonts(){
