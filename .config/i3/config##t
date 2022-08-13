@@ -26,7 +26,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle
 bindsym $mod+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id /opt/uTools/utools
+bindsym $mod+space exec rofi -show drun
 # bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 bindsym Print exec shutter -s
 
@@ -239,7 +239,6 @@ exec --no-startup-id env QT_SCALE_FACTOR=1  megasync
 exec --no-startup-id fcitx -d
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
-exec --no-startup-id utools
 exec --no-startup-id volumeicon
 exec_always --no-startup-id kded5
 
