@@ -48,6 +48,9 @@ end
 
 alias switch_capslock_esc 'setxkbmap -option caps:swapescape'
 alias clean_tmux_cache='rm -rf /home/jessun/.tmux/resurrect/* && tmux kill-server'
+if type -q "setxkbmap"
+    setxkbmap -option caps:swapescape
+end
 # ====================== Commands alias ====================== }
 
 
