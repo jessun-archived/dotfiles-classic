@@ -2,7 +2,7 @@ distribution_code_name: "fcitx-rime"
 distribution_name: Rime
 distribution_version: 0.2.3
 install_time: "Tue May  3 07:52:00 2022"
-installation_id: "295c1998-af76-4451-b54f-c67024e3de26"
+installation_id: "linux"
 rime_version: 1.7.3
-sync_dir: "/home/jessun/MEGAsync/sync/rime"
+sync_dir: "/home/jessun/MEGAsync/sync/rime_sync"
 update_time: "Fri May 27 10:18:42 2022"
