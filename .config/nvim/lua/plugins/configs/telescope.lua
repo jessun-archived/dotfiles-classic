@@ -1,3 +1,5 @@
+local actions = require "telescope.actions"
+
 require("telescope").setup {
     defaults = {
         -- layout_strategy = "cursor",
@@ -7,7 +9,7 @@ require("telescope").setup {
             -- other layout configuration here
         },
         borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-        dynamic_preview_title = true
+        dynamic_preview_title = true,
     },
     pickers = {},
     extensions = {
@@ -32,6 +34,7 @@ vim.api.nvim_set_keymap("n", "<leader>th", ":Telescope help_tags<CR>", { noremap
 vim.api.nvim_set_keymap("n", "<leader>tm", ":Telescope commands<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tk", ":Telescope marks<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tp", ":Telescope keymaps<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tr", ":Telescope registers<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>i", ":Telescope octo issues<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
     "n",

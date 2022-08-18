@@ -43,16 +43,6 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-translator.vim
 
 
 "===================
-" Coc Key Map
-"
-"
-inoremap <silent><expr> <c-j>
-      \ coc#pum#visible() ? coc#pum#next(1):
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><c-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 " 触发 coc 补全列表
 inoremap <silent><expr> <C-u> coc#refresh() 
 
@@ -92,7 +82,7 @@ nnoremap <silent><nowait> <leader>clr  :<C-u>CocListResume<CR>
 nmap <leader>cr <Plug>(coc-rename)
 
 " nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
-nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
+nnoremap <silent><nowait> <leader>co  :<C-u>CocOutline<cr>
 
 nmap <expr> <silent> 'w <SID>select_current_word()
 function! s:select_current_word()

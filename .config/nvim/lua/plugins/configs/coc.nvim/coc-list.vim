@@ -20,8 +20,8 @@ endfunction
 "|||||||||||||||||||||||||||||||||||||||||||||||||||||||
 "Q: How to grep by motion?
 "A: Create custom keymappings like:
-vnoremap <leader>g :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
-nnoremap <leader>g :<C-u>set operatorfunc=<SID>GrepFromSelected<CR>g@
+" vnoremap <leader>g :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
+" nnoremap <leader>g :<C-u>set operatorfunc=<SID>GrepFromSelected<CR>g@
 
 function! s:GrepFromSelected(type)
   let saved_unnamed_register = @@
