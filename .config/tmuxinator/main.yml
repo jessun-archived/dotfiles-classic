@@ -71,3 +71,5 @@ windows:
 
   - clash:
       - cd ~/.config/clash && clash -d .
+
+  - sshuttle:
