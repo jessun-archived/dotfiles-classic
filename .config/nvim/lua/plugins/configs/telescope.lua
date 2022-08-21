@@ -35,6 +35,7 @@ vim.api.nvim_set_keymap("n", "<leader>tm", ":Telescope commands<CR>", { noremap 
 vim.api.nvim_set_keymap("n", "<leader>tk", ":Telescope marks<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tp", ":Telescope keymaps<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>tr", ":Telescope registers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tt", ":Telescope<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>i", ":Telescope octo issues<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
     "n",
