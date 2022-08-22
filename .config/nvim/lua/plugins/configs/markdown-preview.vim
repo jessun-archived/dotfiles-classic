@@ -59,7 +59,7 @@ let g:mkdp_preview_options = {
     \ 'mkit': {},
     \ 'katex': {},
     \ 'uml': {
-        \ 'server': 'http://127.0.0.1:8080'
+        \ 'server': 'http://10.186.16.118:8080'
       \ },
     \ 'maid': {},
     \ 'disable_sync_scroll': 0,
