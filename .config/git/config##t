@@ -34,12 +34,8 @@
 	denyNonFastForwards = true
 	denyDeletes = true
 
-{% if yadm.class == "actiontech-dev" %}
 # actiontech 
 [url "git@10.186.18.21:universe"]
 	insteadOf      = http://10.186.18.21/universe
 [url "git@github.com:actiontech"]
 	insteadOf      = https://github.com/actiontech
-[includeIf "gitdir:~/workbench/actiontech/"]
-    path = ~/workbench/actiontech/.gitconfig
-{% endif %}
