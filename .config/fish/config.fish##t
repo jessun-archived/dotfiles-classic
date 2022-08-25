@@ -18,6 +18,11 @@ export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
 export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
 {% endif %}
 
+{% if yadm.class=="mba" %}
+export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
+export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
+{% endif %}
+
 # ====================== Var Definition ====================== }
 
 
