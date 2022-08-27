@@ -131,7 +131,7 @@ sudo pacman -S --noconfirm pritunl-client-electron
 
 install_golang(){
 
-    bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+    bash <<(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
     fish
     gvm install go1.17.9
     gvm use go1.17.9 --default
