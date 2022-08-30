@@ -8,8 +8,8 @@
 
 # ====================== Var Definition ====================== {
 {% if yadm.class=="actiontech-dev" %}
-export LOCAL_SOCKS5_PROXY='socks5://192.168.2.238:1080'
-export LOCAL_HTTP_PROXY='http://192.168.2.238:1087'
+export LOCAL_SOCKS5_PROXY='socks5://192.168.2.133:1080'
+export LOCAL_HTTP_PROXY='http://192.168.2.133:1087'
 set -g __fish_prompt_hostname "10.186.16.118"
 {% endif %}
 
