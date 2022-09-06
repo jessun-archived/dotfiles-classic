@@ -100,7 +100,7 @@ require("lualine").setup {
         lualine_b = {
             {
                 "diagnostics",
-                source = { "nvim", "nvim_diagnostic", "coc" },
+                source = { "nvim_lsp", "nvim_diagnostic", "coc", "nvim_workspace_diagnostic", "ale", "vim_lsp" },
                 diagnostics_color = {
                     -- error = "DiagnosticError",
                     -- warn = "DiagnosticWarn",
