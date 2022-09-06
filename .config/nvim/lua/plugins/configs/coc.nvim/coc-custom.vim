@@ -52,7 +52,7 @@ nmap <silent> ]d <Plug>(coc-diagnostic-next)
 xmap <leader>cs  <Plug>(coc-codeaction-selected)
 nmap <leader>cs  <Plug>(coc-codeaction-selected)
 
-nmap <leader>cc  <Plug>(coc-codeaction)
+nmap <leader>ca  <Plug>(coc-codeaction)
 
 xmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
 nmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
@@ -62,19 +62,21 @@ nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 xmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
 nmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
 
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+
 nnoremap <silent> <leader>c* :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 
 xmap <leader>cb  :CocList buffers<CR>
 nmap <leader>cb  :CocList buffers<CR>
 
-xmap <leader>cm  :CocList commands<CR>
-nmap <leader>cm  :CocList commands<CR>
+xmap <leader>cc  :CocList commands<CR>
+nmap <leader>cc  :CocList commands<CR>
 
-xmap <leader>ck  :CocList marks<CR>
-nmap <leader>ck  :CocList marks<CR>
+xmap <leader>cm  :CocList marks<CR>
+nmap <leader>cm  :CocList marks<CR>
 
-xmap <leader>cp  :CocList maps<CR>
-nmap <leader>cp  :CocList maps<CR>
+xmap <leader>ck  :CocList maps<CR>
+nmap <leader>ck  :CocList maps<CR>
 
 nnoremap <silent><nowait> <leader>clr  :<C-u>CocListResume<CR>
 
