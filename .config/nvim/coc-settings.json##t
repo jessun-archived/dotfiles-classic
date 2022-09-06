@@ -24,7 +24,7 @@
     ],
     "session.saveOnVimLeave": true,
 {% if yadm.class == "actiontech-dev" %}
-    "http.proxy": "http://192.168.2.238:1087",
+    "http.proxy": "http://192.168.2.133:1087",
 {% else %}
     "http.proxy": "http://127.0.0.1:1087",
 {% endif %}
