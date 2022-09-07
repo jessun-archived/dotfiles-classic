@@ -56,6 +56,8 @@ nmap <leader>ca  <Plug>(coc-codeaction)
 
 xmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
 nmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
+xmap <silent> <leader>cf :<C-u>CocList -A files<CR>
+nmap <silent> <leader>cf :<C-u>CocList -A files<CR>
 
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 
