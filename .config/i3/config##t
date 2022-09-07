@@ -28,6 +28,7 @@ bindsym $mod+q kill
 # start program launcher
 bindsym $mod+space exec rofi -show drun
 # bindsym $mod+Shift+d exec --no-startup-id rofi -show run
+#bindsym Print exec shutter -s
 bindsym Print exec gnome-screenshot -a -i
 
 # change focus
