@@ -124,53 +124,71 @@ nmap <leader>cf <Plug>(coc-refactor)
 " endfunction
 
 
-let g:coc_borderchars = ['', '', '', '', '', '', '', '']
+" let g:coc_borderchars = ['', '', '', '', '', '', '', '']
 
-
-function! s:DiagnosticNotify() abort
-  let l:info = get(b:, 'coc_diagnostic_info', {})
-  if empty(l:info) | return '' | endif
-  let l:msgs = []
-  let l:level = 'info'
-   if get(l:info, 'warning', 0)
-    let l:level = 'warn'
-  endif
-  if get(l:info, 'error', 0)
-    let l:level = 'error'
-  endif
- 
-  if get(l:info, 'error', 0)
-    call add(l:msgs, ' Errors: ' . l:info['error'])
-  endif
-  if get(l:info, 'warning', 0)
-    call add(l:msgs, ' Warnings: ' . l:info['warning'])
-  endif
-  if get(l:info, 'information', 0)
-    call add(l:msgs, ' Infos: ' . l:info['information'])
-  endif
-  if get(l:info, 'hint', 0)
-    call add(l:msgs, ' Hints: ' . l:info['hint'])
-  endif
-  let l:msg = join(l:msgs, "\n")
-  if empty(l:msg) | let l:msg = ' All OK' | endif
-  call v:lua.coc_diag_notify(l:msg, l:level)
-endfunction
-
-function! s:StatusNotify() abort
-  let l:status = get(g:, 'coc_status', '')
-  let l:level = 'info'
-  if l:status =~ 'cSpell' | return '' | endif
-  if empty(l:status) | return '' | endif
-  call v:lua.coc_status_notify(l:status, l:level)
-endfunction
-
-function! s:InitCoc() abort
-  execute "lua vim.notify('Initialized coc.nvim for LSP support', 'info', { title = 'LSP Status' })"
-endfunction
-
-" notifications
-autocmd User CocNvimInit call s:InitCoc()
-autocmd User CocDiagnosticChange call s:DiagnosticNotify()
-autocmd User CocStatusChange call s:StatusNotify()
+" function! s:DiagnosticNotify() abort
+"   let l:info = get(b:, 'coc_diagnostic_info', {})
+"   if empty(l:info) | return '' | endif
+"   let l:msgs = []
+"   let l:level = 'info'
+"    if get(l:info, 'warning', 0)
+"     let l:level = 'warn'
+"   endif
+"   if get(l:info, 'error', 0)
+"     let l:level = 'error'
+"   endif
+"  
+"   if get(l:info, 'error', 0)
+"     call add(l:msgs, ' Errors: ' . l:info['error'])
+"   endif
+"   if get(l:info, 'warning', 0)
+"     call add(l:msgs, ' Warnings: ' . l:info['warning'])
+"   endif
+"   if get(l:info, 'information', 0)
+"     call add(l:msgs, ' Infos: ' . l:info['information'])
+"   endif
+"   if get(l:info, 'hint', 0)
+"     call add(l:msgs, ' Hints: ' . l:info['hint'])
+"   endif
+"   let l:msg = join(l:msgs, "\n")
+"   if empty(l:msg) | let l:msg = ' All OK' | endif
+"   call v:lua.coc_diag_notify(l:msg, l:level)
+" endfunction
+"
+" function! s:StatusNotify() abort
+"   let l:status = get(g:, 'coc_status', '')
+"   let l:level = 'info'
+"   if l:status =~ 'cSpell' | return '' | endif
+"   if empty(l:status) | return '' | endif
+"   call v:lua.coc_status_notify(l:status, l:level)
+" endfunction
+"
+" function! s:InitCoc() abort
+"   execute "lua vim.notify('Initialized coc.nvim for LSP support', 'info', { title = 'LSP Status' })"
+" endfunction
+"
+" " notifications
+" autocmd User CocNvimInit call s:InitCoc()
+" autocmd User CocDiagnosticChange call s:DiagnosticNotify()
+" autocmd User CocStatusChange call s:StatusNotify()
 autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
+
+" Use <C-n>, <C-p>, <up> and <down> to navigate completion list: >
+
+inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
+inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
+inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
+inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
+
+" Use <PageDown> and <PageUp> to scroll: >
+
+inoremap <silent><expr> <PageDown> coc#pum#visible() ? coc#pum#scroll(1) : "\<PageDown>"
+inoremap <silent><expr> <PageUp> coc#pum#visible() ? coc#pum#scroll(0) : "\<PageUp>"
+
+" Use <C-e> and <C-y> to cancel and confirm completion: >
+
+inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#cancel() : "\<C-e>"
+inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+
+" Note: <CR> and <Tab> are not remapped by coc.nvim.
