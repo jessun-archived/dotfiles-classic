@@ -1,75 +1,149 @@
-"-----------------------------------------------"
-"               基础设置                        "
-"-----------------------------------------------"
-set modelines=0                          " 禁用模式行（安全措施）
-syntax on                                " 语法高亮
-filetype on                              " 开启文件类型检测
-colorscheme desert
-
+"================================================================ {
+"                 Base config 基本设置
+"================================================================
+"
+" coding and char
+language messages zh_CN.UTF-8            " 设置语言
+set ambiwidth=double                     " 解决中文标点显示的问题
 set encoding=utf-8                       " 编码设置
-set number                               " 显示行号
-set relativenumber                       " 显示相对行号
-set smartindent                          " 智能缩进
-set autoindent                           " 自动对齐
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1,gbk,gb2312 " 设置文件编码
+set helplang=cn                          " 设置帮助文档语言
+set langmenu=zh_CN.UTF-8                 " 设置语言
+set linebreak                            " 设置换行符为unix格式
+set nolist                                 " 显示特殊字符
+set nrformats=octal,hex                  " 设置数字格式
+set sidescroll=10                        " 移动到看不见的字符时，自动向右滚动是10个字符
+set conceallevel=0                       " 不隐藏特殊字符
 
-set smarttab
-set tabstop=4                            " tab缩进
+" indent
+set autoindent                           " 自动对齐
 set shiftwidth=4                         " 设定自动缩进为4个字符
-set expandtab                            " 用space替代tab的输入
+set smartindent                          " 智能缩进
+
+" tab
+set expandtab                            " 使用空格代替tab
+set smarttab                             " 智能tab
+set softtabstop=4                        " tab缩进
+set tabstop=4                            " tab缩进
+%retab!                                  " 将tab转换为空格
+set tabpagemax=10                        " 设置标签页最大数量
+set showtabline=2                        " 始终显示标签栏
+
+" fold
+set foldenable                           " 启动 vim 时打开折叠代码
+set foldlevelstart=99                    " 设置折叠级别的初始值
+set foldmethod=expr                      " 设置折叠方法为表达式
+set nofoldenable                         " 启动 vim 时关闭折叠代码
+set foldexpr=nvim_treesitter#foldexpr()
+
+" win
 set splitright                           " 设置左右分割窗口时，新窗口出现在右侧
 set splitbelow                           " 设置水平分割窗口时，新窗口出现在底部
 
+" file type
+filetype on                              " 开启文件类型检测
+filetype plugin indent on                " 开启文件类型插件和缩进检测
+filetype plugin on                       " 开启文件类型插件
+
+" file
+set hidden                               " 是否显示隐藏文件
 set nobackup                             " 不需要备份
+set nowritebackup                        " 是否备份
+set updatetime=300                       " 设置更新时间
 set noswapfile                           " 禁止生成临时文件
+
+" file 
 set autoread                             " 文件自动检测外部更改
-set clipboard=unnamed                    " 共享剪切板
+set autowriteall                         " 当文件被修改时，自动保存
+set confirm                              " 当文件变化时，是否弹出确认框
 
-set nocompatible                         " 去除vi一致性
-set ambiwidth=double                     " 解决中文标点显示的问题
-set nowrap                               " 不自动折行
-set mouse=a                              " 使用鼠标
-set mousehide                            " 输入时隐藏光标
-set sidescroll=10                        " 移动到看不见的字符时，自动向右滚动是个字符
-
-set sm!                                  " 高亮显示匹配括号
-set hlsearch                             " 高亮查找匹配
-set cursorline                           " 高亮显示当前行
-set termguicolors                        " 启用终端真色
-
-set showmatch                            " 显示匹配
-set ruler                                " 显示标尺，在右下角显示光标位置
-set novisualbell                         " 不要闪烁
+" cmd
+set cmdheight=2                          " 命令行高度
+set history=10000                        " 历史记录数
+set shortmess+=c                         " shortmess 不缩短命令信息
 set showcmd                              " 显示输入的命令
+set ttimeoutlen=0                        " 设置键盘映射等待时间
 
-set laststatus=2                         " always show statusline
-set showtabline=2                        " always show tabline
-set vb t_vb=
+" highlight and colorscheme
+set hlsearch                             " 高亮查找匹配
+set showmatch                            " 显示匹配
+set sm!                                  " 高亮显示匹配括号
+set showmatch                            " 高亮显示匹配的括号
+set colorcolumn=80                       " 设置颜色列
+set background=dark                       " 背景颜色
+colorscheme desert                       " 配色方案
 
-" 设置代码折叠---------------------------------
-"  set nofoldenable             " 启动 vim 时关闭折叠代码
-"  set foldmethod=indent        " 设置语法折叠
-"  setlocal foldlevel=99        " 设置折叠层数
-"  nnoremap <space> za          " 用空格键来开关折叠
+" editor
+set backspace=indent,eol,start           " 设置退格键的行为
+"set cursorline                          " 高亮显示当前行
+"set cursorcolumn                        " 高亮显示当前列
+set modelines=0                          " 禁用模式行
+set mousehide                            " 输入时隐藏光标
+set mouse=a                              " 使用鼠标
+set paste                                " 粘贴模式
+set nowrap                               " 不自动折行
+set selection=exclusive                  " 选择模式，inclusive是包含行尾，exclusive是不包含行尾
+set number                               " 显示行号
+set relativenumber                       " 显示相对行号
+set ruler                                " 显示标尺，在右下角显示光标位置
+set iskeyword=_,$,@,%,#,-                " 设置关键字，用于搜索和替换
+set clipboard=unnamedplus                " 共享系统剪贴板
+set guioptions-=l                        " 禁止显示滚动条
+set guioptions-=L                        " 禁止显示滚动条
+set guioptions-=r                        " 禁止显示滚动条
+set guioptions-=R                        " 禁止显示滚动条
+set guioptions-=m                        " 禁止显示菜单和工具条
+set guioptions-=T                        " 禁止显示菜单和工具条
+set scrolloff=4                          " 光标移动到buffer顶部和底部时保持的距离
+set ignorecase                           " 忽略大小写
+set smartcase                            " 智能大小写
+set wildmenu                             " 
+set wildmode=longest:full,full           " 
+set nocompatible                         " 去除vi一致性
+set novisualbell                         " 不要闪烁
+set redrawtime=1000                      " 设置重绘时间，单位毫秒
+set ttyfast                              " 加快终端响应速度
+set completeopt=menuone,noinsert         " 设置自动补全
+set complete=.
 
-" 设置光标样式-------------------------------
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
+set vb t_vb=                             " 关闭可视响铃
+set synmaxcol=200                        " 语法高亮最大列数
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" " 设置光标为竖线
+let &t_SR = "\<Esc>]50;CursorShape=2\x7" " 设置光标为块
+let &t_EI = "\<Esc>]50;CursorShape=0\x7" " 设置光标为下划线
 set completeopt=longest,menu             " 自动补全配置让Vim补全菜单行为跟IDE一致
 set backspace=indent,eol,start           " 允许用退格键删除字符
-let g:markdown_fenced_languages =['c', 'cpp', 'python', 'javascript']
-set guifont=Hack_Nerd_Font_Mono:h16      " 设置字体和字体大小, 只对gui客户端起作用，终端使用需要修改终端字体和大小
-" 禁止显示滚动条
-set guioptions-=l
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
-" 禁止显示菜单和工具条
-set guioptions-=m
-set guioptions-=T
 
-" 设置状态行-----------------------------------
+syntax on                                " 语法高亮
+syntax sync minlines=256                 " 语法高亮
+
+set tags=./tags,tags,./.tags,./ctags,ctags,./.ctags
+set path+=**                             " 设置搜索路径
+let g:markdown_fenced_languages =['golang', 'go', 'rust', 'c', 'cpp', 'python', 'javascript']
+
+"================================================================
+"
+"
+augroup relative_numbser
+    autocmd!
+    autocmd InsertEnter * :set norelativenumber
+    autocmd InsertLeave * :set relativenumber
+augroup END
+
+autocmd FileType gitcommit set colorcolumn=80
+
+"================================================================
+"
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+nnoremap <silent>  j gj
+nnoremap <silent>  k gk
+
+command! Reload :source ~/workbench/nvim/vimrc<CR>
+"
+"================================================================
+
 " 设置状态行显示常用信息
 " %F 完整文件路径名
 " %m 当前缓冲被修改标记
@@ -86,6 +160,7 @@ set guioptions-=T
 " %{...} 评估表达式的值，并用值代替
 " %{"[fenc=".(&fenc==""?&enc:&fenc).((exists("+bomb") && &bomb)?"+":"")."]"} 显示文件编码
 " %{&ff} 显示文件类型
+set laststatus=2                         " 始终显示状态栏
 set statusline=%1*%F%m%r%h%w%=\ 
 set statusline+=%2*\ %Y\ \|\  
 set statusline+=%3*%{\"\".(\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+\":\"\").\"\"}\ 
@@ -100,7 +175,7 @@ hi User4 cterm=bold ctermfg=yellow ctermbg=gray
 hi User5 cterm=none ctermfg=darkgrey ctermbg=gray
 hi User6 cterm=none ctermfg=darkgrey ctermbg=gray
 
-" 设置tab栏-------------------------------------------------
+" 设置tab栏
 " 选中的tab颜色
 hi SelectTabLine term=Bold cterm=Bold ctermfg=DarkYellow ctermbg=LightGray
 hi SelectPageNum cterm=None ctermfg=DarkRed ctermbg=LightGray
@@ -125,27 +200,5 @@ let g:netrw_list_hide= '^\..*' " 不显示隐藏文件 用 a 键就可以显示�
 "     autocmd VimEnter * :Vexplore
 " augroup END
 
-nnoremap <SPACE>ft :Lexplore<CR>    " 打开或关闭目录树
-
-"-----------------------------------------------"
-autocmd FileType json syntax match Comment +\/\/.\+$+
-"               自定义功能                      "
-"-----------------------------------------------"
-
-" 快捷键绑定-------------------------
-let mapleader=' '
-" 窗口移动快捷键
-noremap <TAB>w <C-w>w
-noremap <TAB><left> <C-w><left>
-noremap <TAB><right> <C-w><right>
-noremap <TAB><up> <C-w><up>
-noremap <TAB><down> <C-w><down>
-" 使用方向键切换buffer
-noremap <Leader><left> :bp<CR>
-noremap <Leader><right> :bn<CR>
-" 使用方括号切换tab
-noremap <Leader>] :tabnext<CR>
-noremap <Leader>[ :tabprevious<CR>
-" 使用 \ + s 保存, \ + q 退出
-noremap <Leader>s :w<CR>
-noremap <Leader>q :q<CR>
+"
+"================================================================ }
