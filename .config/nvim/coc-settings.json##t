@@ -12,7 +12,7 @@
     "outline.sortBy": "position",
     "dialog.rounded": false,
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextPrefix": "----->",
+    "diagnostic.virtualTextPrefix": "  ----->  ",
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.floatConfig": {
