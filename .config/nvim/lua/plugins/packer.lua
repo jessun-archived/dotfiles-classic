@@ -28,7 +28,7 @@ function Packer:start_up()
         function()
             --||||||||||||||||||||||||||||||||||||||||| 插件管理 ||||||||||||||||||||||||||||||||||||||||||||
             use "wbthomason/packer.nvim" -------------------------------------------------------------------- 插件管理
-            use { "neoclide/coc.nvim" } ------------------------------------------------- coc.nvim
+            use "neoclide/coc.nvim" ------------------------------------------------------------------------- coc.nvim
             --
             --
             --|||||||||||||||||||||||||||||||||||||||||||| UI |||||||||||||||||||||||||||||||||||||||||||||||
@@ -38,8 +38,11 @@ function Packer:start_up()
             use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } } -- 状态栏
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
-            use { 'neoclide/jsonc.vim' }
+            use 'neoclide/jsonc.vim'
             use "shaunsingh/nord.nvim"
+            use "petertriho/nvim-scrollbar"
+            use "karb94/neoscroll.nvim"
+
             -- use { 'Everblush/everblush.nvim', as = 'everblush' }
             -- use 'stefanvanburen/rams.vim'
             -- use 'cormacrelf/vim-colors-github'
