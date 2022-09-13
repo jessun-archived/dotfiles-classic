@@ -54,10 +54,10 @@ nmap <leader>cs  <Plug>(coc-codeaction-selected)
 
 nmap <leader>ca  <Plug>(coc-codeaction)
 
-xmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
-nmap <silent> <leader>c<leader> :<C-u>CocList -A files<CR>
-xmap <silent> <leader>cf :<C-u>CocList -A files<CR>
-nmap <silent> <leader>cf :<C-u>CocList -A files<CR>
+xmap <silent> <leader>c<leader> :<C-u>CocList -A --no-sort files<CR>
+nmap <silent> <leader>c<leader> :<C-u>CocList -A --no-sort files<CR>
+xmap <silent> <leader>cf :<C-u>CocList -A --no-sort  files<CR>
+nmap <silent> <leader>cf :<C-u>CocList -A --no-sort  files<CR>
 
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
 
@@ -70,6 +70,8 @@ nnoremap <silent> <leader>c* :exe 'CocList -I --input='.expand('<cword>').' grep
 
 xmap <leader>cb  :CocList buffers<CR>
 nmap <leader>cb  :CocList buffers<CR>
+xmap <leader>b  :CocList buffers<CR>
+nmap <leader>b  :CocList buffers<CR>
 
 xmap <leader>cc  :CocList commands<CR>
 nmap <leader>cc  :CocList commands<CR>
@@ -80,10 +82,8 @@ nmap <leader>cm  :CocList marks<CR>
 xmap <leader>ck  :CocList maps<CR>
 nmap <leader>ck  :CocList maps<CR>
 
-nnoremap <silent><nowait> <leader>clr  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
-" nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>cr <Plug>(coc-rename)
 
 " nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
 nnoremap <silent><nowait> <leader>co  :<C-u>CocOutline<cr>
@@ -96,7 +96,7 @@ function! s:select_current_word()
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
 
-nmap <leader>cf <Plug>(coc-refactor)
+nmap <leader>rf <Plug>(coc-refactor)
 
 "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 " function! s:lightline_coc_diagnostic(kind, sign) abort
