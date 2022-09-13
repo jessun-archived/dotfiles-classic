@@ -33,7 +33,7 @@ require("todo-comments").setup(
             },
             NOTE = { icon = "",
                 color = "#10B981",
-                alt = { "INFO", } },
+                alt = { "INFO", "summary", "note" } },
             Deprecated = {
                 icon = "", -- icon used for the sign, and in search results
                 color = "#DC2626", -- can be a hex color, or a named color (see below)
