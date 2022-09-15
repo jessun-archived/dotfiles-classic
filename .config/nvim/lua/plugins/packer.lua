@@ -41,7 +41,7 @@ function Packer:start_up()
             use 'neoclide/jsonc.vim'
             use "shaunsingh/nord.nvim"
             use "petertriho/nvim-scrollbar"
-            use "karb94/neoscroll.nvim"
+            use "psliwka/vim-smoothie"
 
             -- use { 'Everblush/everblush.nvim', as = 'everblush' }
             -- use 'stefanvanburen/rams.vim'
