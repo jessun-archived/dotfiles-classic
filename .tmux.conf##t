@@ -1,6 +1,7 @@
 # ------ general ------------------------------------
 if-shell '[ -f /usr/bin/fish ]' 'set -g default-shell /usr/bin/fish'
 if-shell '[ -f /usr/local/bin/fish ]' 'set -g default-shell /usr/local/bin/fish'
+if-shell '[ -f /opt/homebrew/bin/fish ]' 'set -g default-shell /usr/local/bin/fish'
 
 # bind-key -n F8 split-window -h
 bind - splitw -v -c '#{pane_current_path}' # 垂直方向新增面板，默认进入当前目录
