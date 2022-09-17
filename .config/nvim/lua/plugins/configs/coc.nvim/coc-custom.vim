@@ -52,35 +52,36 @@ nmap <silent> ]d <Plug>(coc-diagnostic-next)
 xmap <leader>cs  <Plug>(coc-codeaction-selected)
 nmap <leader>cs  <Plug>(coc-codeaction-selected)
 
+xmap <leader>ca  <Plug>(coc-codeaction)
 nmap <leader>ca  <Plug>(coc-codeaction)
 
-xmap <silent> <leader>c<leader> :<C-u>CocList -A --no-sort files<CR>
-nmap <silent> <leader>c<leader> :<C-u>CocList -A --no-sort files<CR>
-xmap <silent> <leader>cf :<C-u>CocList -A --no-sort  files<CR>
-nmap <silent> <leader>cf :<C-u>CocList -A --no-sort  files<CR>
+xmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
+nmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
+xmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
+nmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
 
-nnoremap <silent><nowait> <leader>cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
 
-xmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
-nmap <silent> <leader>c/ :<C-u>CocList -I -A grep<CR>
+xmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
+nmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
 
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList --interactive --auto-preview symbols<cr>
 
-nnoremap <silent> <leader>c* :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <leader>c* :exe 'CocList --interactive --input='.expand('<cword>').' grep'<CR>
 
-xmap <leader>cb  :CocList buffers<CR>
-nmap <leader>cb  :CocList buffers<CR>
-xmap <leader>b  :CocList buffers<CR>
-nmap <leader>b  :CocList buffers<CR>
+xmap <leader>cb  :CocList --auto-preview buffers<CR>
+nmap <leader>cb  :CocList --auto-preview buffers<CR>
+xmap <leader>b   :CocList --auto-preview buffers<CR>
+nmap <leader>b   :CocList --auto-preview buffers<CR>
 
-xmap <leader>cc  :CocList commands<CR>
-nmap <leader>cc  :CocList commands<CR>
+xmap <leader>cc  :CocList --auto-preview commands<CR>
+nmap <leader>cc  :CocList --auto-preview commands<CR>
 
-xmap <leader>cm  :CocList marks<CR>
-nmap <leader>cm  :CocList marks<CR>
+xmap <leader>cm  :CocList --auto-preview marks<CR>
+nmap <leader>cm  :CocList --auto-preview marks<CR>
 
-xmap <leader>ck  :CocList maps<CR>
-nmap <leader>ck  :CocList maps<CR>
+xmap <leader>ck  :CocList --auto-preview maps<CR>
+nmap <leader>ck  :CocList --auto-preview maps<CR>
 
 nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
