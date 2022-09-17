@@ -64,7 +64,9 @@ if command -v tmux &> /dev/null; then
     fi
 fi
 
+{% if yadm.class == "home-pc" %}
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+{% endif %}
 
 
 ## screen layout
