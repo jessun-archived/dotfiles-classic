@@ -47,6 +47,7 @@ bind -r C-k resize-pane -U 5
 bind -r C-j resize-pane -D 5
 bind -r C-h resize-pane -L 5
 bind -r C-l resize-pane -R 5
+bind-key -n C-t switch-client -l
 
 # ------ status theme -------------------------------
 set -g message-style "bg=#00346e, fg=#D8DEE9"       
