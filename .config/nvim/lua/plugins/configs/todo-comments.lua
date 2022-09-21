@@ -23,7 +23,7 @@ require("todo-comments").setup(
             },
             WARN = { icon = "",
                 color = "#FBBF24",
-                alt = { "Warn", "WARNING" } },
+                alt = { "Warn", "WARNING", "attention", "Attention", "ATTENTION" } },
             QUES = { icon = "",
                 color = "#FBBF24",
                 alt = { "QUES", "Ques", "ques" } },
