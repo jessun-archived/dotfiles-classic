@@ -115,6 +115,11 @@ function Config:load_config()
     vim.api.nvim_set_keymap("n", "<leader>p", '"+p<CR>', { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "<leader>P", '"+P<CR>', { noremap = true, silent = true })
 
+    vim.api.nvim_set_keymap("n", "<UP>", '<ESC><C-W>-', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<DOWN>", '<ESC><C-W>+', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<LEFT>", '<ESC><C-W><', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<RIGHT>", '<ESC><C-W>>', { noremap = true, silent = true })
+
     ------------------------------------------------------------------------------------------------------------ key map }
 
     ------------------------------------------------------------------------------------------------------------ { command
