@@ -238,6 +238,7 @@ exec --no-startup-id copyq
 exec --no-startup-id env QT_SCALE_FACTOR=1  megasync
 #exec --no-startup-id ibus-daemon -d
 exec --no-startup-id fcitx -d
+exec --no-startup-id fcitx5 -d
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
@@ -255,7 +256,7 @@ bar {
 
 {% if yadm.class == "home-pc" %}
 # specific config for home-pc
-    output DP-0
+    output DP-1
 {% endif %}
 
 
