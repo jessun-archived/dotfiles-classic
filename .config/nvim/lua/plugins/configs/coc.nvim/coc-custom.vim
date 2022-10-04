@@ -139,7 +139,7 @@ nmap <leader>rf <Plug>(coc-refactor)
 "     let l:level = 'error'
 "   endif
 "  
-"   if get(l:info, 'error', 0)
+" if get(l:info, 'error', 0)
 "     call add(l:msgs, ' Errors: ' . l:info['error'])
 "   endif
 "   if get(l:info, 'warning', 0)
@@ -177,19 +177,19 @@ autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
 
 " Use <C-n>, <C-p>, <up> and <down> to navigate completion list: >
 
-inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
-inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
-inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
-inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
+" inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
+" inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
+" inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
+" inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
 
 " Use <PageDown> and <PageUp> to scroll: >
 
-inoremap <silent><expr> <PageDown> coc#pum#visible() ? coc#pum#scroll(1) : "\<PageDown>"
-inoremap <silent><expr> <PageUp> coc#pum#visible() ? coc#pum#scroll(0) : "\<PageUp>"
+" inoremap <silent><expr> <PageDown> coc#pum#visible() ? coc#pum#scroll(1) : "\<PageDown>"
+" inoremap <silent><expr> <PageUp> coc#pum#visible() ? coc#pum#scroll(0) : "\<PageUp>"
 
 " Use <C-e> and <C-y> to cancel and confirm completion: >
 
-inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#cancel() : "\<C-e>"
-inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+" inoremap <silent><expr> <C-e> coc#pum#visible() ? coc#pum#cancel() : "\<C-e>"
+" inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
 
 " Note: <CR> and <Tab> are not remapped by coc.nvim.
