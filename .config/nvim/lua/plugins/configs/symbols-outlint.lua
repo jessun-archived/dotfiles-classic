@@ -1,2 +1,0 @@
-require("symbols-outline").setup()
-
