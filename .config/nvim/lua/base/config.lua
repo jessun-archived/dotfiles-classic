@@ -94,7 +94,7 @@ function Config:load_config()
     vim.api.nvim_command("augroup END")
 
     vim.api.nvim_command("autocmd FileType gitcommit set colorcolumn=50") --- gitcommit file title length limit
-    vim.api.nvim_command("autocmd InsertLeave * :silent !fcitx5-remote -c") --- fcitx
+    -- vim.api.nvim_command("autocmd InsertLeave * :silent !fcitx5-remote -c") --- fcitx
     -- vim.api.nvim_command("autocmd FileType json syntax match Comment +//.+$+") --- gitcommit file title length limit
 
 

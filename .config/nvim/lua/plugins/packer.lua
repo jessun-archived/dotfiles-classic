@@ -84,8 +84,8 @@ function Packer:start_up()
             --||||||||||||||||||||||||||||||||||||||||| 编码工具 ||||||||||||||||||||||||||||||||||||||||||||
             -- use "stevearc/aerial.nvim" ---------------------------------------------------------------------- 代码大纲
             use "numToStr/Comment.nvim" --------------------------------------------------------------------- 代码注释
-            -- use "jessun/nvim-gps"
-            -- use "liuchengxu/vista.vim"
+            use 'simrat39/symbols-outline.nvim'
+            use "liuchengxu/vista.vim"
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
@@ -95,8 +95,8 @@ function Packer:start_up()
             use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
             use "nvim-treesitter/nvim-treesitter-context"
-
-            use { "phaazon/hop.nvim", branch = 'v2' }
+            -- use "justinmk/vim-sneak"
+            -- use { "phaazon/hop.nvim", branch = 'v2' }
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
             use "nathom/filetype.nvim" ---------------------------------------------------------------------- filetype 性能优化

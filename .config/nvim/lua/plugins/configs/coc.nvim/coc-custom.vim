@@ -16,7 +16,7 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 " ============== coc.nvim official }
 "
 " ============== coc.nvim lsp {
-" let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
+let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
 let g:coc_global_extensions += ['coc-json'] " json format
 let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
 " let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
@@ -59,11 +59,15 @@ xmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 xmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
+" xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
+" nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
 
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
 
 xmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
 nmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
+" xmap <silent> <leader>/ :<C-u>CocList --interactive --auto-preview grep<CR>
+" nmap <silent> <leader>/ :<C-u>CocList --interactive --auto-preview grep<CR>
 
 nnoremap <silent><nowait> <space>s  :<C-u>CocList --interactive --auto-preview symbols<cr>
 

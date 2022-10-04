@@ -1,0 +1,2 @@
+require("symbols-outline").setup()
+

@@ -1,5 +1,20 @@
 local actions = require "telescope.actions"
 
+local full_theme = {
+  winblend = 20;
+  width = 0.8;
+  show_line = false;
+  prompt_prefix = 'TS Symbols>';
+  prompt_title = '';
+  results_title = '';
+  preview_title = '';
+  borderchars = {
+    prompt = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    results = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    preview = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+  };
+}
+
 require("telescope").setup {
     defaults = {
         -- layout_strategy = "cursor",
@@ -65,3 +80,4 @@ vim.api.nvim_set_keymap(
     ":lua require('telescope.builtin').live_grep({ default_text = vim.fn.expand('<cword>') })<CR>",
     { noremap = true, silent = true }
 )
+
