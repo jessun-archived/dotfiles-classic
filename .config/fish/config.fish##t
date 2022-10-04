@@ -7,26 +7,19 @@
 
 
 # ====================== Var Definition ====================== {
+export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
+export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
+
 {% if yadm.class=="actiontech-dev" %}
-export LOCAL_SOCKS5_PROXY='socks5://192.168.2.20:1080'
-export LOCAL_HTTP_PROXY='http://192.168.2.20:1087'
 set -g __fish_prompt_hostname "10.186.16.118"
 {% endif %}
 
-{% if yadm.class=="home-pc" %}
-export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
-export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
-{% endif %}
 
 {% if yadm.class=="mba" %}
-export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
-export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
 set -g __fish_prompt_hostname "mba"
 {% endif %}
 
 {% if yadm.class=="mbp" %}
-export LOCAL_SOCKS5_PROXY='socks5://127.0.0.1:1080'
-export LOCAL_HTTP_PROXY='http://127.0.0.1:1087'
 set -g __fish_prompt_hostname "mbp"
 {% endif %}
 
