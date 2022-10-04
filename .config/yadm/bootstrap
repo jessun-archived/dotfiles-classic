@@ -129,15 +129,6 @@ sudo pacman -Sy
 sudo pacman -S --noconfirm pritunl-client-electron
 }
 
-install_golang(){
-
-    bash <<(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-    fish
-    gvm install go1.17.9
-    gvm use go1.17.9 --default
-    omf install https://github.com/JGAntunes/fish-gvm
-    omf install https://github.com/edc/bass
-}
 
 install_rust_package(){
     yay -S rustup
@@ -163,11 +154,11 @@ install_rust_package(){
     cargo isntall exa
 }
 
-init_env
+#init_env
 #remove_useless_pacages
 #init_arch_base_packages
 #install_arch_packages
-#install_arch_fonts
+install_arch_fonts
 install_pritunl
 #install_golang
 #install_rust_package
