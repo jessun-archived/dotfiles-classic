@@ -26,11 +26,12 @@
     ],
     "session.saveOnVimLeave": true,
 {% if yadm.class == "actiontech-dev" %}
-    "http.proxy": "http://192.168.2.211:1087",
+    "http.proxy": "http://192.168.2.20:1087",
 {% else %}
     "http.proxy": "http://127.0.0.1:1087",
 {% endif %}
     "languageserver": {
+/*
         "golang": {
             "command": "gopls",
             "rootPatterns": [
@@ -40,6 +41,7 @@
                 "go"
             ]
         },
+*/
         "bash": {
             "command": "bash-language-server",
             "args": [
