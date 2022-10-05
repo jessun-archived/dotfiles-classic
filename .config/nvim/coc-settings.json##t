@@ -23,48 +23,16 @@
     "suggest.selection": "recentlyUsedByPrefix",
     "list.source.tags.command": "ctags -R -f ./.tags",
     "list.source.grep.command": "rg",
-    "list.source.grep.args": [],
     "list.source.files.args": [
         "--hidden",
         "--files"
     ],
     "session.saveOnVimLeave": true,
     "http.proxy": "http://127.0.0.1:1087",
-    "languageserver": {
-/*
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "filetypes": [
-                "go"
-            ]
-        },
-*/
-        "bash": {
-            "command": "bash-language-server",
-            "args": [
-                "start"
-            ],
-            "filetypes": [
-                "sh"
-            ]
-        },
-        "rust": {
-            "command": "rust-analyzer",
-            "filetypes": ["rust"],
-            "rootPatterns": ["Cargo.toml"]
-        }
-    },
-    // coc-highlight
     "colors.filetypes": [
         "*"
     ],
-    // coc-git
     "git.addGBlameToBufferVar": false,
-    // coc-markdownlint
-    // coc-spell-checker
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
@@ -147,9 +115,7 @@
         "yaml",
         "yml"
     ],
-    // coc-translator
     "translator.engines": [
-        // "google",
         "youdao",
         "bing",
         "haici"
