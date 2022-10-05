@@ -151,14 +151,14 @@ install_rust_package(){
     cargo install sd
     cargo install typos-cli   
     cargo install xcp         
-    cargo isntall exa
+    cargo install exa
 }
 
 #init_env
 #remove_useless_pacages
 #init_arch_base_packages
 #install_arch_packages
-install_arch_fonts
-install_pritunl
+#install_arch_fonts
+#install_pritunl
 #install_golang
-#install_rust_package
+install_rust_package
