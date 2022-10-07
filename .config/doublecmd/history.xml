@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/jessun/.config/doublecmd/</Item>
+      <Item>/home/jessun/.config/</Item>
+      <Item>/home/jessun/</Item>
+      <Item>/home/jessun/.local/</Item>
+      <Item>/home/</Item>
+      <Item>/</Item>
+      <Item>/lib/</Item>
+      <Item>/usr/</Item>
+      <Item>/usr/lib/</Item>
+    </Navigation>
+    <CommandLine/>
+    <FileMask/>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <CreateDirectories/>
+    <RenameNameMask/>
+    <RenameExtMask/>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
