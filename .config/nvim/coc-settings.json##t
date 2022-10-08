@@ -1,10 +1,6 @@
 {
     "notification.border": true,
     "list.maxPreviewHeight": 99999,
-    "list.normalMappings": {
-        "<C-n>": "command:CocNext",
-        "<C-p>": "command:CocPrev"
-    },
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
