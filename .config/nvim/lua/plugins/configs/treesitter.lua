@@ -7,9 +7,9 @@ require "nvim-treesitter.configs".setup {
     -- ignore_install = {"javascript"},
     highlight = {
         -- `false` will disable the whole extension
-        enable = false,
+        enable = true,
         -- list of language that will be disabled
-        -- disable = { "go" },
+        disable = { "go" },
         -- disable = {"lua"},
         -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
