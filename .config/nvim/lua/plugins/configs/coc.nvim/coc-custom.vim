@@ -96,7 +96,7 @@ nnoremap <silent><nowait> <leader>co  :<C-u>CocOutline<cr>
 nmap <expr> <silent> 'w <SID>select_current_word()
 function! s:select_current_word()
   if !get(b:, 'coc_cursors_activated', 0)
-    return "\<Plug>(coc-cursors-word)"
+    return "\<Plug>(coc-cursors-word)
   endif
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
@@ -181,8 +181,8 @@ autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
 
 " Use <C-n>, <C-p>, <up> and <down> to navigate completion list: >
 
-" inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
-" inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
+inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
+inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 " inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
 " inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
 
@@ -197,3 +197,12 @@ autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
 " inoremap <silent><expr> <C-y> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
 
 " Note: <CR> and <Tab> are not remapped by coc.nvim.
+"
+"
+" let g:copilot_no_tab_map = v:true
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1):
+"       \ exists('b:_copilot.suggestions') ? copilot#Accept("\<CR>") :
+"       \ CheckBackSpace() ? "\<Tab>" :
+"       \ coc#refresh()
+
