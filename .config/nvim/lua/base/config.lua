@@ -25,12 +25,12 @@ function Config:load_config()
     vim.o.nrformats = "" -- 数字格式
     vim.o.showmatch = true -- 显示匹配的括号
     vim.o.tabpagemax = 30 -- VIM 打开 tab 的最大数量
-    vim.o.cursorcolumn = true -- 显示光标所在的列
-    vim.o.cursorline = true -- 显示光标所在的行
+    -- vim.o.cursorcolumn = true -- 显示光标所在的列
+    -- vim.o.cursorline = true -- 显示光标所在的行
 
     vim.o.wildmenu = true
     vim.o.wildmode = "longest:full,full" -- 当按下 <Tab> 时，显示全部匹配的语法项目
-    vim.o.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
+    -- vim.o.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
     -- vim.o.textwidth = 80 -- 文本宽度
     vim.o.relativenumber = true -- 是否显示相对行号
     vim.o.foldlevelstart = 20 -- 折叠级别的起始值
@@ -146,6 +146,10 @@ end
 
 function _G.get_buf_var(...)
     print(vim.api.nvim_buf_get_var(...))
+end
+
+function _G.fn(...)
+    print(vim.inspect(vim.fn[...]))
 end
 
 ----------------------------------------------------------- debug }
