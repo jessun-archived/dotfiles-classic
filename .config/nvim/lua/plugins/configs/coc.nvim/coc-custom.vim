@@ -206,3 +206,63 @@ inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 "       \ CheckBackSpace() ? "\<Tab>" :
 "       \ coc#refresh()
 
+
+" Gets Errors and Warnings for buffer plus the Status message from coc.nvim
+" function! StatusDiagnosticForBuffer() abort
+"   let info = get(b:, 'coc_diagnostic_info', {})
+"   if empty(info) | return '' | endif
+"   let msgs = []
+"   if get(info, 'error', 0)
+"     call add(msgs, '✘' . info['error'])
+"   endif
+"   if get(info, 'warning', 0)
+"     call add(msgs, '' . info['warning'])
+"   endif
+"   return join(msgs, ' ')
+" endfunction
+
+
+" Gets Errors and Warnings for the entire workspace from coc.nvim
+function! StatusDiagnosticForWorkspace() abort
+  let diagnostics = CocAction('diagnosticList')
+  if type(diagnostics) == v:t_list
+    let errors = []
+    let warnings = []
+    for diagnostic in diagnostics
+      if diagnostic['severity'] == 'Error'
+        call add(errors, diagnostic)
+      endif
+      if diagnostic['severity'] == 'Warning'
+        call add(warnings, diagnostic)
+      endif
+    endfor
+    return " E" . string(len(errors)) . " W" . string(len(warnings)) . " "
+  endif
+endfunction
+
+function! UpdateWorkspaceCocDiagnostic() abort
+  let diagnostics = CocAction('diagnosticList')
+  if type(diagnostics) == v:t_list
+    let errors = []
+    let warnings = []
+    let infos = []
+    let hints = []
+    for diagnostic in diagnostics
+      if diagnostic['severity'] == 'Error'
+        call add(errors, diagnostic)
+      endif
+      if diagnostic['severity'] == 'Warning'
+        call add(warnings, diagnostic)
+      endif
+      if diagnostic['severity'] == 'Information'
+        call add(infos, diagnostic)
+      endif
+      if diagnostic['severity'] == 'Hint'
+        call add(hints, diagnostic)
+      endif
+    endfor
+    let b:coc_diagnostic_info = {'error': len(errors), 'warning': len(warnings), 'information': len(infos), 'hint': len(hints)}
+  endif
+endfunction
+
+autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
