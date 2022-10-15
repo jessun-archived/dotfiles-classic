@@ -176,6 +176,30 @@
                   <Path Filename="doublecmd">/usr/lib/</Path>
                   <Path Filename="lib">/usr/</Path>
                   <Path Filename="usr">/</Path>
+                  <Path Filename="..">/home/jessun/.config/doublecmd/</Path>
+                  <Path Filename="..">/home/jessun/.config/</Path>
+                  <Path Filename="Insync">/home/jessun/</Path>
+                  <Path Filename="jessun.zhang@outlook.com">/home/jessun/Insync/</Path>
+                  <Path Filename="OneDrive">/home/jessun/Insync/jessun.zhang@outlook.com/</Path>
+                  <Path Filename="文档">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
+                  <Path Filename="日记">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/日记/</Path>
+                  <Path Filename="jessun 的笔记本">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/jessun 的笔记本/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
+                  <Path Filename="sync">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
+                  <Path Filename="jessun">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
+                  <Path Filename="docs">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/docs/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
+                  <Path Filename="sync">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
+                  <Path Filename="jessun">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
+                  <Path Filename="OneDrive">/home/jessun/Insync/jessun.zhang@outlook.com/</Path>
+                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -615,7 +639,7 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="jessun" Path="/home/jessun/"/>
+    <HotDir Name="jessun" Path="/home/jessun"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
