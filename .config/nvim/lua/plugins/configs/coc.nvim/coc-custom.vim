@@ -241,6 +241,9 @@ function! StatusDiagnosticForWorkspace() abort
 endfunction
 
 function! UpdateWorkspaceCocDiagnostic() abort
+  if !get(g:, 'coc_workspace_initialized', 0)
+    return
+  endif
   let diagnostics = CocAction('diagnosticList')
   if type(diagnostics) == v:t_list
     let errors = []
