@@ -86,26 +86,7 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 
 
 "--||||||||||||||||||||||||||||||||||||||||| vim-sneak ||||||||||||||||||||||||||||||||||||||||||||
-" map s <Plug>Sneak_s
-" map S <Plug>Sneak_S
-"
-"
-function! HighlightFSearches(cmd)
-  " Get extra character for the command.
-  let char = nr2char(getchar())
-
-  if char ==# ''
-    " Skip special keys: arrows, backspace...
-    return ''
-  endif
-
-  " Here you'll want to highlight "char"
-  " on the current line.
-
-  " Finally, execute the original command.
-  return a:cmd.char
-endfunction
-
-nnoremap <expr> f HighlightFSearches('f')
-nnoremap f<bs> <nop>
-
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T

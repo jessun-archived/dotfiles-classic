@@ -94,7 +94,7 @@ function Packer:start_up()
             use "nvim-treesitter/nvim-treesitter-textobjects" ----------------------------------------------- 文本对象 ?
             use "RRethy/nvim-treesitter-textsubjects" ------------------------------------------------------- 文本对象 ?
             use "nvim-treesitter/nvim-treesitter-context"
-            -- use "justinmk/vim-sneak"
+            use "justinmk/vim-sneak"
             -- use { "phaazon/hop.nvim", branch = 'v2' }
             --
             --||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
