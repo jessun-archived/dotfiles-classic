@@ -155,9 +155,9 @@
     <Position Save="True">
       <Left>80</Left>
       <Top>48</Top>
-      <Width>800</Width>
-      <Height>480</Height>
-      <PixelsPerInch>96</PixelsPerInch>
+      <Width>900</Width>
+      <Height>540</Height>
+      <PixelsPerInch>108</PixelsPerInch>
       <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -168,38 +168,66 @@
         <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>2</Function>
+              </Sorting>
+            </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
-                  <Path Filename="..">/usr/lib/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib/</Path>
-                  <Path Filename="lib">/usr/</Path>
-                  <Path Filename="usr">/</Path>
-                  <Path Filename="..">/home/jessun/.config/doublecmd/</Path>
-                  <Path Filename="..">/home/jessun/.config/</Path>
-                  <Path Filename="Insync">/home/jessun/</Path>
-                  <Path Filename="jessun.zhang@outlook.com">/home/jessun/Insync/</Path>
-                  <Path Filename="OneDrive">/home/jessun/Insync/jessun.zhang@outlook.com/</Path>
-                  <Path Filename="文档">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
-                  <Path Filename="日记">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/日记/</Path>
-                  <Path Filename="jessun 的笔记本">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/jessun 的笔记本/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/文档/</Path>
-                  <Path Filename="sync">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
-                  <Path Filename="jessun">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
-                  <Path Filename="docs">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/docs/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
-                  <Path Filename="sync">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
-                  <Path Filename="jessun">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/jessun/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/sync/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
-                  <Path Filename="OneDrive">/home/jessun/Insync/jessun.zhang@outlook.com/</Path>
-                  <Path Filename="..">/home/jessun/Insync/jessun.zhang@outlook.com/OneDrive/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/stars-401-C/</Path>
+                  <Path Filename="SSNI-777-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-777-C/</Path>
+                  <Path Filename="ssni-752-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/ssni-752-C/</Path>
+                  <Path Filename="SSNI-727-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-727-C/</Path>
+                  <Path Filename="SSNI-671-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-671-C/</Path>
+                  <Path Filename="ssis-262-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/ssis-262-C/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="SSNI-777-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-777-C/</Path>
+                  <Path Filename="ssni-752-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/ssni-752-C/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="ssis-262-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/ssis-262-C/</Path>
+                  <Path Filename="SSNI-671-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-671-C/</Path>
+                  <Path Filename="SSNI-727-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-727-C/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="SSNI-777-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-777-C/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="SSNI-671-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-671-C/</Path>
+                  <Path Filename="SSNI-727-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-727-C/</Path>
+                  <Path Filename="ssni-752-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/ssni-752-C/</Path>
+                  <Path Filename="SSNI-671-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="SSNI-671-C.mp4">/home/jessun/迅雷下载/SSNI-671-C/</Path>
+                  <Path Filename="迅雷下载">/home/jessun/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="SSNI-671-C">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/SSNI-671-C/</Path>
+                  <Path Filename="OFJE-329.HD">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/OFJE-329.HD/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/</Path>
+                  <Path Filename="迅雷下载">/home/jessun/</Path>
+                  <Path Filename="..">/home/jessun/迅雷下载/</Path>
+                  <Path Filename=".audacity-data">/home/jessun/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -213,11 +241,22 @@
         <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
+            <Sortings>
+              <Sorting>
+                <Direction>2</Direction>
+                <Function>12</Function>
+              </Sorting>
+            </Sortings>
             <History>
               <Entry Active="True">
                 <FileSource Type="FileSystem"/>
                 <Paths>
                   <Path Filename="..">/usr/lib/doublecmd/</Path>
+                  <Path Filename="PS">/run/media/jessun/16T/</Path>
+                  <Path Filename="..">/run/media/jessun/16T/PS/</Path>
+                  <Path Filename="pc_games">/run/media/jessun/16T/</Path>
+                  <Path Filename="p">/run/media/jessun/16T/pc_games/</Path>
+                  <Path Filename="._ofje-329-2.mp4">/run/media/jessun/16T/pc_games/p/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -311,7 +350,7 @@
   <Fonts>
     <Main>
       <Name>文泉驿正黑</Name>
-      <Size>26</Size>
+      <Size>13</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
@@ -525,14 +564,14 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
+    <ProgressKind>2</ProgressKind>
     <Confirmations>15</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
       <CopyOnWrite>2</CopyOnWrite>
-      <FileExists>0</FileExists>
-      <DirectoryExists>0</DirectoryExists>
+      <FileExists>3</FileExists>
+      <DirectoryExists>3</DirectoryExists>
       <SetPropertyError>0</SetPropertyError>
       <ReserveSpace>True</ReserveSpace>
       <CheckFreeSpace>True</CheckFreeSpace>
@@ -629,7 +668,7 @@
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>96</PixelsPerInch>
+    <PixelsPerInch>108</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -660,7 +699,7 @@
     <NumberOfColumns>1</NumberOfColumns>
     <TabSpaces>8</TabSpaces>
     <MaxTextWidth>1024</MaxTextWidth>
-    <ViewerMode>0</ViewerMode>
+    <ViewerMode>1</ViewerMode>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
     <WrapText>False</WrapText>
@@ -814,7 +853,7 @@
       <Name>Default</Name>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>96</PixelsPerInch>
+      <PixelsPerInch>108</PixelsPerInch>
       <CursorBorder Enabled="False">
         <Color>0</Color>
       </CursorBorder>
@@ -822,7 +861,7 @@
         <Column>
           <Title>名称</Title>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>224</Width>
+          <Width>252</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -845,7 +884,7 @@
         <Column>
           <Title>扩展名</Title>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>282</Width>
+          <Width>317</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -868,7 +907,7 @@
         <Column>
           <Title>大小</Title>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>241</Width>
+          <Width>271</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -891,7 +930,7 @@
         <Column>
           <Title>日期</Title>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>126</Width>
+          <Width>142</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -914,7 +953,7 @@
         <Column>
           <Title>属性</Title>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>90</Width>
+          <Width>101</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
