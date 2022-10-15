@@ -16,7 +16,7 @@ monitor = ${env:MONITOR:DP-2}
 
 {% if yadm.class == "home-pc" %}
 # specific config for home-cp
-monitor = ${env:MONITOR:DP-1}
+monitor = ${env:MONITOR:DP-0}
 {% endif %}
 width = 100%
 height = 30
