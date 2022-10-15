@@ -1,0 +1,3 @@
+.ssh/*
+.config/clash/*
+.config/yadm/encrypt
