@@ -266,3 +266,4 @@ function! UpdateWorkspaceCocDiagnostic() abort
 endfunction
 
 autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
+

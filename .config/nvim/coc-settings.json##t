@@ -1,5 +1,4 @@
 {
-    "notification.border": true,
     "list.maxPreviewHeight": 99999,
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
@@ -13,9 +12,6 @@
     "dialog.rounded": false,
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
-    "suggest.floatConfig": {
-        "border": true
-    },
     "suggest.selection": "recentlyUsedByPrefix",
     "list.source.tags.command": "ctags -R -f ./.tags",
     "list.source.grep.command": "rg",

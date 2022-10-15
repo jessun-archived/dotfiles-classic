@@ -90,3 +90,8 @@ map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
+
+hi CocFloating ctermfg=100 guibg=#D8DEE9 guifg=#2E3440
+hi CocMenuSel ctermfg=102 guibg=#4C566A guifg=#D8DEE9
+hi CocSearch ctermfg=106 guibg=#4C566A guifg=#D8DEE9
+
