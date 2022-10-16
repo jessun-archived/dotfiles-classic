@@ -62,10 +62,6 @@ let g:vista_ctags_cmd = {
 let g:vista_fzf_preview = ['right:50%']
 
 colorscheme nord
-
-" coc.nvim
-hi CocMenuSel guibg=#4C566A
-
             
 "--||||||||||||||||||||||||||||||||||||||||| vim-fugitive ||||||||||||||||||||||||||||||||||||||||||||
 nnoremap <space>ga :Git add %:p<CR><CR>
@@ -94,4 +90,3 @@ map T <Plug>Sneak_T
 hi CocFloating ctermfg=100 guibg=#D8DEE9 guifg=#2E3440
 hi CocMenuSel ctermfg=102 guibg=#4C566A guifg=#D8DEE9
 hi CocSearch ctermfg=106 guibg=#4C566A guifg=#D8DEE9
-
