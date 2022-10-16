@@ -59,8 +59,8 @@ xmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 xmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
-" xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
-" nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
+xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
+nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
 
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
 
@@ -241,7 +241,7 @@ function! StatusDiagnosticForWorkspace() abort
 endfunction
 
 function! UpdateWorkspaceCocDiagnostic() abort
-  if !get(g:, 'coc_workspace_initialized', 0)
+  if get(g:, 'coc_workspace_initialized', 0)
     return
   endif
   let diagnostics = CocAction('diagnosticList')

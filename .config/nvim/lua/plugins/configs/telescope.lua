@@ -1,18 +1,18 @@
 local actions = require "telescope.actions"
 
 local full_theme = {
-  winblend = 20;
-  width = 0.8;
-  show_line = false;
-  prompt_prefix = 'TS Symbols>';
-  prompt_title = '';
-  results_title = '';
-  preview_title = '';
-  borderchars = {
-    prompt = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
-    results = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
-    preview = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
-  };
+    winblend = 20;
+    width = 0.8;
+    show_line = false;
+    prompt_prefix = 'TS Symbols>';
+    prompt_title = '';
+    results_title = '';
+    preview_title = '';
+    borderchars = {
+        prompt = { '▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+        results = { '▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+        preview = { '▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' };
+    };
 }
 
 require("telescope").setup {
@@ -70,7 +70,7 @@ vim.api.nvim_set_keymap("n", "<leader>tf", ":GetCurrentFunctions<CR>", { noremap
 
 -- shortcuts
 vim.api.nvim_set_keymap("n", "<leader>k", ":Telescope keymaps<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader><leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<leader><leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope buffers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
@@ -80,4 +80,3 @@ vim.api.nvim_set_keymap(
     ":lua require('telescope.builtin').live_grep({ default_text = vim.fn.expand('<cword>') })<CR>",
     { noremap = true, silent = true }
 )
-
