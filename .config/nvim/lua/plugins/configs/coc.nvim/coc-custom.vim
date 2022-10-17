@@ -223,22 +223,22 @@ inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 
 
 " Gets Errors and Warnings for the entire workspace from coc.nvim
-function! StatusDiagnosticForWorkspace() abort
-  let diagnostics = CocAction('diagnosticList')
-  if type(diagnostics) == v:t_list
-    let errors = []
-    let warnings = []
-    for diagnostic in diagnostics
-      if diagnostic['severity'] == 'Error'
-        call add(errors, diagnostic)
-      endif
-      if diagnostic['severity'] == 'Warning'
-        call add(warnings, diagnostic)
-      endif
-    endfor
-    return " E" . string(len(errors)) . " W" . string(len(warnings)) . " "
-  endif
-endfunction
+" function! StatusDiagnosticForWorkspace() abort
+"   let diagnostics = CocAction('diagnosticList')
+"   if type(diagnostics) == v:t_list
+"     let errors = []
+"     let warnings = []
+"     for diagnostic in diagnostics
+"       if diagnostic['severity'] == 'Error'
+"         call add(errors, diagnostic)
+"       endif
+"       if diagnostic['severity'] == 'Warning'
+"         call add(warnings, diagnostic)
+"       endif
+"     endfor
+"     return " E" . string(len(errors)) . " W" . string(len(warnings)) . " "
+"   endif
+" endfunction
 
 function! UpdateWorkspaceCocDiagnostic() abort
   if get(g:, 'coc_workspace_initialized', 0)
