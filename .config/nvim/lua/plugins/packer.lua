@@ -39,17 +39,19 @@ function Packer:start_up()
             use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" } ------------------------------------ 代码高亮
             use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
             use 'neoclide/jsonc.vim'
-            use "shaunsingh/nord.nvim"
             use "petertriho/nvim-scrollbar"
             use "psliwka/vim-smoothie"
 
-            -- use { 'Everblush/everblush.nvim', as = 'everblush' }
-            -- use 'stefanvanburen/rams.vim'
+            use "easysid/mod8.vim"
+            use "shaunsingh/nord.nvim"
+
             -- use 'cormacrelf/vim-colors-github'
             -- use 'flazz/vim-colorschemes' -- including "github", conflict
             -- use 'rafi/awesome-vim-colorschemes'
+            --
+            -- use { 'Everblush/everblush.nvim', as = 'everblush' }
+            -- use 'stefanvanburen/rams.vim'
             -- use 'rainglow/vim'
-            -- use "jessun/mod8" ------------------------------------------------------------------------------- colorscheme
             --
             --
             --||||||||||||||||||||||||||||||||||||||||| 文本操作 ||||||||||||||||||||||||||||||||||||||||||||
