@@ -68,7 +68,9 @@ if type -q 'git'
     alias alldeletebranchesgit 'git branch | grep -v "master" | xargs git branch -D'
     alias mergedbarncheletedgit 'git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
     alias pushcurrentgit 'git push -u origin (git rev-parse --abbrev-ref HEAD)'
-    alias forcepushcurrentgit 'git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
+    # alias forcepushcurrentgit 'git push -u -f origin (git rev-parse --abbrev-ref HEAD)'
+    alias abortcherry 'git cherry-pick --abort'
+    alias abortrebase 'git rebase --abort'
     alias gitusehttpproxy "git config --global http.proxy '$LOCAL_HTTP_PROXY'; git config --global https.proxy '$LOCAL_HTTP_PROXY'"
     alias gitusesocks5proxy "git config --global http.proxy '$LOCAL_SOCKS5_PROXY'; git config --global https.proxy '$LOCAL_SOCKS5_PROXY'"
     alias rebasecontinuegit "git rebase --continue"
