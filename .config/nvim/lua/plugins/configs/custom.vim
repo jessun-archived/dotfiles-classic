@@ -61,7 +61,7 @@ let g:vista_ctags_cmd = {
 " For example:
 let g:vista_fzf_preview = ['right:50%']
 
-colorscheme nord
+colorscheme onenord
             
 "--||||||||||||||||||||||||||||||||||||||||| vim-fugitive ||||||||||||||||||||||||||||||||||||||||||||
 nnoremap <space>ga :Git add %:p<CR><CR>
