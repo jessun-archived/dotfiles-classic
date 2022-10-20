@@ -18,7 +18,8 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 " ============== coc.nvim lsp {
 let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
 let g:coc_global_extensions += ['coc-json'] " json format
-let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
+" let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
+" let g:coc_global_extensions += ['coc-lua'] " lua completion and format
 let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
 let g:coc_global_extensions += ['coc-sh'] " shell
 let g:coc_global_extensions += ['coc-yaml'] " yaml
@@ -59,8 +60,8 @@ xmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>c<leader> :<C-u>CocList --auto-preview files<CR>
 xmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
 nmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
-xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
-nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
+" xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
+" nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
 
 nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
 
@@ -181,8 +182,8 @@ autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
 
 " Use <C-n>, <C-p>, <up> and <down> to navigate completion list: >
 
-inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
-inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
+" inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
+" inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 " inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
 " inoremap <silent><expr> <up> coc#pum#visible() ? coc#pum#prev(0) : "\<up>"
 
@@ -241,7 +242,7 @@ inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
 " endfunction
 
 function! UpdateWorkspaceCocDiagnostic() abort
-  if get(g:, 'coc_workspace_initialized', 0)
+  if !get(g:, 'coc_workspace_initialized', 'v:true')
     return
   endif
   let diagnostics = CocAction('diagnosticList')
