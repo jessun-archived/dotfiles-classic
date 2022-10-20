@@ -1,4 +1,3 @@
-local vim = vim
 local vim_loop, vim_api = vim.loop, vim.api
 
 local global = require("base/global")
@@ -27,56 +26,41 @@ function Packer:start_up()
 		--
 		--
 		--|||||||||||||||||||||||||||||||||||||||||||| UI |||||||||||||||||||||||||||||||||||||||||||||||
-		-- use "chentoast/marks.nvim" ------------------------------------------------------------------------ 文本标记
 		use("kyazdani42/nvim-web-devicons") -------------------------------------------------------------- 扩展图标
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -------------------------- 高亮关键字
 		use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- 状态栏
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
-		-- use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
 		use("neoclide/jsonc.vim")
 		use("petertriho/nvim-scrollbar")
-		use("karb94/neoscroll.nvim")
-		use("psliwka/vim-smoothie")
-		-- use("sunjon/shade.nvim")
+		use("sunjon/Shade.nvim")
 
-		use("easysid/mod8.vim")
-		-- use("shaunsingh/nord.nvim")
-		use("arcticicestudio/nord-vim")
+		---------------------------- colorscheme {
+		use("flazz/vim-colorschemes")
+		use("jessun/vimspectr")
+		use("mcchrish/vim-no-color-collections")
+		use("mkarmona/colorsbox")
+		use("mswift42/vim-themes")
 		use("projekt0n/github-nvim-theme")
+		use("rafi/awesome-vim-colorschemes")
+		use("rainglow/vim")
 		use("rmehri01/onenord.nvim")
-		use("kaiuri/nvim-juliana")
-		use({
-			"anuvyklack/windows.nvim",
-			requires = {
-				"anuvyklack/middleclass",
-				"anuvyklack/animation.nvim",
-			},
-			config = function()
-				vim.o.winwidth = 10
-				vim.o.winminwidth = 10
-				vim.o.equalalways = false
-				require("windows").setup()
-			end,
-		})
-
-		-- use 'cormacrelf/vim-colors-github'
-		-- use 'flazz/vim-colorschemes' -- including "github", conflict
-		-- use 'rafi/awesome-vim-colorschemes'
+		---------------------------- colorscheme }
 
 		--||||||||||||||||||||||||||||||||||||||||| 文本操作 ||||||||||||||||||||||||||||||||||||||||||||
 		use("machakann/vim-sandwich") ---------------------=---------------------------------------------- 快速两端文本 ?
 		use("github/copilot.vim") ------------------------------------------------------------------------ Github AI 补全
-		use("iamcco/markdown-preview.nvim")
-		use("smjonas/live-command.nvim")
-		-- use { "nvim-orgmode/orgmode" } ------------------------------------------------------------------ Org 文档
-		-- use { "akinsho/org-bullets.nvim" } -------------------------------------------------------------- Org 文档
-		-- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-		-- use "junegunn/vim-easy-align"
+		use({
+			"iamcco/markdown-preview.nvim",
+			run = "cd app && npm install",
+			setup = function()
+				vim.g.mkdp_filetypes = { "markdown" }
+			end,
+			ft = { "markdown" },
+		})
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 辅助工具 ||||||||||||||||||||||||||||||||||||||||||||
 		use("dstein64/vim-startuptime")
-		-- use "rcarriga/nvim-notify"
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 目录管理 ||||||||||||||||||||||||||||||||||||||||||||
@@ -90,7 +74,6 @@ function Packer:start_up()
 		--
 		--||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
 		-- use {"sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim"} --------------------------- 差异比较
-		use("tpope/vim-fugitive")
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 编码工具 ||||||||||||||||||||||||||||||||||||||||||||
@@ -106,11 +89,26 @@ function Packer:start_up()
 		use("nvim-treesitter/nvim-treesitter-textobjects") ----------------------------------------------- 文本对象 ?
 		use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------- 文本对象 ?
 		use("nvim-treesitter/nvim-treesitter-context")
-		use("justinmk/vim-sneak")
-		-- use { "phaazon/hop.nvim", branch = 'v2' }
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
 		use("nathom/filetype.nvim") ---------------------------------------------------------------------- filetype 性能优化
+
+		--||||||||||||||||||||||||||||||||||||||||| TESTING ||||||||||||||||||||||||||||||||||||||||||||
+		-- use("shaunsingh/nord.nvim")
+		-- use("easysid/mod8.vim")
+		-- use("arcticicestudio/nord-vim")
+		-- use("lukas-reineke/indent-blankline.nvim")
+		use({
+			"lewis6991/gitsigns.nvim",
+			-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+		})
+		use({ "anuvyklack/windows.nvim", requires = { "anuvyklack/middleclass", "anuvyklack/animation.nvim" } })
+		use("yaocccc/nvim-hlchunk")
+		use("smjonas/live-command.nvim")
+		use("tpope/vim-fugitive")
+		use({ "akinsho/git-conflict.nvim", tag = "*" })
+		use("justinmk/vim-sneak")
+		use("karb94/neoscroll.nvim")
 	end)
 end
 
