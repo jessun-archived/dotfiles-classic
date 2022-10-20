@@ -30,7 +30,7 @@ function Packer:start_up()
 		-- use "chentoast/marks.nvim" ------------------------------------------------------------------------ 文本标记
 		use("kyazdani42/nvim-web-devicons") -------------------------------------------------------------- 扩展图标
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -------------------------- 高亮关键字
-		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- 状态栏
+		use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -- 状态栏
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
 		-- use { "winston0410/range-highlight.nvim", requires = "winston0410/cmd-parser.nvim" } ------------ 高亮选中区域
 		use("neoclide/jsonc.vim")

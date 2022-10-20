@@ -265,9 +265,9 @@ function! UpdateWorkspaceCocDiagnostic() abort
         call add(hints, diagnostic)
       endif
     endfor
-    let b:coc_diagnostic_info = {'error': len(errors), 'warning': len(warnings), 'information': len(infos), 'hint': len(hints)}
+    let g:coc_diagnostic_info = {'error': len(errors), 'warning': len(warnings), 'information': len(infos), 'hint': len(hints)}
   endif
 endfunction
 
-autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
+" autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
 

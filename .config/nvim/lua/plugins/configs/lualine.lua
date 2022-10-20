@@ -101,7 +101,14 @@ require("lualine").setup({
 		lualine_b = {
 			{
 				"diagnostics",
-				sources = { "nvim_lsp", "nvim_diagnostic", "coc", "nvim_workspace_diagnostic", "ale", "vim_lsp" },
+				sources = {
+					--	"nvim_lsp",
+					--	"nvim_diagnostic",
+					"coc_workspace",
+					--	"nvim_workspace_diagnostic",
+					--  "ale",
+					--	"vim_lsp",
+				},
 				diagnostics_color = {
 					-- error = "DiagnosticError",
 					-- warn = "DiagnosticWarn",
@@ -168,8 +175,8 @@ require("lualine").setup({
 
 				buffers_color = {
 					-- Same values as the general color option can be used here.
-					active = "lualine_a_normal",
-					inactive = "lualine_b_normal",
+					active = "lualine_b_normal",
+					inactive = "lualine_a_normal",
 				},
 
 				symbols = {
