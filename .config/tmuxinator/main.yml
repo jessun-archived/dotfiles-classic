@@ -45,7 +45,6 @@ root: /home/jessun
 # attach: false
 
 windows:
-  - other:
   - arch:
       yay
       # layout: main-vertical
@@ -55,21 +54,11 @@ windows:
       # panes:
       # - vim
       # - guard
-  - nvim-update:
-      - cd ~/.config/nvim/
-      - export all_proxy='http://127.0.0.1:1087'; export http_proxy='http://127.0.0.1:1087'; export https_proxy='http://127.0.0.1:1087'; git config --global http.proxy '127.0.0.1:1087'; git config --global https.proxy '127.0.0.1:1087'
-      # - nvim +PackerUpdate
-
-  - rust-update:
+  - config:
       - export all_proxy='http://127.0.0.1:1087'; export http_proxy='http://127.0.0.1:1087'; export https_proxy='http://127.0.0.1:1087'; git config --global http.proxy '127.0.0.1:1087'; git config --global https.proxy '127.0.0.1:1087'
       - rustup update
-      # - cargo install-update --all
-
-  - configs:
-      - cd ~/.config/
       - yadm status
 
   - clash:
       - cd ~/.config/clash && clash -d .
 
-  - sshuttle:
