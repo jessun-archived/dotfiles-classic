@@ -32,18 +32,21 @@ function Packer:start_up()
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
 		use("neoclide/jsonc.vim")
 		use("petertriho/nvim-scrollbar")
-		use("sunjon/Shade.nvim")
+		use("koenverburg/peepsight.nvim")
 
 		---------------------------- colorscheme {
-		use("flazz/vim-colorschemes")
-		use("jessun/vimspectr")
-		use("mcchrish/vim-no-color-collections")
-		use("mkarmona/colorsbox")
-		use("mswift42/vim-themes")
-		use("projekt0n/github-nvim-theme")
-		use("rafi/awesome-vim-colorschemes")
-		use("rainglow/vim")
-		use("rmehri01/onenord.nvim")
+		use("arcticicestudio/nord-vim")
+		-- use("flazz/vim-colorschemes")
+		-- use("jessun/vimspectr")
+		-- use("mcchrish/vim-no-color-collections")
+		-- use("mkarmona/colorsbox")
+		-- use("mswift42/vim-themes")
+		-- use("projekt0n/github-nvim-theme")
+		-- use("rafi/awesome-vim-colorschemes")
+		-- use("rainglow/vim")
+		-- use("rmehri01/onenord.nvim")
+		use("shaunsingh/nord.nvim")
+		-- use("easysid/mod8.vim")
 		---------------------------- colorscheme }
 
 		--||||||||||||||||||||||||||||||||||||||||| 文本操作 ||||||||||||||||||||||||||||||||||||||||||||
@@ -94,9 +97,6 @@ function Packer:start_up()
 		use("nathom/filetype.nvim") ---------------------------------------------------------------------- filetype 性能优化
 
 		--||||||||||||||||||||||||||||||||||||||||| TESTING ||||||||||||||||||||||||||||||||||||||||||||
-		-- use("shaunsingh/nord.nvim")
-		-- use("easysid/mod8.vim")
-		-- use("arcticicestudio/nord-vim")
 		-- use("lukas-reineke/indent-blankline.nvim")
 		use({
 			"lewis6991/gitsigns.nvim",
@@ -109,6 +109,9 @@ function Packer:start_up()
 		use({ "akinsho/git-conflict.nvim", tag = "*" })
 		use("justinmk/vim-sneak")
 		use("karb94/neoscroll.nvim")
+
+		--||||||||||||||||||||||||||||||||||||||||| DEPRECATED ||||||||||||||||||||||||||||||||||||||||||||
+		-- use("sunjon/Shade.nvim")
 	end)
 end
 
