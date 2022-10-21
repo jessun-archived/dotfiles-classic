@@ -73,6 +73,7 @@ vim.api.nvim_set_keymap("n", "<leader>k", ":Telescope keymaps<CR>", { noremap = 
 vim.api.nvim_set_keymap("n", "<leader><leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>b", ":Telescope buffers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", '"', ":Telescope registers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
 	"n",
 	-- "<leader>t*",
