@@ -1,4 +1,5 @@
 {
+    "git.enableGutters": false,
     "floatFactory.floatConfig": {
         "border": false
     },
