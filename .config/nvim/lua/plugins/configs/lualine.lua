@@ -49,6 +49,30 @@ local colors = {
 	nord_frost_green4 = "#5E81AC",
 }
 
+-- show breadcrumbs if available
+local function breadcrumbs()
+	local items = vim.b.coc_nav
+	local t = { "" }
+	for k, v in ipairs(items) do
+		setmetatable(v, {
+			__index = function(table, key)
+				return " "
+			end,
+		})
+		t[#t + 1] = " %#"
+			.. (v.highlight or "Normal")
+			.. "#"
+			.. (type(v.label) == "string" and v.label .. " " or "")
+			.. "%#NonText#"
+			.. (v.name or "")
+		if next(items, k) ~= nil then
+			t[#t + 1] = "%#StatusLineNC# "
+		end
+	end
+	t[#t + 1] = "%#EndOfBuffer#%L  "
+	return table.concat(t)
+end
+
 local function search_result()
 	if vim.v.hlsearch == 0 then
 		return ""
@@ -88,6 +112,11 @@ require("lualine").setup({
 		icons_enabled = false,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
+		refresh = {
+			statusline = 1000,
+			tabline = 300,
+			winbar = 1000,
+		},
 	},
 	sections = {
 		lualine_a = {
@@ -144,9 +173,14 @@ require("lualine").setup({
 				path = 3,
 			},
 		},
-		lualine_x = { "location" },
-		lualine_y = { "progress" },
-		lualine_z = { "filetype" },
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {
+			{ search_result },
+			{ "location" },
+			{ "progress" },
+			{ "filetype" },
+		},
 	},
 	tabline = {
 		lualine_a = {
@@ -186,14 +220,16 @@ require("lualine").setup({
 				},
 			},
 		},
-		-- lualine_x = {},
-		-- lualine_y = {
-		--     {
-		--         "NearestMethodOrFunction",
-		--         color = { fg = colors.nord_snow_storm_white1, bg = colors.nord_bg }
-		--     }
-		--
-		-- },
-		lualine_z = { search_result },
+		lualine_x = {},
+		lualine_y = {
+			--     {
+			--         "NearestMethodOrFunction",
+			--         color = { fg = colors.nord_snow_storm_white1, bg = colors.nord_bg }
+			--     }
+			--
+		},
+		lualine_z = {
+			-- breadcrumbs
+		},
 	},
 })
