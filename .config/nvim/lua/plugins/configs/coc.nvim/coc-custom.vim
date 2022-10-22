@@ -70,7 +70,7 @@ nmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
 " xmap <silent> <leader>/ :<C-u>CocList --interactive --auto-preview grep<CR>
 " nmap <silent> <leader>/ :<C-u>CocList --interactive --auto-preview grep<CR>
 
-nnoremap <silent><nowait> <space>s  :<C-u>CocList --interactive --auto-preview symbols<cr>
+nnoremap <silent><nowait> <space>ls  :<C-u>CocList --interactive --auto-preview symbols<cr>
 
 nnoremap <silent> <leader>c* :exe 'CocList --interactive --input='.expand('<cword>').' grep'<CR>
 
