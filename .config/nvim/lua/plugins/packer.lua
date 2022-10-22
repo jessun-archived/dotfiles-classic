@@ -35,7 +35,6 @@ function Packer:start_up()
 		use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
 		use("petertriho/nvim-scrollbar") ----------------------------------------------------------------- 滚动条
-		use("koenverburg/peepsight.nvim") ---------------------------------------------------------------- 视觉聚焦
 		use("yaocccc/nvim-hlchunk") ---------------------------------------------------------------------- 线条当前块
 		use({
 			"kyazdani42/nvim-tree.lua", ------------------------------------------------------------------ 文件树
@@ -100,7 +99,6 @@ function Packer:start_up()
 			"lewis6991/gitsigns.nvim",
 			-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
 		})
-		use({ "anuvyklack/windows.nvim", requires = { "anuvyklack/middleclass", "anuvyklack/animation.nvim" } })
 		use("smjonas/live-command.nvim")
 		use("tpope/vim-fugitive")
 		use({ "akinsho/git-conflict.nvim", tag = "*" })
@@ -111,12 +109,15 @@ function Packer:start_up()
 		use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------- 文本对象 ?
 		use("nvim-treesitter/nvim-treesitter-context")
 		use("machakann/vim-sandwich") ---------------------=---------------------------------------------- 快速两端文本 ?
+		use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+
 		-- use {"sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim"} --------------------------- 差异比较
 
-		--||||||||||||||||||||||||||||||||||||||||| DEPRECATED ||||||||||||||||||||||||||||||||||||||||||||
-		-- use "danielpieper/telescope-tmuxinator.nvim" -------------------------------------------------- tmuxinator 跳转
-		-- use("sunjon/Shade.nvim")
+		--||||||||||||||||||||||||||||||||||||||||| DEPRECATED ||||||||||||||||||||||||||||||||||||||||||
+		-- use "danielpieper/telescope-tmuxinator.nvim" ------------------------------------------------- tmuxinator 跳转
+		-- use("koenverburg/peepsight.nvim") ------------------------------------------------------------ 视觉聚焦
 		-- use("lukas-reineke/indent-blankline.nvim")
+		-- use("sunjon/Shade.nvim")
 	end)
 end
 
