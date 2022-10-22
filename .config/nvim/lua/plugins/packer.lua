@@ -36,15 +36,9 @@ function Packer:start_up()
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
 		use("petertriho/nvim-scrollbar") ----------------------------------------------------------------- 滚动条
 		use("yaocccc/nvim-hlchunk") ---------------------------------------------------------------------- 线条当前块
-		use({
-			"kyazdani42/nvim-tree.lua", ------------------------------------------------------------------ 文件树
-			requires = {
-				"kyazdani42/nvim-web-devicons", -- optional, for file icons
-			},
-			tag = "nightly", -- optional, updated every week. (see issue #1193)
-		})
+		use("IngoMeyer441/coc_current_word")
 
-		---------------------------- colorscheme {
+		-------------------------------------------------------------------------------------------------- colorscheme {
 		use("arcticicestudio/nord-vim")
 		use("karoliskoncevicius/sacredforest-vim")
 		use("flazz/vim-colorschemes")
@@ -58,7 +52,7 @@ function Packer:start_up()
 		use("rmehri01/onenord.nvim")
 		use("shaunsingh/nord.nvim")
 		use("easysid/mod8.vim")
-		---------------------------- colorscheme }
+		-------------------------------------------------------------------------------------------------- colorscheme }
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 编码工具 ||||||||||||||||||||||||||||||||||||||||||||
@@ -73,51 +67,56 @@ function Packer:start_up()
 		use("numToStr/Comment.nvim") -------------------------------------------------------------------- 代码注释
 		use("liuchengxu/vista.vim") --------------------------------------------------------------------- 代码大纲
 		use("neoclide/jsonc.vim") ----------------------------------------------------------------------- jsonc 文件高亮
-		--
 
+		use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }) --------------------------- 差异比较
+		use("tpope/vim-fugitive")
+		--
+		--
 		--||||||||||||||||||||||||||||||||||||||||| 文本操作 ||||||||||||||||||||||||||||||||||||||||||||
 		use("github/copilot.vim") ----------------------------------------------------------------------- Github AI 补全
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 目录管理 ||||||||||||||||||||||||||||||||||||||||||||
+		use({
+			"kyazdani42/nvim-tree.lua", ------------------------------------------------------------------ 文件树
+			requires = {
+				"kyazdani42/nvim-web-devicons", -- optional, for file icons
+			},
+			tag = "nightly", -- optional, updated every week. (see issue #1193)
+		})
+		--
+		--
+		--||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
+		use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) ------------ 模糊搜索
+		use({ "kevinhwang91/nvim-hlslens" })
+		use("justinmk/vim-sneak")
 		--
 		--
 		--||||||||||||||||||||||||||||||||||||||||| 辅助工具 ||||||||||||||||||||||||||||||||||||||||||||
 		use("dstein64/vim-startuptime") ----------------------------------------------------------------- 启动时间
 		--
 		--
-		--||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
-		--
-		--
-		--||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
-		use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) ------------ 模糊搜索
-		--
-		--||||||||||||||||||||||||||||||||||||||||| 性能优化 ||||||||||||||||||||||||||||||||||||||||||||
-
 		--||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||
-		use({
-			"lewis6991/gitsigns.nvim",
-			-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
-		})
 		use("smjonas/live-command.nvim")
-		use("tpope/vim-fugitive")
 		use({ "akinsho/git-conflict.nvim", tag = "*" })
-		use("justinmk/vim-sneak")
-		use("karb94/neoscroll.nvim")
-		use("eckon/treesitter-current-functions") -------------------------------------------------------- 当前函数 ?
-		use("nvim-treesitter/nvim-treesitter-textobjects") ----------------------------------------------- 文本对象 ?
-		use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------- 文本对象 ?
+		use("eckon/treesitter-current-functions") ------------------------------------------------------- 当前函数 ?
+		use("nvim-treesitter/nvim-treesitter-textobjects") ---------------------------------------------- 文本对象 ?
+		use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------ 文本对象 ?
 		use("nvim-treesitter/nvim-treesitter-context")
-		use("machakann/vim-sandwich") ---------------------=---------------------------------------------- 快速两端文本 ?
-		use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
-
-		-- use {"sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim"} --------------------------- 差异比较
-
+		use("machakann/vim-sandwich") ---------------------=--------------------------------------------- 快速两端文本 ?
+		--
+		--
 		--||||||||||||||||||||||||||||||||||||||||| DEPRECATED ||||||||||||||||||||||||||||||||||||||||||
 		-- use "danielpieper/telescope-tmuxinator.nvim" ------------------------------------------------- tmuxinator 跳转
+		-- use("karb94/neoscroll.nvim")
 		-- use("koenverburg/peepsight.nvim") ------------------------------------------------------------ 视觉聚焦
 		-- use("lukas-reineke/indent-blankline.nvim")
 		-- use("sunjon/Shade.nvim")
+		-- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+		-- use({
+		-- 	"lewis6991/gitsigns.nvim",
+		-- 	-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+		-- })
 	end)
 end
 

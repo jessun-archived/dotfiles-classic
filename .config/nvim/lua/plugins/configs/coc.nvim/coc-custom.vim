@@ -90,10 +90,6 @@ nmap <leader>ck  :CocList --auto-preview maps<CR>
 
 nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
-
-" nnoremap <silent><nowait> <leader>co  :<C-u>CocList -A outline<cr>
-nnoremap <silent><nowait> <leader>co  :<C-u>CocOutline<cr>
-
 nmap <expr> <silent> 'w <SID>select_current_word()
 function! s:select_current_word()
   if !get(b:, 'coc_cursors_activated', 0)
@@ -177,8 +173,10 @@ nmap <leader>rf <Plug>(coc-refactor)
 " autocmd User CocNvimInit call s:InitCoc()
 " autocmd User CocDiagnosticChange call s:DiagnosticNotify()
 " autocmd User CocStatusChange call s:StatusNotify()
-autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd BufAdd NERD_tree_*,your_buffer_name.rb,*.js :let b:coc_current_word_disabled_in_this_buffer = 1
 autocmd BufWritePost * silent call CocActionAsync('diagnosticRefresh')
+autocmd CursorHold * silent call CocActionAsync('highlight')
+let g:coc_current_word_highlight_delay = 100
 
 " Use <C-n>, <C-p>, <up> and <down> to navigate completion list: >
 

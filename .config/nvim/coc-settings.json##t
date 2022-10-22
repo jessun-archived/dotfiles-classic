@@ -1,6 +1,9 @@
 {
-    "git.enableGutters": false,
-    "git.addGBlameToBufferVar": false,
+    "git.addedSign.text": "█",
+    "git.changedSign.text": "█",
+    "git.removedSign.text": "█",
+    "git.changeRemovedSign.text": "█",
+    "git.topRemovedSign.text": "█",
     "floatFactory.floatConfig": {
         "border": false
     },
