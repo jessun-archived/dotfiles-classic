@@ -65,7 +65,8 @@ colorscheme nord
             
 "--||||||||||||||||||||||||||||||||||||||||| vim-fugitive ||||||||||||||||||||||||||||||||||||||||||||
 nnoremap <space>ga :Git add %:p<CR><CR>
-nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>vs :Gvdiffsplit!<CR>
+nnoremap <space>s :Gdiffsplit!<CR>
 nnoremap <space>gc :G commit -v -q<CR>
 nnoremap <space>gt :G commit -v -q %:p<CR>
 nnoremap <space>gd :Gdiff<CR>
