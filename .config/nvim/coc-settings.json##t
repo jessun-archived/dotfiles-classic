@@ -1,5 +1,6 @@
 {
     "git.enableGutters": false,
+    "git.addGBlameToBufferVar": false,
     "floatFactory.floatConfig": {
         "border": false
     },
@@ -9,6 +10,7 @@
     "diagnostic.floatConfig": {
         "border": false
     },
+    "diagnostic.signPriority": 1,
     "signature.floatConfig": {
         "border": false
     },
@@ -40,7 +42,6 @@
     "colors.filetypes": [
         "*"
     ],
-    "git.addGBlameToBufferVar": false,
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
