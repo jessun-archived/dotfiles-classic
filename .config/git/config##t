@@ -41,3 +41,7 @@
 	insteadOf      = https://github.com/actiontech
 [includeIf "gitdir:~/workbench/actiontech/"]
     path = ~/workbench/actiontech/.gitconfig
+[branch "master"]
+	pushRemote = no_push
+[branch "main"]
+	pushRemote = no_push
