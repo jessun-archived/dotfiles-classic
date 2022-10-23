@@ -25,8 +25,8 @@ function Config:load_config()
     vim.o.nrformats = "" -- 数字格式
     vim.o.showmatch = true -- 显示匹配的括号
     vim.o.tabpagemax = 30 -- VIM 打开 tab 的最大数量
-    vim.o.cursorcolumn = true -- 显示光标所在的列
-    vim.o.cursorline = true -- 显示光标所在的行
+    -- vim.o.cursorcolumn = true -- 显示光标所在的列
+    -- vim.o.cursorline = true -- 显示光标所在的行
 
     vim.o.wildmenu = true
     vim.o.wildmode = "longest:full,full" -- 当按下 <Tab> 时，显示全部匹配的语法项目
