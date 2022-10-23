@@ -90,6 +90,6 @@ map T <Plug>Sneak_T
 map s <Plug>Sneak_s
 map S <Plug>Sneak_S
 
-hi CocFloating ctermfg=100 guibg=#D8DEE9 guifg=#2E3440
-hi CocMenuSel ctermfg=102 guibg=#4C566A guifg=#D8DEE9
-hi CocSearch ctermfg=106 guibg=#4C566A guifg=#D8DEE9
+hi CocFloating ctermfg=100 guifg=#ECEFF4 guibg=#434C5E
+hi CocMenuSel ctermfg=102 guifg=#2E3440 guibg=#D8DEE9
+hi CocSearch ctermfg=106 guifg=#D08770
