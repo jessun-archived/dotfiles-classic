@@ -1,4 +1,8 @@
 {
+    "diagnostic.errorSign": "E",
+    "diagnostic.hintSign": "H",
+    "diagnostic.infoSign": "I",
+    "diagnostic.warningSign": "W",
     "git.addedSign.text": "█",
     "git.changedSign.text": "█",
     "git.removedSign.text": "█",
