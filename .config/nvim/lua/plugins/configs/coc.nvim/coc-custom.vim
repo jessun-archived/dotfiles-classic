@@ -76,8 +76,8 @@ nnoremap <silent> <leader>c* :exe 'CocList --interactive --input='.expand('<cwor
 
 xmap <leader>cb  :CocList --auto-preview buffers<CR>
 nmap <leader>cb  :CocList --auto-preview buffers<CR>
-xmap <leader>b   :CocList --auto-preview buffers<CR>
-nmap <leader>b   :CocList --auto-preview buffers<CR>
+" xmap <leader>b   :CocList --auto-preview buffers<CR>
+" nmap <leader>b   :CocList --auto-preview buffers<CR>
 
 xmap <leader>cc  :CocList --auto-preview commands<CR>
 nmap <leader>cc  :CocList --auto-preview commands<CR>
@@ -268,4 +268,3 @@ function! UpdateWorkspaceCocDiagnostic() abort
 endfunction
 
 " autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
-
