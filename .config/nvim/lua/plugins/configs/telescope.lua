@@ -33,14 +33,17 @@ require("telescope").setup({
 			stop_action = "stop", -- | 'kill'
 			disable_icons = true,
 		},
-		-- octo = {}
+		coc = {
+			-- theme = "ivy",
+			-- prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+		},
 	},
 })
 
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 -- require("telescope").load_extension("fzf")
--- require('telescope').load_extension('neoclip')
+require("telescope").load_extension("coc")
 
 vim.api.nvim_set_keymap("n", "<leader>t<leader>", ":Telescope find_files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>t/", ":Telescope live_grep<CR>", { noremap = true, silent = true })
