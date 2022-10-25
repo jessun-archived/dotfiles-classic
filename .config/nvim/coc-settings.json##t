@@ -1,8 +1,8 @@
 {
-    "diagnostic.errorSign": ">>",
+    "diagnostic.errorSign": "——",
     "diagnostic.hintSign": ".",
     "diagnostic.infoSign": ".",
-    "diagnostic.warningSign": ">",
+    "diagnostic.warningSign": "——",
     "git.signPriority": 0,
     "git.addedSign.text": "▏",
     "git.changedSign.text": "▏",
