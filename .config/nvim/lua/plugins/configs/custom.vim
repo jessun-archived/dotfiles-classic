@@ -96,3 +96,7 @@ hi CocMenuSel ctermfg=102 guifg=#2E3440 guibg=#D8DEE9
 hi CocSearch ctermfg=106 guifg=#D08770
 hi CurrentWord guifg=#ECEFF4 guibg=#D08770 
 " hi CurrentWord guifg=#XXXXXX guibg=#XXXXXX gui=underline,bold,italic ctermfg=XXX ctermbg=XXX cterm=underline,bold,italic
+
+hi DiffChange ctermfg=105 guibg=#EBCB8B guifg=#2E3440
+hi DiffAdd ctermfg=108 guibg=#A3BE8C guifg=#2E3440
+hi DiffDelete ctermfg=167 guibg=#BF616A guifg=#2E3440
