@@ -38,7 +38,7 @@ let g:go_highlight_build_constraints = 1
 " This could make the display more compact or more spacious.
 " e.g., more compact: ["▸ ", ""]
 " Note: this option only works for the kind renderer, not the tree renderer.
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_icon_indent = [">>>", ">"]
 
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
@@ -60,6 +60,7 @@ let g:vista_ctags_cmd = {
 " The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
 " For example:
 let g:vista_fzf_preview = ['right:50%']
+let g:vista_sidebar_width = 50
 
 colorscheme nord
             
@@ -93,3 +94,5 @@ map S <Plug>Sneak_S
 hi CocFloating ctermfg=100 guifg=#ECEFF4 guibg=#434C5E
 hi CocMenuSel ctermfg=102 guifg=#2E3440 guibg=#D8DEE9
 hi CocSearch ctermfg=106 guifg=#D08770
+hi CurrentWord guifg=#ECEFF4 guibg=#D08770 
+" hi CurrentWord guifg=#XXXXXX guibg=#XXXXXX gui=underline,bold,italic ctermfg=XXX ctermbg=XXX cterm=underline,bold,italic
