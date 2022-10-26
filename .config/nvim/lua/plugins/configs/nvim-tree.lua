@@ -1,23 +1,68 @@
 require("nvim-tree").setup({
-    sort_by = "case_sensitive",
-    view = {
-        adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "l", action = "edit" },
-                { key = "h", action = "close_node" },
-            },
-        },
-    },
-    renderer = {
-        group_empty = true,
-    },
-    filters = {
-        dotfiles = false,
-    },
-    git = {
-        ignore = false,
-    },
+	sort_by = "case_sensitive",
+	view = {
+		adaptive_size = true,
+		mappings = {
+			list = {
+				{ key = "l", action = "edit" },
+				{ key = "h", action = "close_node" },
+			},
+		},
+		number = true,
+		signcolumn = "yes",
+		-- float = {
+		-- 	enable = false,
+		-- 	open_win_config = {
+		-- 		relative = "editor",
+		-- 		border = "rounded",
+		-- 		width = 30,
+		-- 		height = 30,
+		-- 		row = 1,
+		-- 		col = 1,
+		-- 	},
+		-- },
+	},
+	renderer = {
+		group_empty = true,
+		indent_width = 4,
+		indent_markers = {
+			enable = true,
+			inline_arrows = true,
+			icons = {
+				corner = "└",
+				edge = "│",
+				item = "│",
+				bottom = "─",
+				none = " ",
+			},
+		},
+		icons = {
+			webdev_colors = false,
+			show = {
+				file = false,
+				folder = false,
+				folder_arrow = false,
+				git = false,
+			},
+		},
+	},
+	diagnostics = {
+		enable = true,
+		show_on_dirs = true,
+		debounce_delay = 50,
+		icons = {
+			hint = "·",
+			info = "·",
+			warning = "!",
+			error = "x",
+		},
+	},
+	filters = {
+		dotfiles = false,
+	},
+	git = {
+		ignore = false,
+	},
 })
 
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })

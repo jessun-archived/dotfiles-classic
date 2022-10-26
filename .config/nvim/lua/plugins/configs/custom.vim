@@ -39,6 +39,7 @@ let g:go_highlight_build_constraints = 1
 " e.g., more compact: ["▸ ", ""]
 " Note: this option only works for the kind renderer, not the tree renderer.
 let g:vista_icon_indent = [">>>", ">"]
+let g:vista#renderer#enable_icon = 0
 
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
