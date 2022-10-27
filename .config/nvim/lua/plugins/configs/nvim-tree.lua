@@ -8,7 +8,7 @@ require("nvim-tree").setup({
 				{ key = "h", action = "close_node" },
 			},
 		},
-		number = true,
+		number = false,
 		signcolumn = "yes",
 		-- float = {
 		-- 	enable = false,
@@ -25,24 +25,24 @@ require("nvim-tree").setup({
 	renderer = {
 		group_empty = true,
 		indent_width = 4,
-		indent_markers = {
-			enable = true,
-			inline_arrows = true,
-			icons = {
-				corner = "└",
-				edge = "│",
-				item = "│",
-				bottom = "─",
-				none = " ",
-			},
-		},
+		-- indent_markers = {
+		-- 	enable = true,
+		-- 	inline_arrows = true,
+		-- 	icons = {
+		-- 		corner = "└",
+		-- 		edge = "│",
+		-- 		item = "│",
+		-- 		bottom = "─",
+		-- 		none = " ",
+		-- 	},
+		-- },
 		icons = {
-			webdev_colors = false,
+			webdev_colors = true,
 			show = {
-				file = false,
-				folder = false,
-				folder_arrow = false,
-				git = false,
+				file = true,
+				folder = true,
+				folder_arrow = true,
+				git = true,
 			},
 		},
 	},
