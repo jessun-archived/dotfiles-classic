@@ -32,7 +32,8 @@ function Packer:start_up()
 		--|||||||||||||||||||||||||||||||||||||||||||| UI |||||||||||||||||||||||||||||||||||||||||||||||
 		use("kyazdani42/nvim-web-devicons") -------------------------------------------------------------- 扩展图标
 		use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -------------------------- 高亮关键字
-		use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
+		-- use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
+		use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
 		use("petertriho/nvim-scrollbar") ----------------------------------------------------------------- 滚动条
 		use("yaocccc/nvim-hlchunk") ---------------------------------------------------------------------- 线条当前块
@@ -82,7 +83,6 @@ function Packer:start_up()
 			requires = {
 				"kyazdani42/nvim-web-devicons", -- optional, for file icons
 			},
-			tag = "nightly", -- optional, updated every week. (see issue #1193)
 		})
 		--
 		--
