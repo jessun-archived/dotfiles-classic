@@ -63,7 +63,7 @@ nmap <silent> <leader>cf :<C-u>CocList --auto-preview files<CR>
 " xmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
 " nmap <silent> <leader><leader> :<C-u>CocList --auto-preview files<CR>
 
-" nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
+nnoremap <silent><nowait> <leader>cd  :<C-u>CocList --auto-preview diagnostics<cr>
 
 xmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
 nmap <silent> <leader>c/ :<C-u>CocList --interactive --auto-preview grep<CR>
