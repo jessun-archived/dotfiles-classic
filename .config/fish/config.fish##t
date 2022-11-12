@@ -79,6 +79,8 @@ if type -q 'git'
     alias mainrebasegit "git rebase -i origin/main"
     alias fetchgitall "git fetch --all"
     alias pullgitall "git pull --all"
+    alias diffgit "git diff "
+    alias diffgitcached "git diff --cached"
 end
 # ======================== Git alias ======================== }
 
