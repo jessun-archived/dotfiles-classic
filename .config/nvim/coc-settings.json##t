@@ -83,6 +83,9 @@
 {% if yadm.class == "mbp" %}
             "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
 {% endif %}
+{% if yadm.class == "mba" %}
+            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
+{% endif %}
         },
         {
             "name": "personal_dict",
@@ -95,6 +98,9 @@
 {% endif %}
 
 {% if yadm.class == "mbp" %}
+            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
+{% endif %}
+{% if yadm.class == "mba" %}
             "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
 {% endif %}
         }
