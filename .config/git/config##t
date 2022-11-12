@@ -47,9 +47,5 @@
 	pushRemote = no_push
 [branch "main"]
 	pushRemote = no_push
-{% if yadm.class=="actiontech-dev" %}
-[commit]
-	template = ~/.config/git/dmp_commit.tpl
-{% endif %}
 [help]
 	autoCorrect = 30
