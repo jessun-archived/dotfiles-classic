@@ -40,19 +40,19 @@ function Packer:start_up()
 		use("IngoMeyer441/coc_current_word")
 
 		-------------------------------------------------------------------------------------------------- colorscheme {
-		use("arcticicestudio/nord-vim")
-		use("karoliskoncevicius/sacredforest-vim")
-		use("flazz/vim-colorschemes")
-		use("jessun/vimspectr")
-		use("mcchrish/vim-no-color-collections")
-		use("mkarmona/colorsbox")
-		use("mswift42/vim-themes")
-		use("projekt0n/github-nvim-theme")
-		use("rafi/awesome-vim-colorschemes")
-		use("rainglow/vim")
-		use("rmehri01/onenord.nvim")
+		-- use("arcticicestudio/nord-vim") // VERY BAD
+		-- use("karoliskoncevicius/sacredforest-vim")
+		-- use("flazz/vim-colorschemes")
+		-- use("jessun/vimspectr")
+		-- use("mcchrish/vim-no-color-collections")
+		-- use("mkarmona/colorsbox")
+		-- use("mswift42/vim-themes")
+		-- use("projekt0n/github-nvim-theme")
+		-- use("rafi/awesome-vim-colorschemes")
+		-- use("rainglow/vim")
+		-- use("rmehri01/onenord.nvim")
 		use("shaunsingh/nord.nvim")
-		use("easysid/mod8.vim")
+		-- use("easysid/mod8.vim")
 		-------------------------------------------------------------------------------------------------- colorscheme }
 		--
 		--
