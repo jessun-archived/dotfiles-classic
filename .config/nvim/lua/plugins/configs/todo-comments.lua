@@ -17,7 +17,7 @@ require("todo-comments").setup({
 		},
 		TODO = { color = "error" },
 		HACK = { color = "warning" },
-		WARN = { color = "warning", alt = { "WARNING", "XXX", "Deprecated" } },
+		WARN = { color = "warning", alt = { "WARNING", "XXX", "Deprecated", "WIP" } },
 		PERF = { color = "warning", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 		NOTE = { color = "info", alt = { "INFO", "summary", "param" } },
 		TEST = { color = "warning", alt = { "TESTING", "PASSED", "FAILED" } },
