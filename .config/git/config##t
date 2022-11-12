@@ -32,7 +32,6 @@
 [receive]
 	denyNonFastForwards = true
 	denyDeletes = true
-{% if yadm.class=="actiontech-dev" %}
 # actiontech 
 [url "git@10.186.18.21:universe-extended"]
 	insteadOf      = http://actiontech.cloud/universe-extended
@@ -42,7 +41,6 @@
 	insteadOf      = https://github.com/actiontech
 [includeIf "gitdir:~/workbench/actiontech/"]
     path = ~/workbench/actiontech/.gitconfig
-{% endif %}
 [branch "master"]
 	pushRemote = no_push
 [branch "main"]
