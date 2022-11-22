@@ -45,5 +45,3 @@
 	pushRemote = no_push
 [branch "main"]
 	pushRemote = no_push
-[help]
-	autoCorrect = 30
