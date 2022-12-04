@@ -30,11 +30,7 @@
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "go",
-        "lua",
-        "rust"
-    ],
+    "coc.preferences.formatOnSave": true,
     "outline.sortBy": "position",
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
@@ -45,11 +41,30 @@
         "--hidden",
         "--files"
     ],
+    "colors.enable": true,
     "session.saveOnVimLeave": true,
     "http.proxy": "http://127.0.0.1:1087",
-    "colors.filetypes": [
-        "*"
-    ],
+    "languageserver": {
+        "go": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "trace.server": "verbose",
+            "filetypes": [
+                "go"
+            ]
+        },
+        "rust": {
+            "command": "rust-analyzer",
+            "filetypes": [
+                "rust"
+            ],
+            "rootPatterns": [
+                "Cargo.toml"
+            ]
+        }
+    },
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
@@ -72,37 +87,45 @@
     "cSpell.dictionaryDefinitions": [
         {
             "name": "actiontech_dict",
-{% if yadm.class == "actiontech-dev" %}
-            "path": "/home/jessun-dev/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
+            {% if yadm.class == "actiontech-dev" %
+            }
+            "path": "/home/jessun-dev/.config/nvim/dicts/actiontech_dict.txt"{% endif %
+            }
 
-{% if yadm.class == "home-pc" %}
-            "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
+{% if yadm.class == "home-pc" %
+            }
+            "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"{% endif %
+            }
 
-{% if yadm.class == "mbp" %}
-            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
-{% if yadm.class == "mba" %}
-            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
+{% if yadm.class == "mbp" %
+            }
+            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"{% endif %
+            }
+{% if yadm.class == "mba" %
+            }
+            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"{% endif %
+            }
         },
         {
             "name": "personal_dict",
-{% if yadm.class == "actiontech-dev" %}
-            "path": "/home/jessun-dev/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
+            {% if yadm.class == "actiontech-dev" %
+            }
+            "path": "/home/jessun-dev/.config/nvim/dicts/personal_dict.txt"{% endif %
+            }
 
-{% if yadm.class == "home-pc" %}
-            "path": "/home/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
+{% if yadm.class == "home-pc" %
+            }
+            "path": "/home/jessun/.config/nvim/dicts/personal_dict.txt"{% endif %
+            }
 
-{% if yadm.class == "mbp" %}
-            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
-{% if yadm.class == "mba" %}
-            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
+{% if yadm.class == "mbp" %
+            }
+            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"{% endif %
+            }
+{% if yadm.class == "mba" %
+            }
+            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"{% endif %
+            }
         }
     ],
     "cSpell.ignorePaths": [

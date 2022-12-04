@@ -16,11 +16,11 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 " ============== coc.nvim official }
 "
 " ============== coc.nvim lsp {
-let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
+" let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
 let g:coc_global_extensions += ['coc-json'] " json format
 " let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
 " let g:coc_global_extensions += ['coc-lua'] " lua completion and format
-let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
+" let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
 let g:coc_global_extensions += ['coc-sh'] " shell
 let g:coc_global_extensions += ['coc-yaml'] " yaml
 let g:coc_global_extensions += ['coc-toml'] " toml
