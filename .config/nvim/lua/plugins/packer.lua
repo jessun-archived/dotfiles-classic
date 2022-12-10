@@ -34,7 +34,7 @@ function Packer:start_up()
         use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -------------------------- 高亮关键字
         -- use({ "jessun/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
         use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
-        use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
+        -- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
         use("petertriho/nvim-scrollbar") ----------------------------------------------------------------- 滚动条
         use("yaocccc/nvim-hlchunk") ---------------------------------------------------------------------- 线条当前块
         use("IngoMeyer441/coc_current_word")
@@ -97,10 +97,10 @@ function Packer:start_up()
         --||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||
         use("smjonas/live-command.nvim")
         use({ "akinsho/git-conflict.nvim", tag = "*" })
-        use("eckon/treesitter-current-functions") ------------------------------------------------------- 当前函数 ?
-        use("nvim-treesitter/nvim-treesitter-textobjects") ---------------------------------------------- 文本对象 ?
-        use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------ 文本对象 ?
-        use("nvim-treesitter/nvim-treesitter-context")
+        -- use("eckon/treesitter-current-functions") ------------------------------------------------------- 当前函数 ?
+        -- use("nvim-treesitter/nvim-treesitter-textobjects") ---------------------------------------------- 文本对象 ?
+        -- use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------ 文本对象 ?
+        -- use("nvim-treesitter/nvim-treesitter-context")
         use("machakann/vim-sandwich") ---------------------=--------------------------------------------- 快速两端文本 ?
         --
         --
