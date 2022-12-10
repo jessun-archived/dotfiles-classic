@@ -1,310 +1,51 @@
 {
-    // callHierarchy 调用层级
-    "callHierarchy.enableTooltip": true,
-    "callHierarchy.openCommand": "edit",
-    "callHierarchy.splitCommand": "botright 30vs",
-    // code lens
-    "codeLens.enable": true,
-    "codeLens.position": "right_align",
-    "codeLens.separator": " | ",
-    "codeLens.subseparator": " | ",
-    // colors
-    "colors.enable": true,
-    "colors.highlightPriority": 1000,
-    // cursors
-    "cursors.cancelKey": "<esc>",
-    "cursors.nextKey": "<C-n>",
-    "cursors.previousKey": "<C-p>",
-    "cursors.wrapscan": true,
-    // diagnostic
-    "diagnostic.autoRefresh": true,
-    "diagnostic.checkCurrentLine": false,
-    "diagnostic.displayByAle": false,
-    "diagnostic.enable": true,
-    "diagnostic.enableHighlightLineNumber": true,
-    "diagnostic.enableMessage": "always",
     "diagnostic.errorSign": "x",
-    "diagnostic.filetypeMap": {},
-    "diagnostic.floatConfig": {
-        "border": false
-    },
-    "diagnostic.enableSign": true,
-    "diagnostic.format": "%message (%source%code)",
-    "diagnostic.highlightLimit": 1000,
-    "diagnostic.highlightPriority": 4096,
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
-    "diagnostic.level": "hint",
-    "diagnostic.locationlistLevel": "error",
-    "diagnostic.locationlistUpdate": true,
-    "diagnostic.messageDelay": 200,
-    "diagnostic.messageLevel": "error",
-    "diagnostic.messageTarget": "float",
-    "diagnostic.refreshOnInsertMode": false,
-    "diagnostic.separateRelatedInformationAsDiagnostics": false,
-    "diagnostic.showDeprecated": true,
-    "diagnostic.showUnused": true,
-    "diagnostic.signLevel": "hint",
-    "diagnostic.virtualText": true,
-    "diagnostic.virtualTextAlign": "right",
-    "diagnostic.virtualTextCurrentLineOnly": false,
-    "diagnostic.virtualTextFormat": "%message",
-    "diagnostic.virtualTextLevel": "error",
-    "diagnostic.virtualTextLimitInOneLine": 999,
-    "diagnostic.virtualTextLineSeparator": " || ",
-    "diagnostic.virtualTextLines": 3,
-    "diagnostic.virtualTextPrefix": " >> ",
-    "diagnostic.signPriority": 1,
-    "diagnostic.virtualTextWinCol": 999,
     "diagnostic.warningSign": "!",
-    // dialgo
-    "dialog.confirmKey": "<cr>",
-    "dialog.floatBorderHighlight": "Normal",
-    "dialog.floatHighlight": "Normal",
-    "dialog.maxHeight": 30,
-    "dialog.maxWidth": 80,
-    "dialog.pickerButtonShortcut": true,
-    "dialog.pickerButtons": true,
-    "dialog.rounded": false,
-    "dialog.shortcutHighlight": "MoreMsg",
-    // document
-    "documentHighlight.priority": 100,
-    "documentHighlight.timeout": 300,
-    // floatFactory
     "floatFactory.floatConfig": {
-        "border": false
+        "border": true
     },
-    // hover
-    "hover.autoHide": true,
+    "dialog.rounded": false,
+    "suggest.floatConfig": {
+        "border": true
+    },
+    "diagnostic.floatConfig": {
+        "border": true
+    },
+    "diagnostic.signPriority": 1,
+    "signature.floatConfig": {
+        "border": true
+    },
     "hover.floatConfig": {
-        "border": false
+        "border": true
     },
-    "hover.previewMaxHeight": 12,
-    "hover.target": "float",
-    // http
-    "http.proxy": "http://127.0.0.1:1087",
-    "http.proxyAuthorization": null,
-    "http.proxyCA": "",
-    "http.proxyStrictSSL": true,
-    // inlayhint
-    "inlayHint.enable": true,
-    "inlayHint.enableParameter": true,
-    "inlayHint.display": true,
-    "inlayHint.parameterSeparator": " |P| ",
-    "inlayHint.refreshOnInsertMode": false,
-    "inlayHint.subSeparator": " |S| ",
-    "inlayHint.typeSeparator": " |T|",
-    // link
-    "links.enable": true,
-    "links.highlight": true,
-    "links.tooltip": true,
-    // list
-    "list.alignColumns": true,
-    "list.extendedSearchMode": true,
-    "list.floatPreview": true,
     "list.maxPreviewHeight": 99999,
+    "coc.preferences.enableMessageDialog": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSave": true,
+    "colors.enable": true,
+    "outline.sortBy": "position",
+    "outline.autoPreview": true,
+    "outline.keepWindow": true,
+    "semanticTokens.enable": true,
+    "semanticTokens.incrementTypes": [
+        "variable",
+        "string",
+        "parameter"
+    ],
+    "suggest.defaultSortMethod": "alphabetical",
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.selection": "recentlyUsedByPrefix",
     "list.source.tags.command": "ctags -R -f ./.tags",
     "list.source.grep.command": "rg",
     "list.source.files.args": [
         "--hidden",
         "--files"
     ],
-    "list.height": 10,
-    "list.indicator": " > ",
-    "list.insertMappings": {},
-    "list.interactiveDebounceTime": 100,
-    "list.limitLines": null,
-    "list.menuAction": true,
-    "list.nextKeymap": "<C-j>",
-    "list.normalMappings": {},
-    "list.previewHighlightGroup": "Search",
-    "list.previewSplitRight": true,
-    "list.previewToplineOffset": 3,
-    "list.previewToplineStyle": "offset",
-    "list.previousKeymap": "<C-k>",
-    "list.selectedSignText": "*",
-    "list.signOffset": 900,
-    "list.smartCase": false,
-    // notification
-    "notification.border": true,
-    "notification.disabledProgressSources": [],
-    "notification.focusable": true,
-    "notification.highlightGroup": "Normal",
-    "notification.marginRight": 10,
-    "notification.maxHeight": 10,
-    "notification.maxWidth": 60,
-    "notification.minProgressWidth": 30,
-    "notification.statusLineProgress": true,
-    "notification.timeout": 10000,
-    "notification.winblend": 0,
-    // npm
-    "npm.binPath": "npm",
-    // outline
-    "outline.autoPreview": true,
-    "outline.autoWidth": true,
-    "outline.checkBufferSwitch": true,
-    "outline.codeActionKinds": [
-        "",
-        "quickfix",
-        "refactor"
-    ],
-    "outline.detailAsDescription": true,
-    "outline.expandLevel": 1,
-    "outline.followCursor": true,
-    "outline.keepWindow": true,
-    "outline.previewBorder": true,
-    "outline.previewBorderHighlightGroup": "Normal",
-    "outline.previewBorderRounded": false,
-    "outline.previewHighlightGroup": "Normal",
-    "outline.previewMaxWidth": 80,
-    "outline.previewWinblend": 0,
-    "outline.showLineNumber": true,
-    "outline.splitCommand": "botright 30vs",
-    "outline.switchSortKey": "<C-s>",
-    "outline.togglePreviewKey": "p",
-    //  pullConfiguration
-    "pullDiagnostic.ignored": [],
-    "pullDiagnostic.onChange": true,
-    "pullDiagnostic.onSave": true,
-    "pullDiagnostic.workspace": true,
-    // refactor
-    "refactor.afterContext": 3,
-    "refactor.beforeContext": 3,
-    "refactor.openCommand": "vsplit",
-    "refactor.saveToFile": true,
-    "refactor.showMenu": "<Tab>",
-    // semanticTokens
-    "semanticTokens.enable": true,
-    "semanticTokens.combinedModifiers": [
-        "deprecated"
-    ],
-    "semanticTokens.highlightPriority": 2048,
-    "semanticTokens.incrementTypes": [
-        "variable",
-        "string",
-        "parameter"
-    ],
-    // signature
-    "signature.floatConfig": {
-        "border": false
-    },
-    "signature.enable": true,
-    "signature.hideOnTextChange": false,
-    "signature.preferShownAbove": true,
-    "signature.target": "float",
-    "signature.triggerSignatureWait": 500,
-    // snippet
-    "snippet.highlight": false,
-    "snippet.nextPlaceholderOnDelete": false,
-    "snippet.statusText": "SNIP",
-    // suggest
-    "suggest.acceptSuggestionOnCommitCharacter": true,
-    "suggest.asciiCharactersOnly": false,
-    "suggest.asciiMatch": true,
-    "suggest.autoTrigger": "always",
-    "suggest.completionItemKindLabels": {},
-    "suggest.detailField": "preview",
-    "suggest.enableFloat": true,
-    "suggest.enablePreselect": true,
-    "suggest.filterGraceful": true,
-    "suggest.formatItems": [
-        "abbr",
-        "menu",
-        "kind",
-        "shortcut"
-    ],
-    "suggest.highPrioritySourceLimit": 5,
-    "suggest.ignoreRegexps": [],
-    "suggest.insertMode": "replace",
-    "suggest.invalidInsertCharacters": [
-        "\r",
-        "\n"
-    ],
-    "suggest.labelMaxLength": 200,
-    "suggest.languageSourcePriority": 99,
-    "suggest.localityBonus": true,
-    "suggest.lowPrioritySourceLimit": 90,
-    "suggest.maxCompleteItemCount": 256,
-    "suggest.minTriggerInputLength": 1,
-    "suggest.noselect": false,
-    "suggest.pumFloatConfig": {
-        "border": false
-    },
-    "suggest.removeDuplicateItems": true,
-    "suggest.reversePumAboveCursor": true,
-    "suggest.snippetIndicator": "~",
-    "suggest.snippetsSupport": true,
-    "suggest.timeout": 5000,
-    "suggest.triggerAfterInsertEnter": true,
-    "suggest.triggerCompletionWait": 0,
-    "suggest.virtualText": true,
-    // tree
-    "tree.closedIcon": "+",
-    "tree.key.invoke": "<cr>",
-    "tree.key.actions": "<tab>",
-    "tree.key.activeFilter": "f",
-    "tree.key.toggle": "t",
-    "tree.key.close": "<esc>",
-    "tree.key.collapseAll": "M",
-    "tree.key.selectNext": "<C-j>",
-    "tree.key.selectPrevious": "<C-k>",
-    "tree.key.toggleSelection": "<space>",
-    "tree.openedIcon": "-",
-    // typeHierarchy
-    "typeHierarchy.enableTooltip": true,
-    "typeHierarchy.openCommand": "edit",
-    "typeHierarchy.splitCommand": "botright 30vs",
-    // workspace
-    "workspace.bottomUpFiletypes": [],
-    "workspace.ignoredFiletypes": [],
-    "workspace.ignoredFolders": [
-        "$HOME"
-    ],
-    "workspace.openOutputCommand": "vs",
-    "workspace.openResourceCommand": "tab drop",
-    "workspace.rootPatterns": [
-        ".git",
-        ".hg",
-        ".projections.json"
-    ],
-    "workspace.workspaceFolderCheckCwd": true,
-    "workspace.workspaceFolderFallbackCwd": true,
-    // coc
-    "coc.preferences.bracketEnterImprove": true,
-    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-    "coc.preferences.enableLinkedEditing": true,
-    "coc.preferences.enableMarkdown": true,
-    "coc.preferences.enableGFMBreaksInMarkdownDocument": true,
-    "coc.preferences.excludeImageLinksInMarkdownDocument": true,
-    "coc.preferences.floatActions": true,
-    "coc.preferences.jumpCommand": "edit",
-    "coc.preferences.maxFileSize": "1000MB",
-    "coc.preferences.messageLevel": "error",
-    "coc.preferences.promptInput": true,
-    "coc.preferences.silentAutoupdate": true,
-    "coc.preferences.renameFillCurrent": true,
-    "coc.preferences.useQuickfixForLocations": true,
-    "coc.preferences.watchmanPath": "",
-    "coc.preferences.willSaveHandlerTimeout": 500,
-    "coc.preferences.enableMessageDialog": true,
-    "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSave": true,
-    //
-    "git.signPriority": 0,
-    "git.addedSign.text": "│",
-    "git.changedSign.text": "│",
-    "git.removedSign.text": "│",
-    "git.changeRemovedSign.text": "│",
-    "git.topRemovedSign.text": "│",
-    "suggest.floatConfig": {
-        "border": false
-    },
-    "outline.sortBy": "position",
-    "suggest.defaultSortMethod": "alphabetical",
-    "suggest.preferCompleteThanJumpPlaceholder": true,
-    "suggest.selection": "recentlyUsedByPrefix",
     "session.saveOnVimLeave": true,
+    "http.proxy": "http://127.0.0.1:1087",
     "languageserver": {
         "go": {
             "command": "gopls",
@@ -326,6 +67,12 @@
             ]
         }
     },
+    "git.signPriority": 0,
+    "git.addedSign.text": "│",
+    "git.changedSign.text": "│",
+    "git.removedSign.text": "│",
+    "git.changeRemovedSign.text": "│",
+    "git.topRemovedSign.text": "│",
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
@@ -358,9 +105,10 @@
 
 {% if yadm.class == "mbp" %}
             "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
+{% endif % }
 
-{% if yadm.class == "mba" %}
+{% if yadm.class == "mba" %
+            }
             "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
 {% endif %}
         },
@@ -377,7 +125,6 @@
 {% if yadm.class == "mbp" %}
             "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
 {% endif %}
-
 {% if yadm.class == "mba" %}
             "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
 {% endif %}
