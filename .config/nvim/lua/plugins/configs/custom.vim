@@ -13,12 +13,40 @@ augroup END
 "=========================== yadm }
 
 "=========================== golang highlight }
+let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds'     : [
+                \ 'p:package',
+                \ 'i:imports:1',
+                \ 'c:constants',
+                \ 'v:variables',
+                \ 't:types',
+                \ 'n:interfaces',
+                \ 'w:fields',
+                \ 'e:embedded',
+                \ 'm:methods',
+                \ 'r:constructor',
+                \ 'f:functions'
+        \ ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+                \ 't' : 'ctype',
+                \ 'n' : 'ntype'
+        \ },
+        \ 'scope2kind' : {
+                \ 'ctype' : 't',
+                \ 'ntype' : 'n'
+        \ },
+        \ 'ctagsbin'  : 'gotags',
+        \ 'ctagsargs' : '-sort -silent'
+\ }
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 "=========================== golang highlight }
 
 "
@@ -38,30 +66,30 @@ let g:go_highlight_build_constraints = 1
 " This could make the display more compact or more spacious.
 " e.g., more compact: ["▸ ", ""]
 " Note: this option only works for the kind renderer, not the tree renderer.
-let g:vista_icon_indent = [">>>", ">"]
-let g:vista#renderer#enable_icon = 0
+" let g:vista_icon_indent = [">>>", ">"]
+" let g:vista#renderer#enable_icon = 0
 
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
-let g:vista_default_executive = 'coc'
+" let g:vista_default_executive = 'coc'
 
 " Set the executive for some filetypes explicitly. Use the explicit executive
 " instead of the default one for these filetypes when using `:Vista` without
 " specifying the executive.
-let g:vista_executive_for = {
-  \ }
-
-" Declare the command including the executable and options used to generate ctags output
-" for some certain filetypes.The file path will be appened to your custom command.
-" For example:
-let g:vista_ctags_cmd = {
-      \ }
-
-" To enable fzf's preview window set g:vista_fzf_preview.
-" The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
-" For example:
-let g:vista_fzf_preview = ['right:50%']
-let g:vista_sidebar_width = 50
+" let g:vista_executive_for = {
+"   \ }
+"
+" " Declare the command including the executable and options used to generate ctags output
+" " for some certain filetypes.The file path will be appened to your custom command.
+" " For example:
+" let g:vista_ctags_cmd = {
+"       \ }
+"
+" " To enable fzf's preview window set g:vista_fzf_preview.
+" " The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
+" " For example:
+" let g:vista_fzf_preview = ['right:50%']
+" let g:vista_sidebar_width = 50
 
 colorscheme nord
             
@@ -92,12 +120,37 @@ map T <Plug>Sneak_T
 map s <Plug>Sneak_s
 map S <Plug>Sneak_S
 
-hi CocFloating ctermfg=100 guifg=#ECEFF4 guibg=#434C5E
-hi CocMenuSel ctermfg=102 guifg=#2E3440 guibg=#D8DEE9
-hi CocSearch ctermfg=106 guifg=#D08770
-hi CurrentWord guifg=#ECEFF4 guibg=#D08770 
-" hi CurrentWord guifg=#XXXXXX guibg=#XXXXXX gui=underline,bold,italic ctermfg=XXX ctermbg=XXX cterm=underline,bold,italic
 
-hi DiffChange ctermfg=105 guibg=#EBCB8B guifg=#2E3440
-hi DiffAdd ctermfg=108 guibg=#A3BE8C guifg=#2E3440
-hi DiffDelete ctermfg=167 guibg=#BF616A guifg=#2E3440
+
+"--||||||||||||||||||||||||||||||||||||||||| theme  ||||||||||||||||||||||||||||||||||||||||||||
+" let g:terminal_ansi_colors = ['#f65b5b', '#e74c4c', '#6bb05d', '#e59e67', '#5b98a9', '#b185db', '#51a39f', '#c4c4c4', '#343636', '#c26f6f', '#8dc776', '#e7ac7e', '#7ab3c3', '#bb84e5', '#6db0ad', '#cccccc']
+" hi SpecialKey guifg=#343636
+" hi NonText guifg=#343636 guibg=NONE
+" hi Folded guibg=#343636 guifg=#8ccf7e
+" hi MatchParen guibg=#6cd0ca guifg=#c4c4c4 gui=none
+" hi CppObjType guifg=#6cd0ca gui=bold
+" hi CocSemMacro guifg=#c47fd5
+"
+" hi CocSemVariable guifg=#c4c4c4
+" hi CocSemParameter guifg=#e5e5e5
+" hi CocSemFunction guifg=#e57474
+" hi CocSemMethod guifg=#e57474 gui=italic,bold term=italic,bold cterm=italic,bold
+" hi CocSemProperty guifg=#c4c4c4 gui=italic,bold term=italic,bold cterm=italic,bold
+" hi link CocSemClass CppObjType
+" hi link CocSemInterface CppObjType
+" hi link CocSemEnum CppObjType
+" hi CocSemEnumMember guifg=#c47fd5 gui=italic,bold term=italic,bold cterm=italic,bold
+" hi link CocSemType CppObjType
+" hi CocSemNamespace guifg=#6cd0ca
+" hi link CocSemTypeParameter CppObjType
+" hi CocSemConcept guifg=#e5c76b gui=italic,bold term=italic,bold cterm=italic,bold
+" hi CocSemMacro guifg=#c47fd5
+" hi link CocSemComment cComment
+" hi Number guifg=#8ccf7e
+" hi CocSemVirtual guifg=#e57474 gui=italic,bold,underline term=italic,bold,underline cterm=italic,bold,underline
+"
+" hi CocMenuSel guibg=#242626 gui=italic,bold term=italic,bold cterm=italic,bold
+" "hi CocSemDeclaration gui=italic term=italic cterm=italic
+"
+" hi CocSemDeprecated gui=strikethrough term=strikethrough cterm=strikethrough
+" hi CocHighlightText guibg=#343434

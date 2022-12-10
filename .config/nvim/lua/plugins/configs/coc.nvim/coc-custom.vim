@@ -16,7 +16,7 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 " ============== coc.nvim official }
 "
 " ============== coc.nvim lsp {
-" let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
+let g:coc_global_extensions += ['coc-go'] " golang coding, completion, format
 let g:coc_global_extensions += ['coc-json'] " json format
 " let g:coc_global_extensions += ['coc-sumneko-lua'] " lua completion and format
 " let g:coc_global_extensions += ['coc-lua'] " lua completion and format
@@ -87,6 +87,9 @@ nmap <leader>cm  :CocList --auto-preview marks<CR>
 
 xmap <leader>ck  :CocList --auto-preview maps<CR>
 nmap <leader>ck  :CocList --auto-preview maps<CR>
+
+xmap <leader>co  :CocOutline<CR>
+nmap <leader>co  :CocOutline<CR>
 
 nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
@@ -268,3 +271,6 @@ function! UpdateWorkspaceCocDiagnostic() abort
 endfunction
 
 " autocmd CursorHold,CursorHoldI,CursorMovedI,CursorMoved,BufWritePost * silent! call UpdateWorkspaceCocDiagnostic()
+"
+
+
