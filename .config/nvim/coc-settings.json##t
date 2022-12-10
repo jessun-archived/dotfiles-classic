@@ -47,16 +47,6 @@
     "session.saveOnVimLeave": true,
     "http.proxy": "http://127.0.0.1:1087",
     "languageserver": {
-        "go": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "trace.server": "verbose",
-            "filetypes": [
-                "go"
-            ]
-        },
         "rust": {
             "command": "rust-analyzer",
             "filetypes": [
@@ -66,6 +56,10 @@
                 "Cargo.toml"
             ]
         }
+    },
+    "go.goplsOptions": {
+        "semanticTokens": true,
+        "allowModfileModifications": true
     },
     "git.signPriority": 0,
     "git.addedSign.text": "│",
