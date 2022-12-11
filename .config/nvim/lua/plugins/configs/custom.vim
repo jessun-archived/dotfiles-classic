@@ -13,40 +13,13 @@ augroup END
 "=========================== yadm }
 
 "=========================== golang highlight }
-let g:tagbar_type_go = {
-        \ 'ctagstype' : 'go',
-        \ 'kinds'     : [
-                \ 'p:package',
-                \ 'i:imports:1',
-                \ 'c:constants',
-                \ 'v:variables',
-                \ 't:types',
-                \ 'n:interfaces',
-                \ 'w:fields',
-                \ 'e:embedded',
-                \ 'm:methods',
-                \ 'r:constructor',
-                \ 'f:functions'
-        \ ],
-        \ 'sro' : '.',
-        \ 'kind2scope' : {
-                \ 't' : 'ctype',
-                \ 'n' : 'ntype'
-        \ },
-        \ 'scope2kind' : {
-                \ 'ctype' : 't',
-                \ 'ntype' : 'n'
-        \ },
-        \ 'ctagsbin'  : 'gotags',
-        \ 'ctagsargs' : '-sort -silent'
-\ }
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_types = 1
 "=========================== golang highlight }
 
 "
@@ -121,36 +94,41 @@ map s <Plug>Sneak_s
 map S <Plug>Sneak_S
 
 
-
-"--||||||||||||||||||||||||||||||||||||||||| theme  ||||||||||||||||||||||||||||||||||||||||||||
-" let g:terminal_ansi_colors = ['#f65b5b', '#e74c4c', '#6bb05d', '#e59e67', '#5b98a9', '#b185db', '#51a39f', '#c4c4c4', '#343636', '#c26f6f', '#8dc776', '#e7ac7e', '#7ab3c3', '#bb84e5', '#6db0ad', '#cccccc']
-" hi SpecialKey guifg=#343636
-" hi NonText guifg=#343636 guibg=NONE
-" hi Folded guibg=#343636 guifg=#8ccf7e
-" hi MatchParen guibg=#6cd0ca guifg=#c4c4c4 gui=none
-" hi CppObjType guifg=#6cd0ca gui=bold
-" hi CocSemMacro guifg=#c47fd5
-"
-" hi CocSemVariable guifg=#c4c4c4
-" hi CocSemParameter guifg=#e5e5e5
-" hi CocSemFunction guifg=#e57474
-" hi CocSemMethod guifg=#e57474 gui=italic,bold term=italic,bold cterm=italic,bold
-" hi CocSemProperty guifg=#c4c4c4 gui=italic,bold term=italic,bold cterm=italic,bold
-" hi link CocSemClass CppObjType
-" hi link CocSemInterface CppObjType
-" hi link CocSemEnum CppObjType
-" hi CocSemEnumMember guifg=#c47fd5 gui=italic,bold term=italic,bold cterm=italic,bold
-" hi link CocSemType CppObjType
-" hi CocSemNamespace guifg=#6cd0ca
-" hi link CocSemTypeParameter CppObjType
-" hi CocSemConcept guifg=#e5c76b gui=italic,bold term=italic,bold cterm=italic,bold
-" hi CocSemMacro guifg=#c47fd5
-" hi link CocSemComment cComment
-" hi Number guifg=#8ccf7e
-" hi CocSemVirtual guifg=#e57474 gui=italic,bold,underline term=italic,bold,underline cterm=italic,bold,underline
-"
-" hi CocMenuSel guibg=#242626 gui=italic,bold term=italic,bold cterm=italic,bold
-" "hi CocSemDeclaration gui=italic term=italic cterm=italic
-"
-" hi CocSemDeprecated gui=strikethrough term=strikethrough cterm=strikethrough
-" hi CocHighlightText guibg=#343434
+"--||||||||||||||||||||||||||||||||||||||||| custom theme  ||||||||||||||||||||||||||||||||||||||||||||
+" let g:coc_default_semantic_highlight_groups = 1
+" Tokens types that current Language Server supported:
+" hi CocSemNamespace guifg='#EBCB8B'
+" hi CocSemType guifg="#81A1C1"
+" hi CocSemClass guifg="#81A1C1"
+" hi CocSemEnum guifg="#81A1C1"
+" hi CocSemInterface guifg="#81A1C1"
+" hi CocSemStruct guifg="#81A1C1"
+" hi CocSemTypeParameter guifg="#81A1C1"
+" hi CocSemParameter guifg="#5E81AC"
+" hi CocSemVariable guifg='#AEBECD'
+" hi CocSemProperty guifg="#5E81AC"
+" " hi CocSemEnumMember 
+" " hi CocSemEvent
+" hi CocSemFunction guifg="#88C0D0"
+" hi CocSemMethod guifg="#8FBCBB"
+" hi CocSemMacro guifg="#81A1C1"
+" hi CocSemKeyword guifg="#81A1C1"
+" hi CocSemModifier guifg="#88C0D0"
+" hi CocSemComment guifg="#434C5E"
+" hi CocSemString guifg="#A3BE8C"
+" hi CocSemNumber guifg="#B48EAD"
+" hi CocSemRegexp guifg="#8FBCBB"
+" hi CocSemDecorator guifg="#88C0D0"
+" hi CocSemOperator guifg="#81A1C1"
+" "
+" " " Tokens modifiers that current Language Server supported:
+" hi CocSemDeclaration guifg='#8FBCBB'
+hi CocSemDefinition guifg='#81A1C1'
+hi CocSemReadonly guifg='#81A1C1'
+" hi CocSemStatic guifg='#BF616A'
+" hi CocSemDeprecated guifg='#BF616A'
+" hi CocSemAbstract guifg='#D08770'
+" hi CocSemAsync guifg='#EBCB8B'
+" hi CocSemModification guifg='#88C0D0'
+" hi CocSemDocumentation guifg='#B48EAD'
+" hi CocSemDefaultLibrary guifg='#88C0D0'
