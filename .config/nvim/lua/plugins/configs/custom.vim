@@ -13,13 +13,13 @@ augroup END
 "=========================== yadm }
 
 "=========================== golang highlight }
-" let g:go_highlight_build_constraints = 1
-" let g:go_highlight_fields = 1
-" let g:go_highlight_functions = 1
-" let g:go_highlight_methods = 1
-" let g:go_highlight_operators = 1
-" let g:go_highlight_structs = 1
-" let g:go_highlight_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
 "=========================== golang highlight }
 
 "
@@ -64,6 +64,7 @@ augroup END
 " let g:vista_fzf_preview = ['right:50%']
 " let g:vista_sidebar_width = 50
 
+autocmd FileType json syntax match Comment +\/\/.\+$+
 colorscheme nord
             
 "--||||||||||||||||||||||||||||||||||||||||| vim-fugitive ||||||||||||||||||||||||||||||||||||||||||||
@@ -86,6 +87,7 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 
 
 "--||||||||||||||||||||||||||||||||||||||||| vim-sneak ||||||||||||||||||||||||||||||||||||||||||||
+let g:sneak#label = 1
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
 map t <Plug>Sneak_t
