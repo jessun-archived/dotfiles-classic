@@ -95,11 +95,11 @@ function Packer:start_up()
         --
         --
         --||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||
-        use("smjonas/live-command.nvim")
+        use("smjonas/live-command.nvim") ------------------------------------------------------------------ 实时显示命令变化
         use({ "akinsho/git-conflict.nvim", tag = "*" })
-        -- use("eckon/treesitter-current-functions") ------------------------------------------------------- 当前函数 ?
-        -- use("nvim-treesitter/nvim-treesitter-textobjects") ---------------------------------------------- 文本对象 ?
-        -- use("RRethy/nvim-treesitter-textsubjects") ------------------------------------------------------ 文本对象 ?
+        -- use("eckon/treesitter-current-functions") ------------------------------------------------------ 当前函数 ?
+        -- use("nvim-treesitter/nvim-treesitter-textobjects") --------------------------------------------- 文本对象 ?
+        -- use("RRethy/nvim-treesitter-textsubjects") ----------------------------------------------------- 文本对象 ?
         -- use("nvim-treesitter/nvim-treesitter-context")
         use("machakann/vim-sandwich") ---------------------=--------------------------------------------- 快速两端文本 ?
         --
