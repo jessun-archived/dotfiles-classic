@@ -42,6 +42,7 @@ switch (uname)
         # if type -q 'nvm' 
         #     # nvm use default
         # end
+        alias nvim "GOOS=linux GOARCH=amd64 nvim"
     case 'Linux'
         if type -q 'xsel'
             alias pbcopy 'xsel --clipboard --input'
