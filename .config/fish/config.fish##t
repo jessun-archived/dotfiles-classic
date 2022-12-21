@@ -42,7 +42,6 @@ switch (uname)
         # if type -q 'nvm' 
         #     # nvm use default
         # end
-        alias nvim "GOOS=linux GOARCH=amd64 nvim"
     case 'Linux'
         if type -q 'xsel'
             alias pbcopy 'xsel --clipboard --input'
@@ -104,6 +103,8 @@ if type -q 'go'
     export GOPROXY=goproxy.cn,goproxy.io,direct 
     export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
     export GOINSECURE=actiontech.cloud
+    export GOOS=linux
+    export GOARCH=amd64
 
     # Gvm
     if test -e "$HOME/.gvm/environments/default"
