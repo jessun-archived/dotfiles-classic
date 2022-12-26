@@ -107,7 +107,7 @@ map S <Plug>Sneak_S
 " hi CocSemStruct guifg="#81A1C1"
 " hi CocSemTypeParameter guifg="#81A1C1"
 " hi CocSemParameter guifg="#5E81AC"
-" hi CocSemVariable guifg='#AEBECD'
+hi CocSemVariable guifg='#d8dee9'
 " hi CocSemProperty guifg="#5E81AC"
 " " hi CocSemEnumMember 
 " " hi CocSemEvent
