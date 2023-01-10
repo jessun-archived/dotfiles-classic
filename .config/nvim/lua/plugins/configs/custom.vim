@@ -125,7 +125,7 @@ hi CocSemVariable guifg='#d8dee9'
 " "
 " " " Tokens modifiers that current Language Server supported:
 " hi CocSemDeclaration guifg='#8FBCBB'
-hi CocSemDefinition guifg='#81A1C1'
+"hi CocSemDefinition guifg='#81A1C1'
 hi CocSemReadonly guifg='#81A1C1'
 " hi CocSemStatic guifg='#BF616A'
 " hi CocSemDeprecated guifg='#BF616A'
