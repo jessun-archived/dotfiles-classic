@@ -174,14 +174,9 @@ if test -e "$HOME/.pyenv/bin/pyenv"
 end
 # =========================== python =========================== }
 
-
-
-# ===================== actiontech.cloud  ===================== {
-alias sshtodev="ssh jessun-dev@10.186.16.118"
-# ===================== actiontech.cloud  ===================== }
-
-
-
 # ===================== Derecated configs ===================== {
 # alias sshtomac="sshuttle --dns -NHr jessun@192.168.124.2 127.0.0.1/0 -v"
 # =================== Environment variables =================== }
+
+alias set_gpg_tty 'export GPG_TTY=(tty)'
+alias set_gpg_tty 'export GPG_TTY=$(tty)'
