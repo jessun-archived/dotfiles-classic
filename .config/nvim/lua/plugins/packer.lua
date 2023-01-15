@@ -26,7 +26,10 @@ function Packer:start_up()
             "neoclide/coc.nvim",
             run = "yarn install",
         }) ------------------------------------------------------------------------- coc.nvim
-        use("nathom/filetype.nvim") ---------------------------------------------------------------------- filetype 性能优化
+        -- use {
+        --     'nathom/filetype.nvim',
+        --     setup = [[vim.cmd('runtime! autoload/dist/ft.vim')]],
+        -- }
         --
         --
         --|||||||||||||||||||||||||||||||||||||||||||| UI |||||||||||||||||||||||||||||||||||||||||||||||
