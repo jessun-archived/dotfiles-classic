@@ -39,7 +39,6 @@ function Packer:start_up()
         -- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
         use("petertriho/nvim-scrollbar") ----------------------------------------------------------------- 滚动条
         use("yaocccc/nvim-hlchunk") ---------------------------------------------------------------------- 线条当前块
-        -- use("IngoMeyer441/coc_current_word")
 
         -------------------------------------------------------------------------------------------------- colorscheme {
         -- use("arcticicestudio/nord-vim") // VERY BAD
