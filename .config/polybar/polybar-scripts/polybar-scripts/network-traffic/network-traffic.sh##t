@@ -27,13 +27,7 @@ print_bit() {
 }
 
 INTERVAL=3
-{% if yadm.class == "r7000" %}
-INTERFACES="wlp4s0"
-{% endif %}
-
-{% if yadm.class == "home-pc" %}
 INTERFACES="wlo1"
-{% endif %}
 
 
 declare -A bytes
