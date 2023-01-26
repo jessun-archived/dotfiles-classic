@@ -57,14 +57,14 @@ local function breadcrumbs()
         setmetatable(v, { __index = function(table, key)
             return ' '
         end })
-        t[#t + 1] = ' %#' ..
+        t[#t + 1] = '%#' ..
             (v.highlight or "Normal") ..
             '#' .. (type(v.label) == 'string' and v.label .. ' ' or '') .. '%#NonText#' .. (v.name or '')
         if next(items, k) ~= nil then
-            t[#t + 1] = '%#StatusLineNC# '
+            t[#t + 1] = '%#StatusLineNC#'
         end
     end
-    t[#t + 1] = '%#EndOfBuffer#  '
+    t[#t + 1] = '%#EndOfBuffer#'
     return table.concat(t)
 end
 

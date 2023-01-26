@@ -87,7 +87,7 @@ function Packer:start_up()
         use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) ------------ 模糊搜索
         use({ "fannheyward/telescope-coc.nvim" })
         use({ "kevinhwang91/nvim-hlslens" })
-        use("justinmk/vim-sneak")
+        -- use("justinmk/vim-sneak")
         --
         --
         --||||||||||||||||||||||||||||||||||||||||| 辅助工具 ||||||||||||||||||||||||||||||||||||||||||||
