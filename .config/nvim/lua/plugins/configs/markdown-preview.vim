@@ -61,8 +61,8 @@ let g:mkdp_preview_options = {
         \ 'server': 'http://10.186.16.118:8080'
       \ },
     \ 'maid': {},
-    \ 'disable_sync_scroll': 0,
-    \ 'sync_scroll_type': 'middle',
+    \ 'disable_sync_scroll': 1,
+    \ 'sync_scroll_type': 'top',
     \ 'hide_yaml_meta': 1,
     \ 'sequence_diagrams': {},
     \ 'flowchart_diagrams': {},
