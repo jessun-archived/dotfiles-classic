@@ -33,7 +33,7 @@ function Packer:start_up()
         --
         --
         --|||||||||||||||||||||||||||||||||||||||||||| UI |||||||||||||||||||||||||||||||||||||||||||||||
-        use("kyazdani42/nvim-web-devicons") -------------------------------------------------------------- 扩展图标
+        -- use("kyazdani42/nvim-web-devicons") -------------------------------------------------------------- 扩展图标
         use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -------------------------- 高亮关键字
         use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }) -------- 状态栏
         -- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) ------------------------------------ 代码高亮
@@ -76,12 +76,12 @@ function Packer:start_up()
         --
         --
         --||||||||||||||||||||||||||||||||||||||||| 目录管理 ||||||||||||||||||||||||||||||||||||||||||||
-        use({
-            "kyazdani42/nvim-tree.lua", ------------------------------------------------------------------ 文件树
-            requires = {
-                "kyazdani42/nvim-web-devicons", -- optional, for file icons
-            },
-        })
+        -- use({
+        --     "kyazdani42/nvim-tree.lua", ------------------------------------------------------------------ 文件树
+        --     requires = {
+        --         "kyazdani42/nvim-web-devicons", -- optional, for file icons
+        --     },
+        -- })
         --
         --
         --||||||||||||||||||||||||||||||||||||||||| 模糊搜索 ||||||||||||||||||||||||||||||||||||||||||||
@@ -96,7 +96,7 @@ function Packer:start_up()
         --
         --
         --||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||
-        use("smjonas/live-command.nvim") ------------------------------------------------------------------ 实时显示命令变化
+        -- use("smjonas/live-command.nvim") ------------------------------------------------------------------ 实时显示命令变化
         use({ "akinsho/git-conflict.nvim", tag = "*" })
         -- use("eckon/treesitter-current-functions") ------------------------------------------------------ 当前函数 ?
         -- use("nvim-treesitter/nvim-treesitter-textobjects") --------------------------------------------- 文本对象 ?
@@ -109,7 +109,7 @@ function Packer:start_up()
         -- use("koenverburg/peepsight.nvim") ------------------------------------------------------------ 视觉聚焦
         -- use("lukas-reineke/indent-blankline.nvim")
         -- use("sunjon/Shade.nvim")
-        use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+        -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
         -- use({
         -- 	"lewis6991/gitsigns.nvim",
         -- 	-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
