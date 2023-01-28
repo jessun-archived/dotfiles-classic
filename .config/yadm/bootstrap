@@ -115,6 +115,20 @@ install_arch_fonts(){
     yay -S nerd-fonts-noto-sans-mono --noconfirm
 }
 
+update_env(){
+sudo tee -a /etc/environment << EOF
+export GLFW_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export IMSETTINGS_MODULE=fcitx
+export INPUT_METHOD=fcitx
+
+export LC_ALL=zh_CN.UTF-8
+export LC_CTYPE=
+EOF
+}
+
 install_pritunl(){
 sudo echo "nameserver 1.1.1.1" >> /etc/resolv.conf
 sudo chattr +i /etc/resolv.conf
