@@ -70,8 +70,8 @@
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
-        "actiontech_dict",
-        "personal_dict"
+        "actiontech",
+        "personal"
     ],
     "cSpell.ignoreWords": [],
     "cSpell.language": "en",
@@ -81,47 +81,9 @@
             "languageId": "*",
             "local": "en",
             "dictionaries": [
-                "actiontech_dict",
-                "personal_dict"
+                "actiontech",
+                "personal"
             ]
-        }
-    ],
-    "cSpell.dictionaryDefinitions": [
-        {
-            "name": "actiontech_dict",
-{% if yadm.class == "actiontech-dev" %}
-            "path": "/home/jessun-dev/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
-
-{% if yadm.class == "home-pc" %}
-            "path": "/home/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
-
-{% if yadm.class == "mbp" %}
-            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif % }
-
-{% if yadm.class == "mba" %
-            }
-            "path": "/Users/jessun/.config/nvim/dicts/actiontech_dict.txt"
-{% endif %}
-        },
-        {
-            "name": "personal_dict",
-{% if yadm.class == "actiontech-dev" %}
-            "path": "/home/jessun-dev/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
-
-{% if yadm.class == "home-pc" %}
-            "path": "/home/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
-
-{% if yadm.class == "mbp" %}
-            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
-{% if yadm.class == "mba" %}
-            "path": "/Users/jessun/.config/nvim/dicts/personal_dict.txt"
-{% endif %}
         }
     ],
     "cSpell.ignorePaths": [

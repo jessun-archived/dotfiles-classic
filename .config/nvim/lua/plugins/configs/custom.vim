@@ -293,9 +293,13 @@ let g:coc_explorer_global_presets = {
 
 " Use preset argument to open it
 nmap <space>ef <Cmd>CocCommand explorer --preset floatingLeftside<CR>
-nmap <space>d <Cmd>CocCommand explorer --preset floatingLeftside<CR>
 nmap <space>ec <Cmd>CocCommand explorer --preset cocConfig<CR>
 nmap <space>ed <Cmd>CocCommand explorer<CR>
 
 " List all presets
 nmap <space>el <Cmd>CocList explPresets<CR>
+
+call coc#config('cSpell.dictionaryDefinitions', [
+  \ { "name" : "actiontech", "path": expand("$HOME/.config/nvim/dicts/actiontech.txt") },
+  \ { "name" : "personal", "path": expand("$HOME/.config/nvim/dicts/personal.txt") }
+  \])

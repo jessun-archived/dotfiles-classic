@@ -13,7 +13,6 @@ Hoare
 Inconsolata
 JDBC
 Jessun
-jessun
 MIRI
 Menlo
 Meslo
@@ -22,12 +21,14 @@ Mysqlbatis
 Mysqld
 NUMA
 Noto
+Pgrpc
 Rpcf
 Schwarz
 Thanos
 Unscoped
 Unstage
 Untracked
+Wrapf
 XKBOPTIONS
 Yovisun
 aarch
@@ -38,10 +39,10 @@ astaxie
 auths
 beego
 biaoqing
+consts
 coreutils
 cpuid
 cpus
-ctags
 deepl
 devf
 donttouchme
@@ -56,6 +57,7 @@ flazz
 fstype
 funcobj
 gitui
+gopls
 grex
 grpc
 gtid
@@ -85,7 +87,9 @@ neoclide
 nordthemewallpapers
 nums
 nvim
+obclient
 obook
+obproxy
 orgs
 paru
 picgo
@@ -135,13 +139,8 @@ vimrc
 vsplit
 whoer
 xxhash
+yadm
 yapf
 youdao
 zfunc
 zhangsan
-gopls
-Pgrpc
-Wrapf
-consts
-obclient
-obproxy
