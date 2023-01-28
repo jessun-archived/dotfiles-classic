@@ -1,6 +1,6 @@
 # /home/jessun/.config/tmuxinator/docs.yml
 
-name: docs
+name: notes
 root: /home/jessun/workbench
 
 # Optional tmux socket
@@ -45,15 +45,17 @@ root: /home/jessun/workbench
 # attach: false
 
 windows:
-  - logs:
-    - cd /home/jessun/workbench/github.com/jessun/logs
-    - git pull --all
-    - git diff origin/main
-  - blogs:
-    - cd ~/workbench/github.com/jessun/jessun.github.io
-    - git pull --all
-    - git diff origin/main
-  - tools_collections:
-    - cd ~/workbench/github.com/jessun/tools_collections/
-    - git pull --all
-    - git diff origin/main
+  - notes:
+    - cd /home/jessun/MEGAsync/notes/
+  # - logs:
+  #   - cd /home/jessun/workbench/github.com/jessun/logs
+  #   - git pull --all
+  #   - git diff origin/main
+  # - blogs:
+  #   - cd ~/workbench/github.com/jessun/jessun.github.io
+  #   - git pull --all
+  #   - git diff origin/main
+  # - tools_collections:
+  #   - cd ~/workbench/github.com/jessun/tools_collections/
+  #   - git pull --all
+  #   - git diff origin/main
