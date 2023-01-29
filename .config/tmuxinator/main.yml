@@ -60,7 +60,7 @@ windows:
       - yadm status
 
   - clash:
-      - cd ~/.config/clash && clash -d .
+      - cd ~/.config/clash 
 
   - ssh:
      - sshuttle --dns -NHr jessun@192.168.124.8 127.0.0.1/0 -v
