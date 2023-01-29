@@ -119,3 +119,6 @@ set-option -gw xterm-keys on
 
 bind -n C-M-t new-window
 bind-key -n C-M-r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+set -g @resurrect-processes 'sshuttle clash'
+set -g @resurrect-dir '~/.tmux/resurrect'
