@@ -133,7 +133,7 @@ hi CocSemReadonly guifg='#81A1C1'
 " hi CocSemModification guifg='#88C0D0'
 " hi CocSemDocumentation guifg='#B48EAD'
 " hi CocSemDefaultLibrary guifg='#88C0D0'
-hi CocHighlightText guifg='#d8dee9' guibg='#BF616A'
+hi CocHighlightText guibg='#BF616A'
 
 
 "--||||||||||||||||||||||||||||||||||||||||| coc.nvim  ||||||||||||||||||||||||||||||||||||||||||||
