@@ -64,7 +64,7 @@ local function breadcrumbs()
             t[#t + 1] = '%#StatusLineNC#'
         end
     end
-    t[#t + 1] = '%#EndOfBuffer#'
+    t[#t + 1] = '%#EndOfBuffer#AAA'
     return table.concat(t)
 end
 
@@ -225,7 +225,7 @@ require("lualine").setup({
         },
         lualine_z = {
             {
-                breadcrumbs,
+                -- breadcrumbs,
             }
         },
     },

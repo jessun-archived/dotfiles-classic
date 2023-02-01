@@ -141,7 +141,7 @@ let g:coc_global_extensions = []
 
 " ============== coc.nvim official {
 let g:coc_global_extensions += ['coc-dictionary']
-let g:coc_global_extensions += ['coc-nav']
+" let g:coc_global_extensions += ['coc-nav']
 let g:coc_global_extensions += ['coc-emoji']
 let g:coc_global_extensions += ['coc-extension-codemod']
 let g:coc_global_extensions += ['coc-explorer']
