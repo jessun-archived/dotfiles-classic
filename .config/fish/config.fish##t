@@ -91,7 +91,7 @@ if type -q 'go'
     alias golangcirundocker "docker run --rm -v (pwd):/app -w /app golangci/golangci-lint:v1.43.0 golangci-lint run"
     alias golangcirun "golangci-lint run"
 {% if yadm.class=="mba" %}
-    alias govet "GOOS=linux go vet ./..."
+    alias govet "CC=x86_64-unknown-linux-gnu-gcc GOOS=linux GOARCH=amd64 CGO_ENABLED=1 go vet ./..."
 {% else %}
     alias govet "GOOS=linux CGO_CFLAGS=\"-g -O2 -Wno-return-local-addr\" go vet ./..."
 {% endif %}
