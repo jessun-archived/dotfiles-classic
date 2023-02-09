@@ -56,13 +56,13 @@ export NVM_DIR="$HOME/.nvm"
 export GPG_TTY=$(tty)
 
 # TMUX
-if command -v tmux &> /dev/null; then 
-    if [ -n "$TMUX" ]; then
-      tmux
-    else
-      tmux attach -d
-    fi
-fi
+# if command -v tmux &> /dev/null; then 
+#     if [ -n "$TMUX" ]; then
+#       tmux
+#     else
+#       tmux attach -d
+#     fi
+# fi
 
 {% if yadm.class == "home-pc" %}
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
