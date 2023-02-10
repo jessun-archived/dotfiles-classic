@@ -103,8 +103,6 @@ if type -q 'go'
     export GOPROXY=goproxy.cn,goproxy.io,direct 
     export GOPRIVATE=actiontech.cloud,github.com/actiontech/sqle-ee
     export GOINSECURE=actiontech.cloud
-    export GOOS=linux
-    export GOARCH=amd64
 
     # Gvm
     if test -e "$HOME/.gvm/environments/default"
