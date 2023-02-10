@@ -104,6 +104,11 @@ function Packer:start_up()
         -- use("nvim-treesitter/nvim-treesitter-context")
         use("machakann/vim-sandwich") ---------------------=--------------------------------------------- 快速两端文本 ?
         --
+        --||||||||||||||||||||||||||||||||||||||||| NOTE TAKING ||||||||||||||||||||||||||||||||||||||||||
+        use 'renerocksai/telekasten.nvim'
+        use 'renerocksai/calendar-vim'
+
+        --
         --
         --||||||||||||||||||||||||||||||||||||||||| DEPRECATED ||||||||||||||||||||||||||||||||||||||||||
         -- use("koenverburg/peepsight.nvim") ------------------------------------------------------------ 视觉聚焦
@@ -111,8 +116,8 @@ function Packer:start_up()
         -- use("sunjon/Shade.nvim")
         -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
         -- use({
-        -- 	"lewis6991/gitsigns.nvim",
-        -- 	-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+        --     "lewis6991/gitsigns.nvim",
+        --     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
         -- })
     end)
 end

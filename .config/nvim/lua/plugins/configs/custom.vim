@@ -304,3 +304,6 @@ call coc#config('cSpell.dictionaryDefinitions', [
   \ { "name" : "actiontech", "path": expand("$HOME/.config/nvim/dicts/actiontech.txt") },
   \ { "name" : "personal", "path": expand("$HOME/.config/nvim/dicts/personal.txt") }
   \])
+
+autocmd FileType gitcommit set colorcolumn=50
+autocmd FileType json setlocal ft=jsonc sw=2 expandtab
