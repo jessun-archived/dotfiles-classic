@@ -38,7 +38,7 @@
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.selection": "recentlyUsedByPrefix",
-    "list.source.tags.command": "ctags -R -f ./.tags",
+    "list.source.tags.command": "ctags -R -f ./tags",
     "list.source.grep.command": "rg",
     "list.source.files.args": [
         "--hidden",
