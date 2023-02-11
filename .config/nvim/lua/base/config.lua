@@ -73,7 +73,7 @@ function Config:load_config()
     vim.api.nvim_command("inoremap # <space><backspace>#") -- TODO
     vim.api.nvim_command("syntax sync minlines=128") -- TODO
     vim.api.nvim_command("set path+=**") -- TODO
-    vim.api.nvim_command("set tags=./tags,tags,./.tags,./ctags,ctags,./.ctags") -- TODO
+    -- vim.api.nvim_command("set tags=./tags,tags,./.tags,./ctags,ctags,./.ctags") -- TODO
     vim.o.background = "dark" -- TODO
     vim.api.nvim_command("filetype on") -- TODO
     vim.api.nvim_command("colorscheme desert") -- TODO
