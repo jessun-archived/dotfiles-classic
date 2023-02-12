@@ -62,11 +62,11 @@
         "allowModfileModifications": true
     },
     "git.signPriority": 0,
-    "git.addedSign.text": "│",
-    "git.changedSign.text": "│",
-    "git.removedSign.text": "│",
-    "git.changeRemovedSign.text": "│",
-    "git.topRemovedSign.text": "│",
+    "git.addedSign.text": "█",
+    "git.changedSign.text": "█",
+    "git.removedSign.text": "█",
+    "git.changeRemovedSign.text": "█",
+    "git.topRemovedSign.text": "█",
     "cSpell.userWords": [],
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
