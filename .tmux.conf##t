@@ -58,7 +58,8 @@ set -g status-style "bg=#2E3440, fg=#ECEFF4"
 set -g status-left "#[bg=#2E3440, fg=#EBCB8B]#S"             
 set -g status-right-length 400
 # set -g status-right "#{sysstat_cpu} | #{sysstat_mem} | #{sysstat_swap} | #{sysstat_loadavg} | #[fg=cyan]#(echo $USER)#[default]@#H"
-set -g status-right "#{net_speed}|#{ip}|#(echo $USER)#[default]@#H"
+# set -g status-right "#{net_speed}|#{ip}|#(echo $USER)#[default]@#H"
+set -g status-right "#{ip}|#(echo $USER)#[default]@#H"
 
 set -g set-clipboard on
 set -g history-limit 9999
@@ -94,10 +95,10 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-set -g @plugin 'tmux-plugins/tmux-net-speed'
+# set -g @plugin 'tmux-plugins/tmux-net-speed'
 set -g @plugin 'pwittchen/tmux-plugin-ip'
 
-set -g @net_speed_interfaces "wlo1"
+set -g @net_speed_interfaces "en0"
 set -g @download_speed_format "%10s"
 set -g @upload_speed_format "%10s"
 set -g @net_speed_format "D:%1s U:%1s"
