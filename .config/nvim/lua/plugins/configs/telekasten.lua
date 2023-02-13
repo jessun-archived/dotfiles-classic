@@ -131,3 +131,19 @@ require('telekasten').setup({
     -- A customizable fallback handler for urls.
     follow_url_fallback = nil,
 })
+
+-- Launch panel if nothing is typed after <leader>z
+vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>Telekasten panel<CR>", { noremap = true, silent = true })
+
+-- Most used functions
+vim.api.nvim_set_keymap("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zg", "<cmd>Telekasten search_notes<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zz", "<cmd>Telekasten follow_link<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zn", "<cmd>Telekasten new_note<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zb", "<cmd>Telekasten show_backlinks<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zI", "<cmd>Telekasten insert_img_link<CR>", { noremap = true, silent = true })
+
+-- Call insert link automatically when we start typing a link
+vim.api.nvim_set_keymap("i", "[[", "<cmd>Telekasten insert_link<CR>", { noremap = true, silent = true })
