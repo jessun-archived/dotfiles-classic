@@ -171,7 +171,7 @@ let g:coc_global_extensions += ['coc-toml'] " toml
 " let g:coc_global_extensions += ['coc-ci']
 " source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-ci.vim
 
-let g:coc_global_extensions += ['coc-git']
+" let g:coc_global_extensions += ['coc-git']
 source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-git.vim
 
 let g:coc_global_extensions += ['coc-marketplace']

@@ -1,3 +1,5 @@
+require("scrollbar.handlers.gitsigns").setup()
+
 require("scrollbar").setup({
     show = true,
     show_in_active_only = false,
@@ -20,7 +22,7 @@ require("scrollbar").setup({
             highlight = "Search",
         },
         Error = {
-            text = { "-", "=" },
+            text = { "-", "x" },
             priority = 1,
             color = nil,
             cterm = nil,

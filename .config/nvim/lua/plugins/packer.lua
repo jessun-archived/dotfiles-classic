@@ -115,10 +115,9 @@ function Packer:start_up()
         -- use("lukas-reineke/indent-blankline.nvim")
         -- use("sunjon/Shade.nvim")
         -- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
-        -- use({
-        --     "lewis6991/gitsigns.nvim",
-        --     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
-        -- })
+        use({
+            "lewis6991/gitsigns.nvim",
+        })
     end)
 end
 

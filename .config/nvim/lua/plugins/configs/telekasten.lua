@@ -133,7 +133,7 @@ require('telekasten').setup({
 })
 
 -- Launch panel if nothing is typed after <leader>z
-vim.api.nvim_set_keymap("n", "<leader>z", "<cmd>Telekasten panel<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zp", "<cmd>Telekasten panel<CR>", { noremap = true, silent = true })
 
 -- Most used functions
 vim.api.nvim_set_keymap("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>", { noremap = true, silent = true })
