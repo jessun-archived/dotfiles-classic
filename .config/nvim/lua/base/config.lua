@@ -29,8 +29,8 @@ function Config:load_config()
 
     vim.o.wildmenu = true
     vim.o.wildmode = "longest:full,full" -- 当按下 <Tab> 时，显示全部匹配的语法项目
-    vim.o.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
-    -- vim.o.textwidth = 80 -- 文本宽度
+    -- vim.o.colorcolumn = "80" -- 当光标所在的列超过 80 列时，显示颜色
+    vim.o.textwidth = 80 -- 文本宽度
     vim.o.relativenumber = true -- 是否显示相对行号
     vim.o.foldlevelstart = 20 -- 折叠级别的起始值
     vim.o.ruler = true -- 显示状态栏
