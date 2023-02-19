@@ -1,0 +1,13 @@
+{
+    "auths": {
+        "https://index.docker.io/v1/": {
+            "auth": "amVzc3VuOjE5OTBaUUBkb2NrZXI="
+        }
+    },
+    "proxies": {
+        "default": {
+            "httpProxy": "http://10.186.16.118:1087",
+            "httpsProxy": "http://10.186.16.118:1087"
+        }
+    }
+}
