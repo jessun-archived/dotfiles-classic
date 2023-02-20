@@ -1,128 +1,133 @@
 {
-    "diagnostic.errorSign": "x",
-    "diagnostic.hintSign": "·",
-    "diagnostic.infoSign": "·",
-    "diagnostic.warningSign": "!",
-    "floatFactory.floatConfig": {
-        "border": true
-    },
-    "dialog.rounded": false,
-    "suggest.floatConfig": {
-        "border": true
-    },
-    "diagnostic.floatConfig": {
-        "border": true
-    },
-    "diagnostic.signPriority": 1,
-    "signature.floatConfig": {
-        "border": true
-    },
-    "hover.floatConfig": {
-        "border": true
-    },
-    "list.maxPreviewHeight": 99999,
-    "coc.preferences.enableMessageDialog": true,
-    "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSave": true,
-    "colors.enable": true,
-    "outline.sortBy": "position",
-    "outline.autoPreview": true,
-    "outline.keepWindow": true,
-    "semanticTokens.enable": true,
-    "semanticTokens.incrementTypes": [
-        "variable",
-        "string",
-        "parameter"
-    ],
-    "suggest.defaultSortMethod": "alphabetical",
-    "suggest.preferCompleteThanJumpPlaceholder": true,
-    "suggest.selection": "recentlyUsedByPrefix",
-    "list.source.tags.command": "ctags -R -f ./tags",
-    "list.source.grep.command": "rg",
-    "list.source.files.args": [
-        "--hidden",
-        "--files"
-    ],
-    "session.saveOnVimLeave": true,
-    "http.proxy": "http://127.0.0.1:1087",
-    "go.goplsOptions": {
-        "semanticTokens": true,
-        "allowModfileModifications": true
-    },
-    "git.signPriority": 0,
-    "git.addedSign.text": "█",
-    "git.changedSign.text": "█",
-    "git.removedSign.text": "█",
-    "git.changeRemovedSign.text": "█",
-    "git.topRemovedSign.text": "█",
-    "cSpell.userWords": [],
-    "cSpell.allowCompoundWords": true,
-    "cSpell.dictionaries": [
+  "diagnostic.errorSign": "x",
+  "diagnostic.hintSign": "·",
+  "diagnostic.infoSign": "·",
+  "diagnostic.warningSign": "!",
+  "floatFactory.floatConfig": {
+    "border": true
+  },
+  "dialog.rounded": false,
+  "suggest.floatConfig": {
+    "border": true
+  },
+  "diagnostic.floatConfig": {
+    "border": true
+  },
+  "diagnostic.signPriority": 1,
+  "signature.floatConfig": {
+    "border": true
+  },
+  "hover.floatConfig": {
+    "border": true
+  },
+  "list.maxPreviewHeight": 99999,
+  "coc.preferences.enableMessageDialog": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSave": true,
+  "colors.enable": true,
+  "outline.sortBy": "position",
+  "outline.autoPreview": true,
+  "outline.keepWindow": true,
+  "semanticTokens.enable": true,
+  "semanticTokens.incrementTypes": [
+    "variable",
+    "string",
+    "parameter"
+  ],
+  "suggest.defaultSortMethod": "alphabetical",
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.selection": "recentlyUsedByPrefix",
+  "list.source.tags.command": "ctags -R -f ./tags",
+  "list.source.grep.command": "rg",
+  "list.source.files.args": [
+    "--hidden",
+    "--files"
+  ],
+  "session.saveOnVimLeave": true,
+  "http.proxy": "http://127.0.0.1:1087",
+  "go.goplsOptions": {
+    "semanticTokens": true,
+    "allowModfileModifications": true
+  },
+  // "git.signPriority": 0,
+  // "git.addedSign.text": "█",
+  // "git.changedSign.text": "█",
+  // "git.removedSign.text": "█",
+  // "git.changeRemovedSign.text": "█",
+  // "git.topRemovedSign.text": "█",
+  "cSpell.userWords": [
+    "ctags"
+  ],
+  "cSpell.allowCompoundWords": true,
+  "cSpell.dictionaries": [
+    "actiontech",
+    "personal"
+  ],
+  "cSpell.ignoreWords": [],
+  "cSpell.language": "en",
+  "cSpell.showStatus": true,
+  "cSpell.languageSettings": [
+    {
+      "languageId": "*",
+      "local": "en",
+      "dictionaries": [
         "actiontech",
         "personal"
+      ]
+    }
+  ],
+  "cSpell.ignorePaths": [
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "node_modules/**",
+    "vscode-extension",
+    ".git",
+    "*.dll",
+    "**/*.dll"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "vim",
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "explorer.keyMappings.global": {
+    "<cr>": [
+      "wait",
+      "expandable?",
+      "expand",
+      "open"
     ],
-    "cSpell.ignoreWords": [],
-    "cSpell.language": "en",
-    "cSpell.showStatus": true,
-    "cSpell.languageSettings": [
-        {
-            "languageId": "*",
-            "local": "en",
-            "dictionaries": [
-                "actiontech",
-                "personal"
-            ]
-        }
-    ],
-    "cSpell.ignorePaths": [
-        "node_modules",
-        "**/node_modules",
-        "**/node_modules/**",
-        "node_modules/**",
-        "vscode-extension",
-        ".git",
-        "*.dll",
-        "**/*.dll"
-    ],
-    "cSpell.enabledLanguageIds": [
-        "vim",
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "css",
-        "git-commit",
-        "go",
-        "handlebars",
-        "haskell",
-        "html",
-        "jade",
-        "java",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "python",
-        "pug",
-        "restructuredtext",
-        "rust",
-        "scala",
-        "scss",
-        "text",
-        "typescript",
-        "typescriptreact",
-        "yaml",
-        "yml"
-    ],
-    "translator.engines": [
-        "youdao",
-        "bing",
-        "haici"
-    ]
+  }
 }
