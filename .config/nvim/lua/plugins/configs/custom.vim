@@ -134,7 +134,9 @@ hi CocSemReadonly guifg='#81A1C1'
 " hi CocSemModification guifg='#88C0D0'
 " hi CocSemDocumentation guifg='#B48EAD'
 " hi CocSemDefaultLibrary guifg='#88C0D0'
-hi CocHighlightText guibg='#BF616A'
+hi CocHighlightText guibg='#B48EAD' guifg='#2E3440'
+hi CocErrorHighlight guibg='#BF616A'  guifg='#d8dee9'
+hi CocWarnHighlight guibg='#EBCB8B'  guifg='#d8dee9'
 
 
 "--||||||||||||||||||||||||||||||||||||||||| coc.nvim  ||||||||||||||||||||||||||||||||||||||||||||
@@ -311,3 +313,5 @@ autocmd FileType json setlocal ft=jsonc sw=2 expandtab
 
 hi tkLink ctermfg=Blue cterm=bold,underline guifg=blue gui=bold,underline
 hi tkBrackets ctermfg=gray guifg=gray
+
+
