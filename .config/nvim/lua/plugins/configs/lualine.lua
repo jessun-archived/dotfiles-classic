@@ -2,19 +2,15 @@ local colors = {
     black = "#383a42",
     dark_green = "#196F3D",
     grey = "#a0a1a7",
-
     green = "#8ec07c",
     light_green = "#007708",
-
     orange = "#fe8019",
     orange1 = "#FAB005",
     orange2 = "#FF7000",
-
     red = "#ca1243",
     seagreen = "#93E9BE",
     white = "#f3f3f3",
     yellow = "#FFFF00",
-
     nord1 = "#3B4252",
     nord13 = "#EBCB8B",
     nord3 = "#4C566A",
@@ -23,26 +19,21 @@ local colors = {
     nord7 = "#8FBCBB",
     nord8 = "#88C0D0",
     nord_bg = "#2E3440",
-
     default_diagnostic_error = "#e32636",
     default_diagnostic_warn = "#ffa500",
     default_diagnostic_info = "#ffffff",
     default_diagnostic_hint = "#273faf",
-
     default_git_diff_add = "#90ee90",
     default_git_diff_change = "#f0e130",
     default_git_diff_delete = "#ff0038",
-
     nord_aurora_red = "#BF616A",
     nord_aurora_orange = "#D08770",
     nord_aurora_yellow = "#EBCB8B",
     nord_aurora_green = "#A3BE8C",
     nord_aurora_pink = "#B48EAD",
-
     nord_snow_storm_white1 = "#D8DEE9",
     nord_snow_storm_white2 = "#E5E9F0",
     nord_snow_storm_white3 = "#ECEFF4",
-
     nord_frost_green1 = "#8FBCBB",
     nord_frost_green2 = "#88C0D0",
     nord_frost_green3 = "#81A1C1",
@@ -54,9 +45,11 @@ local function breadcrumbs()
     local items = vim.b.coc_nav
     local t = { '' }
     for k, v in ipairs(items) do
-        setmetatable(v, { __index = function(table, key)
-            return ' '
-        end })
+        setmetatable(v, {
+            __index = function(table, key)
+                return ' '
+            end
+        })
         t[#t + 1] = '%#' ..
             (v.highlight or "Normal") ..
             '#' .. (type(v.label) == 'string' and v.label .. ' ' or '') .. '%#NonText#' .. (v.name or '')
@@ -161,12 +154,12 @@ require("lualine").setup({
             },
         },
         lualine_c = {
-            {
-                "filename",
-                file_status = true,
-                color = { fg = colors.nord3, bg = colors.nord_bg },
-                path = 3,
-            },
+            -- {
+            --     "filename",
+            --     file_status = true,
+            --     color = { fg = colors.nord3, bg = colors.nord_bg },
+            --     path = 3,
+            -- },
         },
         lualine_x = {},
         lualine_y = {},
