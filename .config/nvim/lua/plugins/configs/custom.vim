@@ -308,7 +308,8 @@ call coc#config('cSpell.dictionaryDefinitions', [
   \])
 
 autocmd FileType gitcommit set colorcolumn=50
-autocmd FileType json setlocal ft=jsonc sw=2 expandtab
+" autocmd FileType json setlocal ft=jsonc sw=2 expandtab
+autocmd FileType json setlocal ft=jsonc expandtab
 
 
 hi tkLink ctermfg=Blue cterm=bold,underline guifg=blue gui=bold,underline
