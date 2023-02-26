@@ -1,4 +1,5 @@
 {
+    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
     "diagnostic.errorSign": "x",
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
