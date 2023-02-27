@@ -29,7 +29,6 @@ end
 
 function Plugin:load_config()
     require_modules(global.plugins_path)
-    -- vim.cmd('source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc.vim')
     vim.cmd('source ~/.config/nvim/lua/plugins/configs/custom.vim')
 end
 
