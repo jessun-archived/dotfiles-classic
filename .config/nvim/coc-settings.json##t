@@ -22,6 +22,7 @@
         "border": true
     },
     "list.maxPreviewHeight": 99999,
+    "json.format.enable": false,
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
