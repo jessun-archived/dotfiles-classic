@@ -1,6 +1,7 @@
 {
+    "diagnostic.virtualTextLines": 2,
+    "diagnostic.virtualTextLimitInOneLine": 10,
     "diagnostic.virtualTextAlign": "right",
-    "diagnostic.virtualTextPrefix": " === ",
     "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.virtualText": true,
     "diagnostic.errorSign": "x",
