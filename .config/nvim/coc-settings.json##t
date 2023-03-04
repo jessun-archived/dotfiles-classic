@@ -1,9 +1,4 @@
 {
-    "diagnostic.virtualTextLines": 2,
-    "diagnostic.virtualTextLimitInOneLine": 10,
-    "diagnostic.virtualTextAlign": "right",
-    "diagnostic.virtualTextCurrentLineOnly": false,
-    "diagnostic.virtualText": true,
     "diagnostic.errorSign": "x",
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
@@ -33,7 +28,6 @@
     "coc.preferences.formatOnSave": false,
     "colors.enable": true,
     "outline.sortBy": "position",
-    "outline.keepWindow": true,
     "semanticTokens.enable": true,
     "semanticTokens.incrementTypes": [
         "variable",
