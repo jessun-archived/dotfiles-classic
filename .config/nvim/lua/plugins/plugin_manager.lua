@@ -17,7 +17,6 @@ function pluginManager:init()
         --||||||||||||||||||||||||||||||||||||||||| SETTINGS ||||||||||||||||||||||||||||||||||||||||||||
         { "neoclide/coc.nvim",             build = "yarn install" },
         { "dstein64/vim-startuptime" },
-        { "lewis6991/impatient.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
         { "fannheyward/telescope-coc.nvim" },
@@ -28,7 +27,7 @@ function pluginManager:init()
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
         { "petertriho/nvim-scrollbar" },
         { "yaocccc/nvim-hlchunk" },
-        { "machakann/vim-sandwich" },
+        { "justinmk/vim-sneak" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
         { "iamcco/markdown-preview.nvim",  config = function() vim.fn["mkdp#util#install"]() end },
@@ -47,6 +46,11 @@ function pluginManager:init()
         --
         --|||||||||||||||||||||||||||||||||||||||||||| THEME |||||||||||||||||||||||||||||||||||||||||||||||
         { "shaunsingh/nord.nvim" },
+
+        --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
+        { "lewis6991/impatient.nvim" },
+        { "machakann/vim-sandwich" },
+
     })
 end
 
