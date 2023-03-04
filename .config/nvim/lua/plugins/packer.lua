@@ -103,6 +103,7 @@ function Packer:start_up()
         -- use("RRethy/nvim-treesitter-textsubjects") ----------------------------------------------------- 文本对象 ?
         -- use("nvim-treesitter/nvim-treesitter-context")
         use("machakann/vim-sandwich") ---------------------=--------------------------------------------- 快速两端文本 ?
+        use "lewis6991/impatient.nvim" -- Speed up loading Lua modules
         --
         --||||||||||||||||||||||||||||||||||||||||| NOTE TAKING ||||||||||||||||||||||||||||||||||||||||||
         use 'renerocksai/telekasten.nvim'
