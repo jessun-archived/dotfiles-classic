@@ -13,7 +13,41 @@ function pluginManager:init()
         })
     end
     vim.opt.rtp:prepend(lazypath)
-    require("lazy").setup(plugins, opts)
+    require("lazy").setup({
+        --||||||||||||||||||||||||||||||||||||||||| SETTINGS ||||||||||||||||||||||||||||||||||||||||||||
+        { "neoclide/coc.nvim",             build = "yarn install" },
+        { "dstein64/vim-startuptime" },
+        { "lewis6991/impatient.nvim" },
+
+        --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
+        { "fannheyward/telescope-coc.nvim" },
+        { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------------------------- 高亮关键字
+        { "kevinhwang91/nvim-hlslens" },
+        { "numToStr/Comment.nvim" },
+        { "nvim-lualine/lualine.nvim" },
+        { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
+        { "petertriho/nvim-scrollbar" },
+        { "yaocccc/nvim-hlchunk" },
+        { "machakann/vim-sandwich" },
+
+        --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
+        { "iamcco/markdown-preview.nvim",  config = function() vim.fn["mkdp#util#install"]() end },
+        { "nathom/filetype.nvim",          config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
+        { "neoclide/jsonc.vim" },
+
+        --|||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
+        { "tpope/vim-fugitive" },
+        { "sindrets/diffview.nvim",        dependencies = "nvim-lua/plenary.nvim" },
+        { "akinsho/git-conflict.nvim",     version = "*" },
+        { "lewis6991/gitsigns.nvim" },
+
+        --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
+        { "renerocksai/telekasten.nvim" },
+        { "renerocksai/calendar-vim" },
+        --
+        --|||||||||||||||||||||||||||||||||||||||||||| THEME |||||||||||||||||||||||||||||||||||||||||||||||
+        { "shaunsingh/nord.nvim" },
+    })
 end
 
 return pluginManager
