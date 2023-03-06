@@ -16,7 +16,6 @@ function pluginManager:init()
     require("lazy").setup({
         --||||||||||||||||||||||||||||||||||||||||| SETTINGS ||||||||||||||||||||||||||||||||||||||||||||
         { "neoclide/coc.nvim",             build = "yarn install" },
-        { "dstein64/vim-startuptime" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
         { "fannheyward/telescope-coc.nvim" },
@@ -28,9 +27,10 @@ function pluginManager:init()
         { "petertriho/nvim-scrollbar" },
         { "yaocccc/nvim-hlchunk" },
         { "justinmk/vim-sneak" },
+        {"windwp/nvim-spectre", dependencies="nvim-lua/plenary.nvim"},
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
-        { "iamcco/markdown-preview.nvim",  config = function() vim.fn["mkdp#util#install"]() end },
+        { "iamcco/markdown-preview.nvim",  config = function() vim.fn["mkdp#util#install"]() end, ft="markdown" },
         { "nathom/filetype.nvim",          config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
         { "neoclide/jsonc.vim" },
 

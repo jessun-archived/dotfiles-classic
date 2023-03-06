@@ -1,4 +1,5 @@
 {
+
     "diagnostic.errorSign": "x",
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
@@ -35,7 +36,6 @@
         "parameter"
     ],
     "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
-    "suggest.virtualText": true,
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.selection": "recentlyUsedByPrefix",
