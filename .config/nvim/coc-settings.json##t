@@ -26,7 +26,7 @@
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSave": false,
+    "coc.preferences.formatOnSave": true,
     "colors.enable": true,
     "outline.sortBy": "position",
     "semanticTokens.enable": true,
