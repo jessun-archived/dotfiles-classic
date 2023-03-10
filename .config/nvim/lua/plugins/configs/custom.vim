@@ -235,6 +235,9 @@ nmap <leader>ck  :CocList --auto-preview maps<CR>
 xmap <leader>co  :CocOutline<CR>
 nmap <leader>co  :CocOutline<CR>
 
+xmap <leader>kn  :nohl<CR>
+nmap <leader>kn  :nohl<CR>
+
 nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
 nmap <expr> <silent> 'w <SID>select_current_word()

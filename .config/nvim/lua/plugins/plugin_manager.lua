@@ -27,17 +27,22 @@ function pluginManager:init()
         { "petertriho/nvim-scrollbar" },
         { "yaocccc/nvim-hlchunk" },
         { "justinmk/vim-sneak" },
-        {"windwp/nvim-spectre", dependencies="nvim-lua/plenary.nvim"},
+        { "windwp/nvim-spectre",           dependencies = "nvim-lua/plenary.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
-        { "iamcco/markdown-preview.nvim",  config = function() vim.fn["mkdp#util#install"]() end, ft="markdown" },
-        { "nathom/filetype.nvim",          config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
+        {
+            "iamcco/markdown-preview.nvim",
+            config = function() vim.fn["mkdp#util#install"]() end,
+            ft =
+            "markdown"
+        },
+        { "nathom/filetype.nvim",       config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
         { "neoclide/jsonc.vim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
         { "tpope/vim-fugitive" },
-        { "sindrets/diffview.nvim",        dependencies = "nvim-lua/plenary.nvim" },
-        { "akinsho/git-conflict.nvim",     version = "*" },
+        { "sindrets/diffview.nvim",     dependencies = "nvim-lua/plenary.nvim" },
+        { "akinsho/git-conflict.nvim",  version = "*" },
         { "lewis6991/gitsigns.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
@@ -50,6 +55,12 @@ function pluginManager:init()
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
         { "lewis6991/impatient.nvim" },
         { "machakann/vim-sandwich" },
+        --
+        -- { "mswift42/vim-themes" },
+        -- { "mkarmona/colorsbox" },
+        -- { "flazz/vim-colorschemes" },
+        -- { "rafi/awesome-vim-colorschemes" },
+        -- { "rainglow/vim" }
 
     })
 end
