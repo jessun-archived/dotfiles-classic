@@ -67,9 +67,3 @@ export GPG_TTY=$(tty)
 {% if yadm.class == "home-pc" %}
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 {% endif %}
-
-
-## screen layout
-{% if yadm.class == "home" %}
-source ./.screenlayout/home.sh
-{% endif %}
