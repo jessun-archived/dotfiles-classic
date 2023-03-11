@@ -75,7 +75,7 @@
     background: @bg;
     color: @light;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -180,22 +180,22 @@
 
 #network {
     background: @bg;
-    border-bottom: 0.3rem solid @frost_3;
+    border-bottom: 0.2rem solid @frost_3;
 }
 
 #memory {
     background: @bg;
-    border-bottom: 0.3rem solid @frost_1;
+    border-bottom: 0.2rem solid @frost_1;
 }
 
 #cpu {
     background: @bg;
-    border-bottom: 0.3rem solid @aurora_1;
+    border-bottom: 0.2rem solid @aurora_1;
 }
 
 #temperature {
     background: @bg;
-    border-bottom: 0.3rem solid @aurora_3;
+    border-bottom: 0.2rem solid @aurora_3;
 }
 
 #custom-layout {
@@ -212,7 +212,7 @@
 
 #clock {
 	background: @bg;
-    border-bottom: 0.3rem solid @aurora_5;
+    border-bottom: 0.2rem solid @aurora_5;
 }
 
 #clock.date {
