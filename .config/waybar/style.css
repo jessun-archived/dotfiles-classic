@@ -232,5 +232,14 @@
 }
 
 #tray {
-	background: @tray;
+	background: @bg;
+    border-bottom: 0.2rem solid @snow_storm_1;
+}
+
+#custom-power {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+    font-size: 16px;
+	background: @bg;
+    border-bottom: 0.2rem solid @mode;
 }

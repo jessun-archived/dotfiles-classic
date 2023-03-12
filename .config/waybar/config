@@ -1,17 +1,12 @@
 {
     "layer": "top", // Waybar at top layer
     "height": 15, // Waybar height (to be removed for auto height)
-    "modules-left": ["wlr/workspaces","hyprland/submap"],
+    "modules-left": ["wlr/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network","cpu","memory","temperature","clock","tray"],
+    "modules-right": ["network","cpu","memory","temperature","clock","tray","custom/power"],
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true
-    },
-    "hyprland/submap": {
-        "format": "{}",
-        "max-length": 8,
-        "tooltip": true
     },
     "wlr/workspaces": {
          "format": "{icon}",
@@ -20,8 +15,6 @@
     },
     "clock": {
         "format": "{:%Y/%m/%d-%H:%M}",
-        "format-alt": "{:%A, %B %d, %Y (%R)}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
     },
     "tray": {
         "icon-size": 21,
@@ -39,10 +32,14 @@
         "format": "TEMP:{temperatureC}°C",
     },
     "network": {
-        "format-wifi": "{ipaddr}/{cidr}",
+        "format-wifi": "IP:{ipaddr}/{cidr}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{essid} ({signalStrength}%)",
+    },
+    "custom/power": {
+        "format": "",    
+        "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'shutdown' 'shutdown now'"
     }
 }
