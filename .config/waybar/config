@@ -1,8 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "height": 15, // Waybar height (to be removed for auto height)
-    "modules-left": ["wlr/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["wlr/workspaces","hyprland/window"],
+    "modules-center": [],
     "modules-right": ["network","cpu","memory","temperature","clock","tray","custom/power"],
     "hyprland/window": {
         "format": "{}",
@@ -14,7 +14,7 @@
          "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
     "clock": {
-        "format": "{:%Y/%m/%d-%H:%M}",
+        "format": "{:%Y/%m/%d %H:%M}",
     },
     "tray": {
         "icon-size": 21,
@@ -32,7 +32,8 @@
         "format": "TEMP:{temperatureC}°C",
     },
     "network": {
-        "format-wifi": "IP:{ipaddr}/{cidr}",
+        "interval": 2,
+        "format-wifi": "IP:{ipaddr}|{bandwidthUpBits}|{bandwidthDownBits}",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
