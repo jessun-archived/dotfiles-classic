@@ -25,7 +25,7 @@ function pluginManager:init()
         { "nvim-lualine/lualine.nvim" },
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
         { "petertriho/nvim-scrollbar" },
-        { "yaocccc/nvim-hlchunk" },
+        { "shellRaining/hlchunk.nvim" },
         { "justinmk/vim-sneak" },
         { "windwp/nvim-spectre",           dependencies = "nvim-lua/plenary.nvim" },
 
