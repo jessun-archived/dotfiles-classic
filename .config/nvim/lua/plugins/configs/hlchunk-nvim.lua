@@ -35,7 +35,7 @@ require('hlchunk').setup({
     chunk = {
         enable = true,
         support_filetypes = {
-            "*"
+            "*.go"
         },
         chars = {
             horizontal_line = "─",

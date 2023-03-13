@@ -23,6 +23,7 @@ function pluginManager:init()
         { "kevinhwang91/nvim-hlslens" },
         { "numToStr/Comment.nvim" },
         { "nvim-lualine/lualine.nvim" },
+        { "nvim-tree/nvim-tree.lua" },
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
