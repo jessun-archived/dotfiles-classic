@@ -56,6 +56,7 @@ function pluginManager:init()
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
         { "lewis6991/impatient.nvim" },
         { "machakann/vim-sandwich" },
+        { "chentoast/marks.nvim" }
         --
         -- { "mswift42/vim-themes" },
         -- { "mkarmona/colorsbox" },
