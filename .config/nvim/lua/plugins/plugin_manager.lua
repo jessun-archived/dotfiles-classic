@@ -27,7 +27,6 @@ function pluginManager:init()
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
-        { "justinmk/vim-sneak" },
         { "windwp/nvim-spectre",           dependencies = "nvim-lua/plenary.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
@@ -48,7 +47,6 @@ function pluginManager:init()
 
         --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
         { "renerocksai/telekasten.nvim" },
-        { "renerocksai/calendar-vim" },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| THEME |||||||||||||||||||||||||||||||||||||||||||||||
         { "shaunsingh/nord.nvim" },
@@ -58,11 +56,16 @@ function pluginManager:init()
         { "machakann/vim-sandwich" },
         { "chentoast/marks.nvim" }
         --
+        --
+        --
+        --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "mswift42/vim-themes" },
         -- { "mkarmona/colorsbox" },
         -- { "flazz/vim-colorschemes" },
         -- { "rafi/awesome-vim-colorschemes" },
         -- { "rainglow/vim" }
+        -- { "justinmk/vim-sneak" },
+        -- { "renerocksai/calendar-vim" },
 
     })
 end
