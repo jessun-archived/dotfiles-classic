@@ -14,12 +14,12 @@ function pluginManager:init()
     end
     vim.opt.rtp:prepend(lazypath)
     require("lazy").setup({
-        --||||||||||||||||||||||||||||||||||||||||| SETTINGS ||||||||||||||||||||||||||||||||||||||||||||
+        --|||||||||||||||||||||||||||||||||||||||||||| SETTINGS |||||||||||||||||||||||||||||||||||||||||||||
         { "neoclide/coc.nvim",             build = "yarn install" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
         { "fannheyward/telescope-coc.nvim" },
-        { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------------------------- 高亮关键字
+        { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
         { "kevinhwang91/nvim-hlslens" },
         { "numToStr/Comment.nvim" },
         { "nvim-lualine/lualine.nvim" },
@@ -27,7 +27,6 @@ function pluginManager:init()
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
-        { "windwp/nvim-spectre",           dependencies = "nvim-lua/plenary.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
         {
@@ -53,10 +52,9 @@ function pluginManager:init()
 
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
         { "lewis6991/impatient.nvim" },
-        { "machakann/vim-sandwich" },
-        { "chentoast/marks.nvim" }
-        --
-        --
+        { "chentoast/marks.nvim" },
+        { "windwp/nvim-spectre",        dependencies = "nvim-lua/plenary.nvim" },
+        { 'echasnovski/mini.surround',  version = false },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "mswift42/vim-themes" },
