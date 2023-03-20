@@ -13,7 +13,6 @@ bind -n S-Right next-window
 bind C-s send-prefix -2
 
 bind c new-window -c "#{pane_current_path}"
-bind u last
 bind-key r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
 bind s choose-tree -s -O time
 
@@ -48,6 +47,7 @@ bind -r C-j resize-pane -D 5
 bind -r C-h resize-pane -L 5
 bind -r C-l resize-pane -R 5
 bind-key -n C-t switch-client -l
+bind -n C-h last
 
 # ------ status theme -------------------------------
 set -g message-style "bg=#00346e, fg=#D8DEE9"       
