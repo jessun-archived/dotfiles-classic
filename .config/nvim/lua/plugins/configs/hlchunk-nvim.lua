@@ -3,14 +3,23 @@ require('hlchunk').setup({
         enable = false,
     },
     indent = {
-        enable = false,
+        enable = true,
         use_treesitter = false,
         -- You can uncomment to get more indented line look like
         chars = {
             "│",
+            "¦",
+            "┆",
+            "┊",
         },
         -- you can uncomment to get more indented line style
         style = {
+            "#FF0000",
+            "#FF7F00",
+            "#FFFF00",
+            "#00FF00",
+            "#00FFFF",
+            "#0000FF",
             "#8B00FF",
         },
         exclude_filetype = {
@@ -35,7 +44,8 @@ require('hlchunk').setup({
     chunk = {
         enable = true,
         support_filetypes = {
-            "*.go"
+            "*.go",
+            "*.rs"
         },
         chars = {
             horizontal_line = "─",
@@ -46,19 +56,4 @@ require('hlchunk').setup({
         },
         style = "#00ffff",
     },
-    -- when overide the config, enable option must be contained
-    -- enabled = true,
-    -- -- if you want to use multiple indent line, just place them here, the key is like vertical_line + x, which x is a number
-    -- chars = {
-    --     vertical_line1 = "│",
-    --     vertical_line2 = "¦",
-    --     vertical_line3 = "┆",
-    --     vertical_line4 = "┊",
-    -- },
-    -- hl_indent = {
-    --     enable = true,
-    --     style = {
-    --         "#8B00FF",
-    --     },
-    -- },
 })
