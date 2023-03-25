@@ -3,7 +3,7 @@ require('hlchunk').setup({
         enable = false,
     },
     indent = {
-        enable = true,
+        enable = false,
         use_treesitter = false,
         -- You can uncomment to get more indented line look like
         chars = {
