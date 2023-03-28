@@ -35,13 +35,13 @@ function pluginManager:init()
             ft =
             "markdown"
         },
-        { "nathom/filetype.nvim",       config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
+        { "nathom/filetype.nvim",         config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
         { "neoclide/jsonc.vim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
         { "tpope/vim-fugitive" },
-        { "sindrets/diffview.nvim",     dependencies = "nvim-lua/plenary.nvim" },
-        { "akinsho/git-conflict.nvim",  version = "*" },
+        { "sindrets/diffview.nvim",       dependencies = "nvim-lua/plenary.nvim" },
+        { "akinsho/git-conflict.nvim",    version = "*" },
         { "lewis6991/gitsigns.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
@@ -53,8 +53,9 @@ function pluginManager:init()
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
         { "lewis6991/impatient.nvim" },
         { "chentoast/marks.nvim" },
-        { "windwp/nvim-spectre",        dependencies = "nvim-lua/plenary.nvim" },
-        { 'echasnovski/mini.surround',  version = false },
+        { "windwp/nvim-spectre",          dependencies = "nvim-lua/plenary.nvim" },
+        { "echasnovski/mini.surround",    version = false },
+        { "simrat39/symbols-outline.nvim" },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "mswift42/vim-themes" },
