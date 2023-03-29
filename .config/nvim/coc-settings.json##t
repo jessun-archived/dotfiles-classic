@@ -1,5 +1,5 @@
 {
-
+    "git.enableGutters": false,
     "diagnostic.errorSign": "x",
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
