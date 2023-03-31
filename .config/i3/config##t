@@ -252,7 +252,7 @@ bar {
 
 
 # specific config for home-pc
-    output DP-1
+    output HDMI-1
 
 
     colors {
