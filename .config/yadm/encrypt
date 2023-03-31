@@ -1,3 +1,4 @@
 .ssh/*
 .config/clash/*
 .config/yadm/encrypt
+.config/himalaya/config.toml
