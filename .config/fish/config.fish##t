@@ -170,6 +170,9 @@ if test -e "$HOME/.pyenv/bin/pyenv"
     set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
     pyenv init - | source
 end
+if test -d "$HOME/Library/Python/3.11/bin/"
+    set -g PATH "$HOME/Library/Python/3.11/bin/" $PATH
+end 
 # =========================== python =========================== }
 
 # ===================== Derecated configs ===================== {
