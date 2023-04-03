@@ -18,13 +18,16 @@ function pluginManager:init()
         { "neoclide/coc.nvim",             build = "yarn install" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
-        { "fannheyward/telescope-coc.nvim" },
         { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
-        { "kevinhwang91/nvim-hlslens" },
         { "numToStr/Comment.nvim" },
+
+        { "kevinhwang91/nvim-hlslens" },
         { "nvim-lualine/lualine.nvim" },
         { "nvim-tree/nvim-tree.lua" },
+
         { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
+        { "fannheyward/telescope-coc.nvim" },
+
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
 
