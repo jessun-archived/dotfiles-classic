@@ -97,7 +97,7 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 " hi CocSemStruct guifg="#81A1C1"
 " hi CocSemTypeParameter guifg="#81A1C1"
 " hi CocSemParameter guifg="#5E81AC"
-hi CocSemVariable guifg='#d8dee9'
+" hi CocSemVariable guifg='#d8dee9'
 " hi CocSemProperty guifg="#5E81AC"
 " " hi CocSemEnumMember 
 " " hi CocSemEvent
@@ -115,9 +115,9 @@ hi CocSemVariable guifg='#d8dee9'
 " "
 " " " Tokens modifiers that current Language Server supported:
 " hi CocSemDeclaration guifg='#8FBCBB'
-hi CocSemDefinition guifg='#81A1C1'
-hi CocSemFunction guifg='#81A1C1'
-hi CocSemReadonly guifg='#81A1C1'
+" hi CocSemDefinition guifg='#81A1C1'
+" hi CocSemFunction guifg='#81A1C1'
+" hi CocSemReadonly guifg='#81A1C1'
 " hi CocSemStatic guifg='#BF616A'
 " hi CocSemDeprecated guifg='#BF616A'
 " hi CocSemAbstract guifg='#D08770'

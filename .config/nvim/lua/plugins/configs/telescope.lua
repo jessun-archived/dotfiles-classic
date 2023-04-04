@@ -16,7 +16,7 @@ require("telescope").setup({
     extensions = {
         tmuxinator = {
             select_action = "switch", -- | 'stop' | 'kill'
-            stop_action = "stop", -- | 'kill'
+            stop_action = "stop",     -- | 'kill'
             disable_icons = true,
         },
         coc = {
@@ -71,4 +71,4 @@ vim.api.nvim_set_keymap(
     ":lua require('telescope.builtin').live_grep({ default_text = vim.fn.expand('<cword>') })<CR>",
     { noremap = true, silent = true }
 )
-vim.api.nvim_set_keymap("n", "<leader>td", ":Telescope coc diagnostics<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>td", ":Telescope coc workspace_diagnostics<CR>", { noremap = true, silent = true })

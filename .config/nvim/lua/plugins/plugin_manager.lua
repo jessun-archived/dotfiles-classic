@@ -60,11 +60,6 @@ function pluginManager:init()
         { "echasnovski/mini.surround",  version = false },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
-        -- { "mswift42/vim-themes" },
-        -- { "mkarmona/colorsbox" },
-        -- { "flazz/vim-colorschemes" },
-        -- { "rafi/awesome-vim-colorschemes" },
-        -- { "rainglow/vim" }
         -- { "justinmk/vim-sneak" },
         -- { "renerocksai/calendar-vim" },
 
