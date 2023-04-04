@@ -235,6 +235,7 @@ exec --no-startup-id picom --experimental-backends
 exec --no-startup-id blueberry-tray
 exec --no-startup-id copyq
 exec --no-startup-id env QT_SCALE_FACTOR=1  megasync
+exec --no-startup-id xrandr --output DVI-D-1 --off --output DVI-D-2 --off --output HDMI-1 --mode 1920x1080 --pos 2560x0 --rotate right --output DP-1 --mode 2560x1440 --pos 0x0 --rotate normal
 #exec --no-startup-id ibus-daemon -d
 #exec --no-startup-id fcitx -d
 exec --no-startup-id fcitx5 -d
