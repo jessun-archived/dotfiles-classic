@@ -1,8 +1,8 @@
 "=========================== session {
-augroup auto_save_session
-  autocmd!
-  autocmd VimEnter,BufWritePost,VimLeavePre,CursorMoved,CursorMovedI * :mksession!
-augroup END
+" augroup auto_save_session
+"   autocmd!
+"   autocmd VimEnter,BufWritePost,VimLeavePre,CursorMoved,CursorMovedI * :mksession!
+" augroup END
 "=========================== session }
 "
 "=========================== yadm {

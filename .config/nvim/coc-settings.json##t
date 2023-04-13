@@ -1,50 +1,28 @@
 {
-    "git.enableGutters": false,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.highlightPriority": 110,
+    "diagnostic.virtualText": true,
     "diagnostic.errorSign": "x",
     "diagnostic.hintSign": "·",
     "diagnostic.infoSign": "·",
     "diagnostic.warningSign": "!",
-    "floatFactory.floatConfig": {
-        "border": true
-    },
-    "dialog.rounded": false,
-    "suggest.floatConfig": {
-        "border": true
-    },
+    "diagnostic.signPriority": 4096,
     "diagnostic.floatConfig": {
         "border": true
     },
-    "diagnostic.signPriority": 1,
-    "signature.floatConfig": {
-        "border": true
-    },
-    "hover.floatConfig": {
-        "border": true
-    },
-    "list.maxPreviewHeight": 99999,
-    "json.format.enable": true,
+    "suggest.defaultSortMethod": "alphabetical",
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.selection": "recentlyUsedByPrefix",
+    "dialog.rounded": false,
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "daily",
     "coc.preferences.formatOnType": true,
     "coc.preferences.formatOnSave": true,
     "colors.enable": true,
     "outline.sortBy": "position",
-    "semanticTokens.enable": true,
-    "semanticTokens.incrementTypes": [
-        "variable",
-        "string",
-        "parameter"
-    ],
+    "semanticTokens.enable": false,
     "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
-    "suggest.defaultSortMethod": "alphabetical",
-    "suggest.preferCompleteThanJumpPlaceholder": true,
-    "suggest.selection": "recentlyUsedByPrefix",
-    "list.source.tags.command": "ctags -R -f ./tags",
-    "list.source.grep.command": "rg",
-    "list.source.files.args": [
-        "--hidden",
-        "--files"
-    ],
+    "session.restartOnSessionLoad": true,
     "session.saveOnVimLeave": true,
     "http.proxy": "http://127.0.0.1:1087",
     "go.goplsPath": "~/.gvm/pkgsets/go1.19.7/global/bin/gopls",
@@ -52,6 +30,7 @@
         "semanticTokens": true,
         "allowModfileModifications": true
     },
+    "git.enableGutters": false,
     // "git.signPriority": 0,
     // "git.addedSign.text": "█",
     // "git.changedSign.text": "█",
@@ -124,12 +103,4 @@
         "yaml",
         "yml"
     ],
-    "explorer.keyMappings.global": {
-        "<cr>": [
-            "wait",
-            "expandable?",
-            "expand",
-            "open"
-        ],
-    }
 }
