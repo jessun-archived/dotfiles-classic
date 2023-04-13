@@ -226,18 +226,15 @@ nmap <leader>ck  :CocList --auto-preview maps<CR>
 xmap <leader>co  :CocOutline<CR>
 nmap <leader>co  :CocOutline<CR>
 
-xmap <leader>kn  :nohl<CR>
-nmap <leader>kn  :nohl<CR>
-
 nnoremap <silent><nowait> <leader>cr  :<C-u>CocListResume<CR>
 
-nmap <expr> <silent> 'w <SID>select_current_word()
-function! s:select_current_word()
-  if !get(b:, 'coc_cursors_activated', 0)
-    return "\<Plug>(coc-cursors-word)
-  endif
-  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
-endfunc
+" nmap <expr> <silent> 'w <SID>select_current_word()
+" function! s:select_current_word()
+"   if !get(b:, 'coc_cursors_activated', 0)
+"     return "\<Plug>(coc-cursors-word)
+"   endif
+"   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+" endfunc
 nmap <leader>rf <Plug>(coc-refactor)
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
