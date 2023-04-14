@@ -61,7 +61,6 @@ function pluginManager:init()
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "justinmk/vim-sneak" },
-        -- { "renerocksai/calendar-vim" },
 
     })
 end
