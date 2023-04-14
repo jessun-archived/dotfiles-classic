@@ -3,7 +3,9 @@ Cacher
 Condf
 Ctim
 DUPL
+Debugf
 Devs
+Feishu
 Fira
 GONOSUMDB
 Gliffy
@@ -16,6 +18,7 @@ Jessun
 MIRI
 Menlo
 Meslo
+Mybatis
 Mycnf
 Mysqlbatis
 Mysqld
@@ -24,6 +27,7 @@ Noto
 Pgrpc
 Rpcf
 Schwarz
+Stmts
 Thanos
 Unscoped
 Unstage
@@ -43,6 +47,7 @@ consts
 coreutils
 cpuid
 cpus
+ctags
 deepl
 devf
 donttouchme
@@ -50,9 +55,11 @@ egrep
 enduml
 ents
 estab
+facebookgo
 fanyi
 fcitx
 feedx
+feishu
 flazz
 fstype
 funcobj
@@ -80,10 +87,12 @@ mkdir
 mocword
 mongodb
 mpyls
+mutex
 mygroup
 navi
 nedit
 neoclide
+nolint
 nordthemewallpapers
 nums
 nvim
@@ -124,6 +133,7 @@ stnight
 stretchr
 struct
 sumneko
+swaggo
 tabc
 tabo
 tindy
@@ -144,12 +154,3 @@ yapf
 youdao
 zfunc
 zhangsan
-ctags
-nolint
-mutex
-Debugf
-facebookgo
-feishu
-swaggo
-Feishu
-Stmts
