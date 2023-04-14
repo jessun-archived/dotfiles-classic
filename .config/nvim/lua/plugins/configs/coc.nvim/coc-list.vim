@@ -23,20 +23,20 @@ endfunction
 " vnoremap <leader>g :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
 " nnoremap <leader>g :<C-u>set operatorfunc=<SID>GrepFromSelected<CR>g@
 
-function! s:GrepFromSelected(type)
-  let saved_unnamed_register = @@
-  if a:type ==# 'v'
-    normal! `<v`>y
-  elseif a:type ==# 'char'
-    normal! `[v`]y
-  else
-    return
-  endif
-  let word = substitute(@@, '\n$', '', 'g')
-  let word = escape(word, '| ')
-  let @@ = saved_unnamed_register
-  execute 'CocList grep '.word
-endfunction
+" function! s:GrepFromSelected(type)
+"   let saved_unnamed_register = @@
+"   if a:type ==# 'v'
+"     normal! `<v`>y
+"   elseif a:type ==# 'char'
+"     normal! `[v`]y
+"   else
+"     return
+"   endif
+"   let word = substitute(@@, '\n$', '', 'g')
+"   let word = escape(word, '| ')
+"   let @@ = saved_unnamed_register
+"   execute 'CocList grep '.word
+" endfunction
 "|||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 

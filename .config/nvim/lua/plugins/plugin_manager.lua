@@ -15,18 +15,18 @@ function pluginManager:init()
     vim.opt.rtp:prepend(lazypath)
     require("lazy").setup({
         --|||||||||||||||||||||||||||||||||||||||||||| SETTINGS |||||||||||||||||||||||||||||||||||||||||||||
-        { "neoclide/coc.nvim",             build = "yarn install" },
+        { "neoclide/coc.nvim",        build = "yarn install" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
-        { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
+        { "folke/todo-comments.nvim", dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
         { "numToStr/Comment.nvim" },
 
         { "kevinhwang91/nvim-hlslens" },
         { "nvim-lualine/lualine.nvim" },
         { "nvim-tree/nvim-tree.lua" },
 
-        { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
-        { "fannheyward/telescope-coc.nvim" },
+        -- { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
+        -- { "fannheyward/telescope-coc.nvim" },
 
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
@@ -35,20 +35,19 @@ function pluginManager:init()
         {
             "iamcco/markdown-preview.nvim",
             config = function() vim.fn["mkdp#util#install"]() end,
-            ft =
-            "markdown"
+            ft = "markdown"
         },
-        { "nathom/filetype.nvim",       config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
+        { "nathom/filetype.nvim",      config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
         { "neoclide/jsonc.vim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
         { "tpope/vim-fugitive" },
-        { "sindrets/diffview.nvim",     dependencies = "nvim-lua/plenary.nvim" },
-        { "akinsho/git-conflict.nvim",  version = "*" },
+        { "sindrets/diffview.nvim",    dependencies = "nvim-lua/plenary.nvim" },
+        { "akinsho/git-conflict.nvim", version = "*" },
         { "lewis6991/gitsigns.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
-        { "renerocksai/telekasten.nvim" },
+        -- { "renerocksai/telekasten.nvim" },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| THEME |||||||||||||||||||||||||||||||||||||||||||||||
         { "shaunsingh/nord.nvim" },
@@ -56,8 +55,8 @@ function pluginManager:init()
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
         { "lewis6991/impatient.nvim" },
         { "chentoast/marks.nvim" },
-        { "windwp/nvim-spectre",        dependencies = "nvim-lua/plenary.nvim" },
-        { "echasnovski/mini.surround",  version = false },
+        { "windwp/nvim-spectre",       dependencies = "nvim-lua/plenary.nvim" },
+        { "echasnovski/mini.surround", version = false },
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "justinmk/vim-sneak" },
