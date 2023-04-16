@@ -1,4 +1,10 @@
 {
+    // ============ list {
+    "list.previewSplitRight": true,
+    "list.maxPreviewHeight": 4096,
+    "list.height": 20,
+    "list.floatPreview": true,
+    // ============ list }
     "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.highlightPriority": 110,
     "diagnostic.virtualText": true,
