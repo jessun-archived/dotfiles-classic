@@ -1,41 +1,108 @@
 {
-    // ============ list {
-    "list.previewSplitRight": true,
-    "list.maxPreviewHeight": 4096,
-    "list.height": 20,
-    "list.floatPreview": true,
-    // ============ list }
-    "diagnostic.virtualTextCurrentLineOnly": false,
+    // ||||||||||||||||||||||||||||||||||||||||
+    // |||||||||||||| coc.nvim  |||||||||||||||
+    // ||||||||||||||||||||||||||||||||||||||||
+    // ============== coc-config-codeLens ============== 
+    "codeLens.enable": true,
+    "codeLens.position": "right_align",
+    // ============== coc-config-colors ============== 
+    "colors.enable": true,
+    // ============== coc-config-dialog  ============== 
+    "dialog.rounded": false,
+    // ============== coc-config-diagnostic ============== 
+    "diagnostic.checkCurrentLine": true,
     "diagnostic.highlightPriority": 110,
-    "diagnostic.virtualText": true,
-    "diagnostic.errorSign": "x",
-    "diagnostic.hintSign": "·",
-    "diagnostic.infoSign": "·",
-    "diagnostic.warningSign": "!",
     "diagnostic.signPriority": 4096,
-    "diagnostic.floatConfig": {
-        "border": true
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.errorSign": "E",
+    "diagnostic.hintSign": "H",
+    "diagnostic.infoSign": "I",
+    "diagnostic.warningSign": "W",
+    // ============== coc-config-http ==============
+    "http.proxy": "http://127.0.0.1:1087",
+    // ============== coc-config-float ==============
+    "floatFactory.floatConfig": {
+        "rounded": false,
     },
+    // ============== coc-config-links ==============
+    "links.highlight": true,
+    "links.tooltip": true,
+    // ============== coc-config-list ==============
+    "list.previewSplitRight": true,
+    "list.menuAction": true,
+    "list.height": 13,
+    "list.nextKeymap": "<C-n>",
+    "list.previousKeymap": "<C-p>",
+    "list.smartCase": true,
+    "list.interactiveDebounceTime": 300,
+    // ============== coc-config-notification ==============
+    "notification.winblend": 0,
+    // ============== coc-config-suggest ==============
     "suggest.defaultSortMethod": "alphabetical",
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.selection": "recentlyUsedByPrefix",
-    "dialog.rounded": false,
+    "suggest.completionItemKindLabels": {
+        "text": "TXT",
+        "method": "METHOD",
+        "function": "FUNC",
+        "constructor": "CONSTRUCTOR",
+        "field": "FIELD",
+        "variable": "VAR",
+        "class": "CLASS",
+        "interface": "IFACE",
+        "module": "MODULE",
+        "property": "PROPERTY",
+        "unit": "UNIT",
+        "value": "VAL",
+        "enum": "ENUM",
+        "keyword": "KEYWORD",
+        "snippet": "SNIP",
+        "color": "COLOR",
+        "file": "FILE",
+        "reference": "REF",
+        "folder": "FOLDER",
+        "enumMember": "ENUM_MEMBER",
+        "constant": "CONST",
+        "struct": "STRUCT",
+        "event": "EVENT",
+        "operator": "OPERATOR",
+        "typeParameter": "TYPE_PARAMETER",
+        "default": ""
+    },
+    "suggest.virtualText": true,
+    // ============== coc-config-preferences ==============
     "coc.preferences.enableMessageDialog": true,
-    "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSave": true,
-    "colors.enable": true,
+    "coc.preferences.extensionUpdateCheck": "weekly",
+    "coc.preferences.formatOnSave": false,
+    "coc.preferences.enableLinkedEditing": true,
+    // ============== coc-config-outline ==============
     "outline.sortBy": "position",
+    "outline.keepWindow": true,
+    // ============== coc-config-semanticTokens ==============
     "semanticTokens.enable": false,
-    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
+    // ||||||||||||||||||||||||||||||||||||||||
+    // |||||||||||| coc extensions ||||||||||||
+    // ||||||||||||||||||||||||||||||||||||||||
+    // ============== coc-lists  ============== 
     "session.restartOnSessionLoad": true,
     "session.saveOnVimLeave": true,
-    "http.proxy": "http://127.0.0.1:1087",
+    // ============== coc-rust-analyzer ==============
+    "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
+    // ============== coc-go ==============
     "go.goplsPath": "~/.gvm/pkgsets/go1.19.7/global/bin/gopls",
     "go.goplsOptions": {
         "semanticTokens": true,
         "allowModfileModifications": true
     },
+    "go.disable": {
+        "features": [
+            "documentFormatting",
+            "documentOnTypeFormatting",
+            "documentOnTypeFormatting"
+        ]
+    },
+    // ============== coc-git ==============
     "git.enableGutters": false,
     // "git.signPriority": 0,
     // "git.addedSign.text": "█",
@@ -43,15 +110,12 @@
     // "git.removedSign.text": "█",
     // "git.changeRemovedSign.text": "█",
     // "git.topRemovedSign.text": "█",
-    "cSpell.userWords": [
-        "ctags"
-    ],
+    // ============== coc-spell-checker ==============
     "cSpell.allowCompoundWords": true,
     "cSpell.dictionaries": [
         "actiontech",
         "personal"
     ],
-    "cSpell.ignoreWords": [],
     "cSpell.language": "en",
     "cSpell.showStatus": true,
     "cSpell.languageSettings": [
@@ -72,7 +136,10 @@
         "vscode-extension",
         ".git",
         "*.dll",
-        "**/*.dll"
+        "**/*.dll",
+        "**/vendor",
+        "**/vendor/**",
+        "vendor/**"
     ],
     "cSpell.enabledLanguageIds": [
         "vim",
