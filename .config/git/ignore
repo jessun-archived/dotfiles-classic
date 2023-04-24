@@ -9,6 +9,7 @@ Session.vim
 
 .cargo/
 .python-version
+.ignore
 
 known_hosts
 known_hosts.old
