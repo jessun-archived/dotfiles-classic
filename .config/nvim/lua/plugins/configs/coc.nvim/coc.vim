@@ -112,7 +112,7 @@ nmap <leader>k  :CocList --auto-preview maps<CR>
 xmap <leader>co  :CocOutline<CR>
 nmap <leader>co  :CocOutline<CR>
 
-nnoremap <silent><nowait> <leader>r :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>cr :<C-u>CocListResume<CR>
 nmap <leader>cr <Plug>(coc-refactor)
 
 " nmap <expr> <silent> 'w <SID>select_current_word()
