@@ -29,6 +29,8 @@
     "links.highlight": true,
     "links.tooltip": true,
     // ============== coc-config-list ==============
+    "list.previewToplineStyle": "offset",
+    "list.previewToplineOffset": 15,
     "list.previewSplitRight": true,
     "list.menuAction": true,
     "list.height": 13,
@@ -70,11 +72,10 @@
         "typeParameter": "TYPE_PARAMETER",
         "default": ""
     },
-    "suggest.virtualText": true,
     // ============== coc-config-preferences ==============
     "coc.preferences.enableMessageDialog": true,
     "coc.preferences.extensionUpdateCheck": "weekly",
-    "coc.preferences.formatOnSave": false,
+    "coc.preferences.formatOnSave": true,
     "coc.preferences.enableLinkedEditing": true,
     // ============== coc-config-outline ==============
     "outline.sortBy": "position",
@@ -90,17 +91,8 @@
     // ============== coc-rust-analyzer ==============
     "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
     // ============== coc-go ==============
-    "go.goplsPath": "~/.gvm/pkgsets/go1.19.7/global/bin/gopls",
     "go.goplsOptions": {
-        "semanticTokens": true,
         "allowModfileModifications": true
-    },
-    "go.disable": {
-        "features": [
-            "documentFormatting",
-            "documentOnTypeFormatting",
-            "documentOnTypeFormatting"
-        ]
     },
     // ============== coc-git ==============
     "git.enableGutters": false,
