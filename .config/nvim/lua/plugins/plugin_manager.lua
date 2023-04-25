@@ -15,18 +15,18 @@ function pluginManager:init()
     vim.opt.rtp:prepend(lazypath)
     require("lazy").setup({
         --|||||||||||||||||||||||||||||||||||||||||||| SETTINGS |||||||||||||||||||||||||||||||||||||||||||||
-        { "neoclide/coc.nvim",        build = "yarn install" },
+        { "neoclide/coc.nvim",             build = "yarn install" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
-        { "folke/todo-comments.nvim", dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
+        { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
         { "numToStr/Comment.nvim" },
 
         { "kevinhwang91/nvim-hlslens" },
         { "nvim-lualine/lualine.nvim" },
         { "nvim-tree/nvim-tree.lua" },
 
-        -- { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
-        -- { "fannheyward/telescope-coc.nvim" },
+        { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
+        { "fannheyward/telescope-coc.nvim" },
 
         { "petertriho/nvim-scrollbar" },
         { "shellRaining/hlchunk.nvim" },
