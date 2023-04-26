@@ -1,69 +1,3 @@
-require("nvim-tree").setup({
-    sort_by = "case_sensitive",
-    renderer = {
-        group_empty = true,
-        indent_width = 1,
-        -- indent_markers = {
-        -- 	enable = true,
-        -- 	inline_arrows = true,
-        -- 	icons = {
-        -- 		corner = "└",
-        -- 		edge = "│",
-        -- 		item = "│",
-        -- 		bottom = "─",
-        -- 		none = " ",
-        -- 	},
-        -- },
-        icons = {
-            webdev_colors = true,
-            show = {
-                file = true,
-                folder = true,
-                folder_arrow = true,
-                git = true,
-            },
-        },
-    },
-    diagnostics = {
-        enable = true,
-        show_on_dirs = true,
-        debounce_delay = 50,
-        icons = {
-            hint = "·",
-            info = "·",
-            warning = "!",
-            error = "x",
-        },
-    },
-    filters = {
-        dotfiles = false,
-    },
-    git = {
-        ignore = false,
-    },
-})
-
-
-vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
-
-
---
--- This function has been generated from your
---   view.mappings.list
---   view.mappings.custom_only
---   remove_keymaps
---
--- You should add this function to your configuration and set on_attach = on_attach in the nvim-tree setup call.
---
--- Although care was taken to ensure correctness and completeness, your review is required.
---
--- Please check for the following issues in auto generated content:
---   "Mappings removed" is as you expect
---   "Mappings migrated" are correct
---
--- Please see https://github.com/nvim-tree/nvim-tree.lua/wiki/Migrating-To-on_attach for assistance in migrating.
---
-
 local function on_attach(bufnr)
     local api = require('nvim-tree.api')
 
@@ -161,3 +95,72 @@ local function on_attach(bufnr)
 
     vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 end
+
+
+
+require("nvim-tree").setup({
+    sort_by = "case_sensitive",
+    renderer = {
+        group_empty = true,
+        indent_width = 1,
+        -- indent_markers = {
+        -- 	enable = true,
+        -- 	inline_arrows = true,
+        -- 	icons = {
+        -- 		corner = "└",
+        -- 		edge = "│",
+        -- 		item = "│",
+        -- 		bottom = "─",
+        -- 		none = " ",
+        -- 	},
+        -- },
+        icons = {
+            webdev_colors = true,
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+            },
+        },
+    },
+    on_attach = on_attach,
+    diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+        debounce_delay = 50,
+        icons = {
+            hint = "·",
+            info = "·",
+            warning = "!",
+            error = "x",
+        },
+    },
+    filters = {
+        dotfiles = false,
+    },
+    git = {
+        ignore = false,
+    },
+})
+
+
+vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+
+
+--
+-- This function has been generated from your
+--   view.mappings.list
+--   view.mappings.custom_only
+--   remove_keymaps
+--
+-- You should add this function to your configuration and set on_attach = on_attach in the nvim-tree setup call.
+--
+-- Although care was taken to ensure correctness and completeness, your review is required.
+--
+-- Please check for the following issues in auto generated content:
+--   "Mappings removed" is as you expect
+--   "Mappings migrated" are correct
+--
+-- Please see https://github.com/nvim-tree/nvim-tree.lua/wiki/Migrating-To-on_attach for assistance in migrating.
+--
