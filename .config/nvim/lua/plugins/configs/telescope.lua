@@ -73,3 +73,5 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap("n", "<leader>tw", ":Telescope coc workspace_diagnostics<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>td", ":Telescope coc diagnostics<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "tr", ":Telescope coc references<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "tu", ":Telescope coc references_used<CR>", { noremap = true, silent = true })
