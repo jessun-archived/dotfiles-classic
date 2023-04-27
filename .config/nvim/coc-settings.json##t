@@ -26,7 +26,7 @@
         "rounded": false,
     },
     // ============== coc-config-links ==============
-    "links.highlight": true,
+    "links.highlight": false,
     "links.tooltip": true,
     // ============== coc-config-list ==============
     "list.previewToplineStyle": "offset",
