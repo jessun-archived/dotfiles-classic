@@ -61,7 +61,6 @@ source ~/.config/nvim/lua/plugins/configs/coc.nvim/coc-list.vim
 let g:coc_global_extensions += ['coc-go'] 
 let g:coc_global_extensions += ['coc-json'] 
 let g:coc_global_extensions += ['coc-sumneko-lua']
-" let g:coc_global_extensions += ['coc-lua'] 
 let g:coc_global_extensions += ['coc-rust-analyzer'] " rust
 let g:coc_global_extensions += ['coc-sh'] " shell
 let g:coc_global_extensions += ['coc-yaml'] " yaml

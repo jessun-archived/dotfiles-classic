@@ -19,32 +19,32 @@ function pluginManager:init()
 
         --|||||||||||||||||||||||||||||||||||||||||||| EDITOR |||||||||||||||||||||||||||||||||||||||||||||||
         { "folke/todo-comments.nvim",      dependencies = "nvim-lua/plenary.nvim" }, -------- 高亮关键字
-        { "numToStr/Comment.nvim" },
+        { "numToStr/Comment.nvim" },                                                 -------- 注释插件
 
-        { "kevinhwang91/nvim-hlslens" },
-        { "nvim-lualine/lualine.nvim" },
-        { "nvim-tree/nvim-tree.lua" },
+        { "kevinhwang91/nvim-hlslens" },                                             -------- 高亮关键字
+        { "nvim-lualine/lualine.nvim" },                                             -------- 状态栏
+        { "nvim-tree/nvim-tree.lua" },                                               -------- 目录树
 
-        { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" },
-        { "fannheyward/telescope-coc.nvim" },
+        { "nvim-telescope/telescope.nvim", dependencies = "nvim-lua/plenary.nvim" }, -------- fuzzy finder
+        { "fannheyward/telescope-coc.nvim" },                                        -------- telescope && coc
 
-        { "petertriho/nvim-scrollbar" },
-        { "shellRaining/hlchunk.nvim" },
+        { "petertriho/nvim-scrollbar" },                                             -------- 滚动条
+        { "shellRaining/hlchunk.nvim" },                                             -------- 高亮代码块
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
         {
             "iamcco/markdown-preview.nvim",
             config = function() vim.fn["mkdp#util#install"]() end,
             ft = "markdown"
-        },
-        { "nathom/filetype.nvim",      config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end },
-        { "neoclide/jsonc.vim" },
+        },                                                                                                   -------- markdown
+        { "nathom/filetype.nvim",      config = function() vim.cmd([[runtime! autoload/dist/ft.vim]]) end }, -------- 替代filetype.vim
+        { "neoclide/jsonc.vim" },                                                                            -------- JSONC 高亮
 
         --|||||||||||||||||||||||||||||||||||||||||||| GIT |||||||||||||||||||||||||||||||||||||||||||||||
         { "tpope/vim-fugitive" },
-        { "sindrets/diffview.nvim",    dependencies = "nvim-lua/plenary.nvim" },
-        { "akinsho/git-conflict.nvim", version = "*" },
-        { "lewis6991/gitsigns.nvim" },
+        -- { "sindrets/diffview.nvim",    dependencies = "nvim-lua/plenary.nvim" },
+        -- { "akinsho/git-conflict.nvim", version = "*" },
+        -- { "lewis6991/gitsigns.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| NOTE |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "renerocksai/telekasten.nvim" },
@@ -53,10 +53,10 @@ function pluginManager:init()
         { "shaunsingh/nord.nvim" },
 
         --|||||||||||||||||||||||||||||||||||||||||||| TESTING |||||||||||||||||||||||||||||||||||||||||||||||
-        { "lewis6991/impatient.nvim" },
-        { "chentoast/marks.nvim" },
-        { "windwp/nvim-spectre",       dependencies = "nvim-lua/plenary.nvim" },
-        { "echasnovski/mini.surround", version = false },
+        { "lewis6991/impatient.nvim" },                                          -------- lua 启动提速
+        { "chentoast/marks.nvim" },                                              -------- marks 标记增强
+        { "windwp/nvim-spectre",       dependencies = "nvim-lua/plenary.nvim" }, -------- 搜索插件
+        { "echasnovski/mini.surround", version = false },                        -------- surround 快速编辑
         --
         --|||||||||||||||||||||||||||||||||||||||||||| DEPRECATED |||||||||||||||||||||||||||||||||||||||||||||||
         -- { "justinmk/vim-sneak" },

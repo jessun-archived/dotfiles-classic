@@ -13,3 +13,13 @@ omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
 omap ag <Plug>(coc-git-chunk-outer)
 xmap ag <Plug>(coc-git-chunk-outer)
+
+
+nmap cb <Plug>(coc-git-keepboth)
+omap cb <Plug>(coc-git-keepboth)
+
+nmap co <Plug>(coc-git-keepcurrent)
+omap co <Plug>(coc-git-keepcurrent)
+
+nmap ct <Plug>(coc-git-keepincoming)
+omap ct <Plug>(coc-git-keepincoming)
