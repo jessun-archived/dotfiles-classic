@@ -14,10 +14,8 @@
 " hi CocSemProperty guifg="#5E81AC"
 " hi CocSemEnumMember 
 " hi CocSemEvent
-" hi CocSemFunction guifg="#88C0D0"
 " hi CocSemMethod guifg="#8FBCBB"
 " hi CocSemMacro guifg="#81A1C1"
-" hi CocSemKeyword guifg="#81A1C1"
 " hi CocSemModifier guifg="#88C0D0"
 " hi CocSemComment guifg="#434C5E"
 " hi CocSemString guifg="#A3BE8C"
@@ -41,6 +39,9 @@
 hi CocHighlightText guibg='#B48EAD' guifg='#2E3440'
 hi CocErrorHighlight guibg='#BF616A'  guifg='#d8dee9'
 hi CocWarnHighlight guibg='#EBCB8B'  guifg='#d8dee9'
+hi CocSemLifetime  guifg='#EBCB8B'
+" hi CocSemKeyword guifg='#88C0D0'
+" hi CocSemFunction guifg='#81A1C1'
 "|||||||||||||||||||||||||||||||||||||||||||||||| Semantic Tokens }
 "
 "
