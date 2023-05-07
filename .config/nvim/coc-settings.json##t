@@ -49,15 +49,6 @@
     "suggest.pumFloatConfig": {
         "border": true
     },
-    "git.floatConfig": {
-        "border": true
-    },
-    "diagnostic.floatConfig": {
-        "border": true
-    },
-    "signature.floatConfig": {
-        "border": true
-    },
     "suggest.selection": "recentlyUsedByPrefix",
     "suggest.completionItemKindLabels": {
         "text": "TXT",
@@ -85,7 +76,16 @@
         "event": "EVENT",
         "operator": "OPERATOR",
         "typeParameter": "TYPE_PARAMETER",
-        "default": ""
+        "default": "DEFAULT"
+    },
+    "git.floatConfig": {
+        "border": true
+    },
+    "diagnostic.floatConfig": {
+        "border": true
+    },
+    "signature.floatConfig": {
+        "border": true
     },
     // ============== coc-config-preferences ==============
     "coc.preferences.enableMessageDialog": true,
