@@ -573,3 +573,6 @@ govet
 prealloc
 unconvert
 gosec
+snapdyn
+sysibmadm
+dynsql
