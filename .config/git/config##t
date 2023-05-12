@@ -22,7 +22,7 @@
 	rebase         = true
 [user]
 	name = jessun
-	email = jessun.zhang@outlook.com
+	email = jessunz@outlook.com
 [includeIf "gitdif:~"]
     path = ~/.config/git/gitconfig
 [http]
