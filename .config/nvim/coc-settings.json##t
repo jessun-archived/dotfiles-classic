@@ -96,7 +96,7 @@
     "outline.sortBy": "position",
     "outline.keepWindow": true,
     // ============== coc-config-semanticTokens ==============
-    "semanticTokens.enable": false,
+    "semanticTokens.enable": true,
     // ||||||||||||||||||||||||||||||||||||||||
     // |||||||||||| coc extensions ||||||||||||
     // ||||||||||||||||||||||||||||||||||||||||
