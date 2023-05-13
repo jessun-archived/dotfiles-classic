@@ -47,7 +47,7 @@ bind -r C-j resize-pane -D 5
 bind -r C-h resize-pane -L 5
 bind -r C-l resize-pane -R 5
 bind-key -n C-t switch-client -l
-bind -n C-h last
+# bind -n C-h last
 
 # ------ status theme -------------------------------
 set -g message-style "bg=#00346e, fg=#D8DEE9"       
@@ -97,6 +97,8 @@ set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 # set -g @plugin 'tmux-plugins/tmux-net-speed'
 set -g @plugin 'pwittchen/tmux-plugin-ip'
+set -g @plugin 'sainnhe/tmux-fzf'
+TMUX_FZF_LAUNCH_KEY="s"
 
 set -g @net_speed_interfaces "en0"
 set -g @download_speed_format "%10s"
