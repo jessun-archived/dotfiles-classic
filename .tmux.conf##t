@@ -98,7 +98,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 # set -g @plugin 'tmux-plugins/tmux-net-speed'
 set -g @plugin 'pwittchen/tmux-plugin-ip'
 set -g @plugin 'sainnhe/tmux-fzf'
-TMUX_FZF_LAUNCH_KEY="s"
+TMUX_FZF_LAUNCH_KEY="e"
 TMUX_FZF_OPTIONS="-p -w 80% -h 50% -m"
 bind-key "c-l" run-shell -b "/Users/jessun/.tmux/plugins/tmux-fzf/scripts/session.sh attach"
 
