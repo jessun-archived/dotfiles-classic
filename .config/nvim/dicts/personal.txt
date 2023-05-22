@@ -576,3 +576,5 @@ gosec
 snapdyn
 sysibmadm
 dynsql
+size
+usize
