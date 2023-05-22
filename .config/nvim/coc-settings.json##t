@@ -4,6 +4,9 @@
     // ||||||||||||||||||||||||||||||||||||||||
     // ============== coc-config-codeLens ============== 
     "go.goplsPath": "/Users/jessun/.gvm/pkgsets/go1.19.9/global/bin/gopls",
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
     "codeLens.enable": true,
     "codeLens.position": "right_align",
     // ============== coc-config-colors ============== 
@@ -183,5 +186,5 @@
         "typescriptreact",
         "yaml",
         "yml"
-    ],
+    ]
 }
