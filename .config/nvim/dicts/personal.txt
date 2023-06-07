@@ -578,3 +578,4 @@ sysibmadm
 dynsql
 size
 usize
+succ
