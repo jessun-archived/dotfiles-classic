@@ -3,7 +3,7 @@
     // |||||||||||||| coc.nvim  |||||||||||||||
     // ||||||||||||||||||||||||||||||||||||||||
     // ============== coc-config-codeLens ============== 
-    "go.goplsPath": "/Users/jessun/.gvm/pkgsets/go1.19.9/global/bin/gopls",
+    "go.goplsPath": "/Users/jessun/.gvm/pkgsets/go1.20.5/global/bin/gopls",
     "Lua.diagnostics.globals": [
         "vim"
     ],
@@ -31,7 +31,6 @@
     },
     // ============== coc-config-links ==============
     "links.highlight": false,
-    "links.tooltip": true,
     // ============== coc-config-list ==============
     "list.previewToplineStyle": "offset",
     "list.previewToplineOffset": 15,
