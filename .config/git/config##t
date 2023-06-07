@@ -23,12 +23,13 @@
 [user]
 	name = jessun
 	email = jessunz@outlook.com
+	signingkey = /Users/jessun/.ssh/id_ed25519.pub
 [includeIf "gitdif:~"]
     path = ~/.config/git/gitconfig
 [http]
-	proxy = 
+	proxy = http://127.0.0.1:1087
 [https]
-	proxy = 
+	proxy = http://127.0.0.1:1087
 [receive]
 	denyNonFastForwards = true
 	denyDeletes = true
@@ -45,3 +46,9 @@
 	pushRemote = no_push
 [branch "main"]
 	pushRemote = no_push
+[commit]
+	gpgSign = true
+[gpg]
+	format = ssh
+[tag]
+	gpgSign = true
