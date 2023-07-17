@@ -30,6 +30,7 @@ function pluginManager:init()
 
         { "petertriho/nvim-scrollbar" },                                             -------- 滚动条
         { "shellRaining/hlchunk.nvim" },                                             -------- 高亮代码块
+        {"nvim-treesitter/nvim-treesitter"},
 
         --|||||||||||||||||||||||||||||||||||||||||||| FILE |||||||||||||||||||||||||||||||||||||||||||||||
         {
